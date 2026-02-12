@@ -1,2 +1,9 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+*.unity unity-yaml
+*.prefab unity-yaml
+*.asset unity-yaml
+*.mat unity-yaml
+*.anim unity-yaml
+*.mp4 filter=lfs diff=lfs merge=lfs -text
