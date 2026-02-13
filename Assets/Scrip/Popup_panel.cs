@@ -13,6 +13,11 @@ public class Popup_panel : MonoBehaviour
         gameObject.SetActive(true);
     }
 
+    public void ClosePanel()
+    {
+        gameObject.SetActive(false);
+    }
+
     // Update is called once per frame
     void Update()
     {
