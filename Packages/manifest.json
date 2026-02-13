@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.nobi.roundedcorners": "https://github.com/kirevdokimov/Unity-UI-Rounded-Corners.git",
     "com.phengine.thaitextcare": "https://github.com/phanphantz/ThaiTextCare-for-Unity.git",
     "com.unity.2d.animation": "13.0.2",
     "com.unity.2d.aseprite": "3.0.1",
