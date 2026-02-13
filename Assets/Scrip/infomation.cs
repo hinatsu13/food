@@ -15,7 +15,7 @@ public class infomation : MonoBehaviour
 
     public void ShowInfomation_fish1()
     {
-        fish_name.text = "fish1";
+        fish_name.text = "???1";
         fish_anime.color = Color.blue;
         fish_descrip.text = "info about fish1";
     }
