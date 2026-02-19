@@ -11,7 +11,7 @@ public class EnterScene : MonoBehaviour
     public void LoadNextScene(string name)
     {
         Debug.Log("Load next Scene");
-        //SceneManager.LoadScene(name);
+        SceneManager.LoadScene(name);
     }
     // Update is called once per frame
     void Update()
