@@ -6,8 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Packages/com.phengine.thaitextcare/Examples/ExampleScenes/Highlights_ExampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/Scene_Fish_Info.unity
+    guid: 7b1dbd998c6164a409f1026144bbd06c
+  - enabled: 1
+    path: Assets/Scenes/Scene_Fish_Selection.unity
+    guid: db4accea5a3c2d34dadef7fa3e378bf5
+  - enabled: 1
+    path: Assets/Scenes/Scene_Get_Dressed.unity
+    guid: 9ad63edc4d4d54d61a6fcaee367e95de
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
