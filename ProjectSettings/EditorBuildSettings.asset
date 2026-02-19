@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Scene_Selector.unity
+    guid: a623be1971ec42a4796d700c95a0dc50
+  - enabled: 1
     path: Assets/Scenes/Scene01_Fish_Info.unity
     guid: 7b1dbd998c6164a409f1026144bbd06c
   - enabled: 1
