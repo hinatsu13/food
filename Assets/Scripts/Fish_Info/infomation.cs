@@ -1,46 +1,35 @@
 using UnityEngine;
-using TMPro;
 using UnityEngine.UI;
 
 public class infomation : MonoBehaviour
 {
-    public TMP_Text fish_name;
-    public UnityEngine.UI.Image fish_anime;
-    public TMP_Text fish_descrip;
+    public RectTransform targetButtonRect;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         //info.text = "what the fox say";
+        gameObject.SetActive(false);
     }
 
-    public void ShowInfomation_fish1()
+    public void OpenImage()
     {
-        fish_name.text = "???1";
-        fish_anime.color = Color.blue;
-        fish_descrip.text = "info about fish1";
+        gameObject.SetActive(true);
     }
 
-    public void ShowInfomation_fish2()
+    public void CloseImage()
     {
-        fish_name.text = "fish2";
-        fish_anime.color = Color.pink;
-        fish_descrip.text = "info about fish2";
+        gameObject.SetActive(false);
     }
 
-    public void ShowInfomation_fish3()
+    public void ChangeButtonLocation()
     {
-        fish_name.text = "fish3";
-        fish_anime.color = Color.green;
-        fish_descrip.text = "info about fish3";
+        targetButtonRect.anchoredPosition = new Vector2(570, 645);
     }
 
-    public void ShowInfomation_fish4()
+    public void ResetLocation()
     {
-        fish_name.text = "fish4";
-        fish_anime.color = Color.yellow;
-        fish_descrip.text = "info about fish4";
+        targetButtonRect.anchoredPosition = new Vector2(970, 645);
     }
-
 
     // Update is called once per frame
     void Update()
