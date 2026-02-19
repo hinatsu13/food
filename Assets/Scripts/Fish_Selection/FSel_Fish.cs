@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using System;
 using UnityEngine.Events;
+using UnityEngine.UIElements;
 
 public class FSel_Fish : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class FSel_Fish : MonoBehaviour
 
     private bool IsInTrigger = false;
     private bool IsInBox = false;
+    private bool IsInDiscard = false;
     private Vector3 lastPosition;
     private FSel_InputDetector hovered_storage;
 
@@ -33,6 +35,10 @@ public class FSel_Fish : MonoBehaviour
             hovered_storage = collision.GetComponent<FSel_InputDetector>();
             IsInBox = true;
         }
+        if (collision.CompareTag("Discard"))
+        {
+            IsInDiscard = true;
+        }
     }
     private void OnDestroy()
     {
@@ -49,6 +55,10 @@ public class FSel_Fish : MonoBehaviour
         {
             OnFailed?.Invoke();
             Destroy(gameObject);
+        }
+        if (collision.CompareTag("Discard"))
+        {
+            IsInDiscard = false;
         }
     }
     // Update is called once per frame
@@ -131,6 +141,9 @@ public class FSel_Fish : MonoBehaviour
                     Destroy(gameObject);
                 }
             }
+        }else if (IsInDiscard)
+        {
+            Destroy(gameObject);
         }
         else
         {
