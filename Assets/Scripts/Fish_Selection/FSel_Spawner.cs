@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class FSel_Spawner : MonoBehaviour
 {
@@ -13,10 +14,12 @@ public class FSel_Spawner : MonoBehaviour
 
     [Header("StaticClass config")]
     public GameObject ScoreIndicator;
+    public GameObject EndingPanel;
 
     FSel_Fish _fih;
     float lastSpawn;
     int queue = 0;
+    public UnityEvent OnEnd;
 
     void Start()
     {
@@ -49,7 +52,7 @@ public class FSel_Spawner : MonoBehaviour
         }
         else
         {
-            Debug.Log("Show end screen, move on to other scene");
+            OnEndGame();
         }
     }
     public void SpawnFish(int index)
@@ -65,5 +68,10 @@ public class FSel_Spawner : MonoBehaviour
         _fih.OnIncorrect.AddListener(FSel_ScoreManager.OnIncorrect);
         _fih.OnDestroyed.AddListener(OnFishDestroyed);
         queue++;
+    }
+    public void OnEndGame()
+    {
+        EndingPanel.SetActive(true);
+        OnEnd?.Invoke();
     }
 }
