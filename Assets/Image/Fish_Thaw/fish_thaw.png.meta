@@ -1,0 +1,1027 @@
+fileFormatVersion: 2
+guid: de67cb61655d77d45a47088ccfcf909e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5210830063431068267
+    second: fish_thaw_0
+  - first:
+      213: -2570493729119196322
+    second: fish_thaw_1
+  - first:
+      213: 1825220665461206333
+    second: fish_thaw_2
+  - first:
+      213: -4990184574136631094
+    second: fish_thaw_3
+  - first:
+      213: -6042634830970157617
+    second: fish_thaw_4
+  - first:
+      213: 7829173105907286803
+    second: fish_thaw_5
+  - first:
+      213: -5494381127442686038
+    second: fish_thaw_6
+  - first:
+      213: 906462179769694112
+    second: fish_thaw_7
+  - first:
+      213: 2947121768651250995
+    second: fish_thaw_8
+  - first:
+      213: 2012691947137463467
+    second: fish_thaw_9
+  - first:
+      213: 1102266182782957969
+    second: fish_thaw_10
+  - first:
+      213: -2340939924987169282
+    second: fish_thaw_11
+  - first:
+      213: -6458472211180411251
+    second: fish_thaw_12
+  - first:
+      213: -2590843639405435514
+    second: fish_thaw_13
+  - first:
+      213: -9215482053451145731
+    second: fish_thaw_14
+  - first:
+      213: 13367632794276618
+    second: fish_thaw_15
+  - first:
+      213: 3976866038555611460
+    second: fish_thaw_16
+  - first:
+      213: -4697383616135763991
+    second: fish_thaw_17
+  - first:
+      213: -6187715445302459532
+    second: fish_thaw_18
+  - first:
+      213: 7394636292851317818
+    second: fish_thaw_19
+  - first:
+      213: -3831418828834856168
+    second: fish_thaw_20
+  - first:
+      213: -3498622613940320930
+    second: fish_thaw_21
+  - first:
+      213: -7050826922590940136
+    second: fish_thaw_22
+  - first:
+      213: -6198437814670398647
+    second: fish_thaw_23
+  - first:
+      213: -1070021359628498100
+    second: fish_thaw_24
+  - first:
+      213: -2574657085608095819
+    second: fish_thaw_25
+  - first:
+      213: 2902500832914206112
+    second: fish_thaw_26
+  - first:
+      213: 9090717826957007251
+    second: fish_thaw_27
+  - first:
+      213: -359127323653933198
+    second: fish_thaw_28
+  - first:
+      213: -8161929805081850627
+    second: fish_thaw_29
+  - first:
+      213: -7993739147185944976
+    second: fish_thaw_30
+  - first:
+      213: -7250344500622298165
+    second: fish_thaw_31
+  - first:
+      213: 5922683391745464044
+    second: fish_thaw_32
+  - first:
+      213: -6415790293918036711
+    second: fish_thaw_33
+  - first:
+      213: 2581091335795763382
+    second: fish_thaw_34
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fish_thaw_0
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 910
+        width: 1922
+        height: 1082
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6a2cb3a556905840800000000000000
+      internalID: 5210830063431068267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_1
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 1903
+        width: 180
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5b2b7a8295c35cd0800000000000000
+      internalID: -2570493729119196322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_2
+      rect:
+        serializedVersion: 2
+        x: 2966
+        y: 1859
+        width: 691
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3d6489568c745910800000000000000
+      internalID: 1825220665461206333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_3
+      rect:
+        serializedVersion: 2
+        x: 2328
+        y: 1564
+        width: 43
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac0c3f6a19d4fbab0800000000000000
+      internalID: -4990184574136631094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_4
+      rect:
+        serializedVersion: 2
+        x: 2375
+        y: 1603
+        width: 44
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc50f90f2af342ca0800000000000000
+      internalID: -6042634830970157617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_5
+      rect:
+        serializedVersion: 2
+        x: 2705
+        y: 1591
+        width: 55
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31345a6857fc6ac60800000000000000
+      internalID: 7829173105907286803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_6
+      rect:
+        serializedVersion: 2
+        x: 3021
+        y: 1332
+        width: 500
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaf1b2e997900c3b0800000000000000
+      internalID: -5494381127442686038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_7
+      rect:
+        serializedVersion: 2
+        x: 3653
+        y: 1592
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a7bf73cc86649c00800000000000000
+      internalID: 906462179769694112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_8
+      rect:
+        serializedVersion: 2
+        x: 3686
+        y: 1618
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33d574252a746e820800000000000000
+      internalID: 2947121768651250995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_9
+      rect:
+        serializedVersion: 2
+        x: 2362
+        y: 1536
+        width: 31
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba4fa6789a48eeb10800000000000000
+      internalID: 2012691947137463467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_10
+      rect:
+        serializedVersion: 2
+        x: 2693
+        y: 1556
+        width: 35
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19934b0d0490c4f00800000000000000
+      internalID: 1102266182782957969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_11
+      rect:
+        serializedVersion: 2
+        x: 3617
+        y: 1568
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef53c928a8f438fd0800000000000000
+      internalID: -2340939924987169282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_12
+      rect:
+        serializedVersion: 2
+        x: 2699
+        y: 1555
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d862cdc0eb5ee56a0800000000000000
+      internalID: -6458472211180411251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_13
+      rect:
+        serializedVersion: 2
+        x: 2702
+        y: 1442
+        width: 32
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 685a8a4df697b0cd0800000000000000
+      internalID: -2590843639405435514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_14
+      rect:
+        serializedVersion: 2
+        x: 2736
+        y: 1483
+        width: 27
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfd9e0ae5e70c1080800000000000000
+      internalID: -9215482053451145731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_15
+      rect:
+        serializedVersion: 2
+        x: 2331
+        y: 1430
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a03d03c8acd7f2000800000000000000
+      internalID: 13367632794276618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_16
+      rect:
+        serializedVersion: 2
+        x: 2354
+        y: 802
+        width: 280
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4411c6b779aa03730800000000000000
+      internalID: 3976866038555611460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_17
+      rect:
+        serializedVersion: 2
+        x: 2991
+        y: 888
+        width: 530
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e7ec7a2d7a8fceb0800000000000000
+      internalID: -4697383616135763991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_18
+      rect:
+        serializedVersion: 2
+        x: 3604
+        y: 1037
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4738c8f1691d02aa0800000000000000
+      internalID: -6187715445302459532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_19
+      rect:
+        serializedVersion: 2
+        x: 3635
+        y: 1056
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3c3d96a7860f9660800000000000000
+      internalID: 7394636292851317818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_20
+      rect:
+        serializedVersion: 2
+        x: 3686
+        y: 1050
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8132e89ffd014dac0800000000000000
+      internalID: -3831418828834856168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_21
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 128
+        width: 814
+        height: 573
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5540f4e445627fc0800000000000000
+      internalID: -3498622613940320930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_22
+      rect:
+        serializedVersion: 2
+        x: 1271
+        y: 133
+        width: 698
+        height: 573
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 814d432554e662e90800000000000000
+      internalID: -7050826922590940136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_23
+      rect:
+        serializedVersion: 2
+        x: 2354
+        y: 271
+        width: 280
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94be836f5a9baf9a0800000000000000
+      internalID: -6198437814670398647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_24
+      rect:
+        serializedVersion: 2
+        x: 2853
+        y: 647
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4b434d1e358621f0800000000000000
+      internalID: -1070021359628498100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_25
+      rect:
+        serializedVersion: 2
+        x: 3076
+        y: 389
+        width: 445
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bf03e1950bf44cd0800000000000000
+      internalID: -2574657085608095819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_26
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 602
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ad60222121c74820800000000000000
+      internalID: 2902500832914206112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_27
+      rect:
+        serializedVersion: 2
+        x: 3009
+        y: 578
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 399551de2b7b82e70800000000000000
+      internalID: 9090717826957007251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_28
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 358
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27778741a9f140bf0800000000000000
+      internalID: -359127323653933198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_29
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 354
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfc4c6606100bbe80800000000000000
+      internalID: -8161929805081850627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_30
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 285
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07609d82998801190800000000000000
+      internalID: -7993739147185944976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_31
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 289
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc37335371a916b90800000000000000
+      internalID: -7250344500622298165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_32
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 271
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce618124a29913250800000000000000
+      internalID: 5922683391745464044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_33
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 152
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91dcd9158b886f6a0800000000000000
+      internalID: -6415790293918036711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_thaw_34
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 170
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b8e1fa05e0e1d320800000000000000
+      internalID: 2581091335795763382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fish_thaw_0: 5210830063431068267
+      fish_thaw_1: -2570493729119196322
+      fish_thaw_10: 1102266182782957969
+      fish_thaw_11: -2340939924987169282
+      fish_thaw_12: -6458472211180411251
+      fish_thaw_13: -2590843639405435514
+      fish_thaw_14: -9215482053451145731
+      fish_thaw_15: 13367632794276618
+      fish_thaw_16: 3976866038555611460
+      fish_thaw_17: -4697383616135763991
+      fish_thaw_18: -6187715445302459532
+      fish_thaw_19: 7394636292851317818
+      fish_thaw_2: 1825220665461206333
+      fish_thaw_20: -3831418828834856168
+      fish_thaw_21: -3498622613940320930
+      fish_thaw_22: -7050826922590940136
+      fish_thaw_23: -6198437814670398647
+      fish_thaw_24: -1070021359628498100
+      fish_thaw_25: -2574657085608095819
+      fish_thaw_26: 2902500832914206112
+      fish_thaw_27: 9090717826957007251
+      fish_thaw_28: -359127323653933198
+      fish_thaw_29: -8161929805081850627
+      fish_thaw_3: -4990184574136631094
+      fish_thaw_30: -7993739147185944976
+      fish_thaw_31: -7250344500622298165
+      fish_thaw_32: 5922683391745464044
+      fish_thaw_33: -6415790293918036711
+      fish_thaw_34: 2581091335795763382
+      fish_thaw_4: -6042634830970157617
+      fish_thaw_5: 7829173105907286803
+      fish_thaw_6: -5494381127442686038
+      fish_thaw_7: 906462179769694112
+      fish_thaw_8: 2947121768651250995
+      fish_thaw_9: 2012691947137463467
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
