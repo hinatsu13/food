@@ -210,7 +210,7 @@ TextureImporter:
         width: 1922
         height: 1082
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -232,7 +232,7 @@ TextureImporter:
         width: 180
         height: 103
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -254,7 +254,7 @@ TextureImporter:
         width: 691
         height: 155
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -271,10 +271,10 @@ TextureImporter:
       name: fish_thaw_3
       rect:
         serializedVersion: 2
-        x: 2328
-        y: 1564
-        width: 43
-        height: 62
+        x: 2661
+        y: 1412
+        width: 140
+        height: 307
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -293,10 +293,10 @@ TextureImporter:
       name: fish_thaw_4
       rect:
         serializedVersion: 2
-        x: 2375
-        y: 1603
-        width: 44
-        height: 79
+        x: 2265
+        y: 1397
+        width: 174
+        height: 301
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -312,28 +312,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fish_thaw_5
-      rect:
-        serializedVersion: 2
-        x: 2705
-        y: 1591
-        width: 55
-        height: 73
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 31345a6857fc6ac60800000000000000
-      internalID: 7829173105907286803
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: fish_thaw_6
       rect:
         serializedVersion: 2
@@ -342,7 +320,7 @@ TextureImporter:
         width: 500
         height: 302
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -359,12 +337,12 @@ TextureImporter:
       name: fish_thaw_7
       rect:
         serializedVersion: 2
-        x: 3653
-        y: 1592
-        width: 39
-        height: 39
+        x: 3607
+        y: 1559
+        width: 85
+        height: 72
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -386,7 +364,7 @@ TextureImporter:
         width: 144
         height: 144
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -400,72 +378,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fish_thaw_9
-      rect:
-        serializedVersion: 2
-        x: 2362
-        y: 1536
-        width: 31
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ba4fa6789a48eeb10800000000000000
-      internalID: 2012691947137463467
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fish_thaw_10
-      rect:
-        serializedVersion: 2
-        x: 2693
-        y: 1556
-        width: 35
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 19934b0d0490c4f00800000000000000
-      internalID: 1102266182782957969
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fish_thaw_11
-      rect:
-        serializedVersion: 2
-        x: 3617
-        y: 1568
-        width: 26
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ef53c928a8f438fd0800000000000000
-      internalID: -2340939924987169282
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: fish_thaw_12
       rect:
         serializedVersion: 2
@@ -474,7 +386,7 @@ TextureImporter:
         width: 7
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -488,72 +400,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fish_thaw_13
-      rect:
-        serializedVersion: 2
-        x: 2702
-        y: 1442
-        width: 32
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 685a8a4df697b0cd0800000000000000
-      internalID: -2590843639405435514
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fish_thaw_14
-      rect:
-        serializedVersion: 2
-        x: 2736
-        y: 1483
-        width: 27
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dfd9e0ae5e70c1080800000000000000
-      internalID: -9215482053451145731
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fish_thaw_15
-      rect:
-        serializedVersion: 2
-        x: 2331
-        y: 1430
-        width: 30
-        height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a03d03c8acd7f2000800000000000000
-      internalID: 13367632794276618
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: fish_thaw_16
       rect:
         serializedVersion: 2
@@ -562,7 +408,7 @@ TextureImporter:
         width: 280
         height: 386
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -584,7 +430,7 @@ TextureImporter:
         width: 530
         height: 302
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -598,37 +444,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fish_thaw_18
-      rect:
-        serializedVersion: 2
-        x: 3604
-        y: 1037
-        width: 26
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4738c8f1691d02aa0800000000000000
-      internalID: -6187715445302459532
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: fish_thaw_19
       rect:
         serializedVersion: 2
-        x: 3635
-        y: 1056
-        width: 39
-        height: 39
+        x: 3596
+        y: 1021
+        width: 78
+        height: 74
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -650,7 +474,7 @@ TextureImporter:
         width: 144
         height: 144
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -672,7 +496,7 @@ TextureImporter:
         width: 814
         height: 573
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -694,7 +518,7 @@ TextureImporter:
         width: 698
         height: 573
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -716,7 +540,7 @@ TextureImporter:
         width: 280
         height: 386
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -733,12 +557,12 @@ TextureImporter:
       name: fish_thaw_24
       rect:
         serializedVersion: 2
-        x: 2853
-        y: 647
+        x: 2855
+        y: 649
         width: 144
         height: 144
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -760,7 +584,7 @@ TextureImporter:
         width: 445
         height: 337
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -777,12 +601,12 @@ TextureImporter:
       name: fish_thaw_26
       rect:
         serializedVersion: 2
-        x: 2960
-        y: 602
-        width: 40
-        height: 40
+        x: 2962
+        y: 550
+        width: 83
+        height: 92
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -796,28 +620,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fish_thaw_27
-      rect:
-        serializedVersion: 2
-        x: 3009
-        y: 578
-        width: 27
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 399551de2b7b82e70800000000000000
-      internalID: 9090717826957007251
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: fish_thaw_28
       rect:
         serializedVersion: 2
@@ -826,7 +628,7 @@ TextureImporter:
         width: 16
         height: 17
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -848,7 +650,7 @@ TextureImporter:
         width: 20
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -870,7 +672,7 @@ TextureImporter:
         width: 16
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -892,7 +694,7 @@ TextureImporter:
         width: 20
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -914,7 +716,7 @@ TextureImporter:
         width: 11
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -936,7 +738,7 @@ TextureImporter:
         width: 19
         height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -958,7 +760,7 @@ TextureImporter:
         width: 18
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -975,7 +777,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 1ee599828cd47bc4684e29be76ccf33c
     internalID: 0
     vertices: []
     indices: 
@@ -1014,6 +816,10 @@ TextureImporter:
       fish_thaw_32: 5922683391745464044
       fish_thaw_33: -6415790293918036711
       fish_thaw_34: 2581091335795763382
+      fish_thaw_35: 611714313
+      fish_thaw_36: -262511095
+      fish_thaw_37: 1305604452
+      fish_thaw_38: -906084867
       fish_thaw_4: -6042634830970157617
       fish_thaw_5: 7829173105907286803
       fish_thaw_6: -5494381127442686038
