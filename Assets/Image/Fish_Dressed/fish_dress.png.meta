@@ -1,0 +1,940 @@
+fileFormatVersion: 2
+guid: 5eadc75a67a66304ebbc92ac49800681
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8862050446876559919
+    second: fish_dress_0
+  - first:
+      213: 3176761789285386171
+    second: fish_dress_1
+  - first:
+      213: 2965993384536279825
+    second: fish_dress_2
+  - first:
+      213: -5747589693906719806
+    second: fish_dress_3
+  - first:
+      213: -765863596266362391
+    second: fish_dress_4
+  - first:
+      213: 8610102602140451302
+    second: fish_dress_5
+  - first:
+      213: -2167093192386344135
+    second: fish_dress_6
+  - first:
+      213: 5092273576951436114
+    second: fish_dress_7
+  - first:
+      213: -3187056345836730742
+    second: fish_dress_8
+  - first:
+      213: 2869209583713360791
+    second: fish_dress_9
+  - first:
+      213: -669643581137600684
+    second: fish_dress_10
+  - first:
+      213: 6290793487765467811
+    second: fish_dress_11
+  - first:
+      213: -5888085287288503143
+    second: fish_dress_12
+  - first:
+      213: 7547173557775637349
+    second: fish_dress_13
+  - first:
+      213: 3190984588190498243
+    second: fish_dress_14
+  - first:
+      213: -7171992038877031333
+    second: fish_dress_15
+  - first:
+      213: -4289549838459674694
+    second: fish_dress_16
+  - first:
+      213: -1406358132955916491
+    second: fish_dress_17
+  - first:
+      213: 4589025371097718657
+    second: fish_dress_18
+  - first:
+      213: -4643078244147271469
+    second: fish_dress_19
+  - first:
+      213: -402969332183297598
+    second: fish_dress_20
+  - first:
+      213: 289558286711117873
+    second: fish_dress_21
+  - first:
+      213: -3988098322255703400
+    second: fish_dress_22
+  - first:
+      213: 479599435177567214
+    second: fish_dress_23
+  - first:
+      213: 7946792859107199352
+    second: fish_dress_24
+  - first:
+      213: 1790796225414270361
+    second: fish_dress_25
+  - first:
+      213: -4261576539111503333
+    second: fish_dress_26
+  - first:
+      213: -4506550052814916725
+    second: fish_dress_27
+  - first:
+      213: -9130735863229377450
+    second: fish_dress_28
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fish_dress_0
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 1257
+        width: 1922
+        height: 1082
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2a4ba3ade35cfa70800000000000000
+      internalID: 8862050446876559919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_dress_1
+      rect:
+        serializedVersion: 2
+        x: 2182
+        y: 1314
+        width: 849
+        height: 967
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb7c3622400261c20800000000000000
+      internalID: 3176761789285386171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_dress_2
+      rect:
+        serializedVersion: 2
+        x: 3263
+        y: 1743
+        width: 370
+        height: 539
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11b817bc443592920800000000000000
+      internalID: 2965993384536279825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_dress_3
+      rect:
+        serializedVersion: 2
+        x: 3769
+        y: 1743
+        width: 370
+        height: 539
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cb6efb10a57c30b0800000000000000
+      internalID: -5747589693906719806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_dress_4
+      rect:
+        serializedVersion: 2
+        x: 4310
+        y: 1743
+        width: 370
+        height: 539
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e9e32eed1b1f55f0800000000000000
+      internalID: -765863596266362391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_dress_5
+      rect:
+        serializedVersion: 2
+        x: 5362
+        y: 1754
+        width: 410
+        height: 562
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e18f38c2ba3d7770800000000000000
+      internalID: 8610102602140451302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_dress_6
+      rect:
+        serializedVersion: 2
+        x: 5879
+        y: 1754
+        width: 410
+        height: 562
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93b05a82930fce1e0800000000000000
+      internalID: -2167093192386344135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_dress_7
+      rect:
+        serializedVersion: 2
+        x: 3242
+        y: 1083
+        width: 410
+        height: 562
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2535c4596d36ba640800000000000000
+      internalID: 5092273576951436114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_dress_8
+      rect:
+        serializedVersion: 2
+        x: 3748
+        y: 1083
+        width: 410
+        height: 562
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a864f33a32d45c3d0800000000000000
+      internalID: -3187056345836730742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_dress_9
+      rect:
+        serializedVersion: 2
+        x: 4289
+        y: 1083
+        width: 410
+        height: 562
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79b91672aea71d720800000000000000
+      internalID: 2869209583713360791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_dress_10
+      rect:
+        serializedVersion: 2
+        x: 4830
+        y: 1083
+        width: 410
+        height: 562
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45f3c2cf5b2f4b6f0800000000000000
+      internalID: -669643581137600684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_dress_11
+      rect:
+        serializedVersion: 2
+        x: 5371
+        y: 1083
+        width: 410
+        height: 562
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a2f999d8536d4750800000000000000
+      internalID: 6290793487765467811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_dress_12
+      rect:
+        serializedVersion: 2
+        x: 5879
+        y: 1083
+        width: 410
+        height: 562
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99407fba0a1594ea0800000000000000
+      internalID: -5888085287288503143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_dress_13
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 769
+        width: 727
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56b10793d52fcb860800000000000000
+      internalID: 7547173557775637349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_dress_14
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 675
+        width: 269
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cd37de8397a84c20800000000000000
+      internalID: 3190984588190498243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_dress_15
+      rect:
+        serializedVersion: 2
+        x: 2288
+        y: 733
+        width: 93
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b541ece4d37f77c90800000000000000
+      internalID: -7171992038877031333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_dress_16
+      rect:
+        serializedVersion: 2
+        x: 2402
+        y: 734
+        width: 91
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abfd64026257874c0800000000000000
+      internalID: -4289549838459674694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_dress_17
+      rect:
+        serializedVersion: 2
+        x: 2701
+        y: 730
+        width: 93
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5375e22babc9b7ce0800000000000000
+      internalID: -1406358132955916491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_dress_18
+      rect:
+        serializedVersion: 2
+        x: 2815
+        y: 733
+        width: 91
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18fd885e24e7faf30800000000000000
+      internalID: 4589025371097718657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_dress_19
+      rect:
+        serializedVersion: 2
+        x: 3197
+        y: 671
+        width: 312
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d8e141efe8709fb0800000000000000
+      internalID: -4643078244147271469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_dress_20
+      rect:
+        serializedVersion: 2
+        x: 3610
+        y: 671
+        width: 312
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c196d3078d586af0800000000000000
+      internalID: -402969332183297598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_dress_21
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 401
+        width: 968
+        height: 290
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 138df254ab7b40400800000000000000
+      internalID: 289558286711117873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_dress_22
+      rect:
+        serializedVersion: 2
+        x: 1507
+        y: 394
+        width: 180
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8921e9ca4bd67a8c0800000000000000
+      internalID: -3988098322255703400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_dress_23
+      rect:
+        serializedVersion: 2
+        x: 1867
+        y: 432
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee3ac303521e7a600800000000000000
+      internalID: 479599435177567214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_dress_24
+      rect:
+        serializedVersion: 2
+        x: 2279
+        y: 305
+        width: 227
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87902be500ea84e60800000000000000
+      internalID: 7946792859107199352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_dress_25
+      rect:
+        serializedVersion: 2
+        x: 2698
+        y: 294
+        width: 227
+        height: 193
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99d8de0ddaf2ad810800000000000000
+      internalID: 1790796225414270361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_dress_26
+      rect:
+        serializedVersion: 2
+        x: 3191
+        y: 275
+        width: 312
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1ace1b67b6dbd4c0800000000000000
+      internalID: -4261576539111503333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_dress_27
+      rect:
+        serializedVersion: 2
+        x: 3604
+        y: 275
+        width: 312
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b83f27b8a948571c0800000000000000
+      internalID: -4506550052814916725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_dress_28
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 410
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6541b4eeb1c194180800000000000000
+      internalID: -9130735863229377450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_dress_29
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 705
+        width: 269
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4c15960f02de244abd92fba7ef3d766
+      internalID: 441257045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_dress_30
+      rect:
+        serializedVersion: 2
+        x: 2658
+        y: 696
+        width: 280
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59163d8936f661547932ec661cb4d949
+      internalID: 2105042936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_dress_31
+      rect:
+        serializedVersion: 2
+        x: 1821
+        y: 388
+        width: 112
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb1a8c1562d0424b890f4655881fddf
+      internalID: -1938885245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 3484911fffd9aef4ba6fd889e961f19e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fish_dress_0: 8862050446876559919
+      fish_dress_1: 3176761789285386171
+      fish_dress_10: -669643581137600684
+      fish_dress_11: 6290793487765467811
+      fish_dress_12: -5888085287288503143
+      fish_dress_13: 7547173557775637349
+      fish_dress_14: 3190984588190498243
+      fish_dress_15: -7171992038877031333
+      fish_dress_16: -4289549838459674694
+      fish_dress_17: -1406358132955916491
+      fish_dress_18: 4589025371097718657
+      fish_dress_19: -4643078244147271469
+      fish_dress_2: 2965993384536279825
+      fish_dress_20: -402969332183297598
+      fish_dress_21: 289558286711117873
+      fish_dress_22: -3988098322255703400
+      fish_dress_23: 479599435177567214
+      fish_dress_24: 7946792859107199352
+      fish_dress_25: 1790796225414270361
+      fish_dress_26: -4261576539111503333
+      fish_dress_27: -4506550052814916725
+      fish_dress_28: -9130735863229377450
+      fish_dress_29: 441257045
+      fish_dress_3: -5747589693906719806
+      fish_dress_30: 2105042936
+      fish_dress_31: -1938885245
+      fish_dress_4: -765863596266362391
+      fish_dress_5: 8610102602140451302
+      fish_dress_6: -2167093192386344135
+      fish_dress_7: 5092273576951436114
+      fish_dress_8: -3187056345836730742
+      fish_dress_9: 2869209583713360791
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
