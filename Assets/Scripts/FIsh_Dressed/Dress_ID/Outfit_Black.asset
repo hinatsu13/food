@@ -15,5 +15,5 @@ MonoBehaviour:
   setID: 1
   itemType: 1
   iconSprite: {fileID: -2096737062245311412, guid: 8732edd1fb863465b89da918cf816a9d, type: 3}
-  onCharacterSprite: {fileID: -2096737062245311412, guid: 8732edd1fb863465b89da918cf816a9d, type: 3}
-  description: Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+  onCharacterSprite: {fileID: -2098421156525548981, guid: 51ca316586b75454387585ef269a4a06, type: 3}
+  description: BlackCloth

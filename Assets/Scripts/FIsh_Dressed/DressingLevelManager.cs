@@ -7,11 +7,18 @@ public class DressingLevelManager : MonoBehaviour
     [Header("Character Display")]
     public Image gloveRenderer;  // Image บนตัวละครสำหรับถุงมือ
     public Image outfitRenderer; // Image บนตัวละครสำหรับชุด
+    public Image characterRenderer; // Image of character
+
+    [Header("Character Sprite")]
+    public Sprite[] characterSprite;
     
     [Header("UI Feedback")]
     public GameObject successPopup; // หน้าต่างที่จะเด้งเมื่อถูก
     public TextMeshProUGUI infoText; // ข้อความข้อมูลชุด
     public Button nextLevelButton;  // ปุ่มไปด่านต่อไป
+
+    [Header("Correct dress")]
+    [SerializeField]private int correct_set;
 
     // State ปัจจุบัน
     private ClothingItemData currentGlove;
@@ -40,6 +47,7 @@ public class DressingLevelManager : MonoBehaviour
         {
             currentOutfit = data;
             outfitRenderer.sprite = data.onCharacterSprite;
+            characterRenderer.sprite = characterSprite[data.setID];
             outfitRenderer.gameObject.SetActive(true);
         }
 
@@ -52,7 +60,7 @@ public class DressingLevelManager : MonoBehaviour
         if (currentGlove == null || currentOutfit == null) return;
 
         // 2. เช็ค ID ว่าตรงกันไหม (Core Logic)
-        if (currentGlove.setID == currentOutfit.setID)
+        if (currentGlove.setID == correct_set && currentOutfit.setID == correct_set)
         {
             OnLevelComplete();
         }

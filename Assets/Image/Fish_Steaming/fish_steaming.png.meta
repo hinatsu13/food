@@ -1,0 +1,1183 @@
+fileFormatVersion: 2
+guid: 692ed6a2fb9ec084c9c881d4087a7073
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6908139445697331994
+    second: fish_steaming_0
+  - first:
+      213: -1746545546704127508
+    second: fish_steaming_1
+  - first:
+      213: 3012476194382015636
+    second: fish_steaming_2
+  - first:
+      213: -8278302464081114907
+    second: fish_steaming_3
+  - first:
+      213: -7072830115493399862
+    second: fish_steaming_4
+  - first:
+      213: -7741117324229872626
+    second: fish_steaming_5
+  - first:
+      213: 1103606762576173862
+    second: fish_steaming_6
+  - first:
+      213: 761905781974195717
+    second: fish_steaming_7
+  - first:
+      213: -6548939867948234305
+    second: fish_steaming_8
+  - first:
+      213: 4568883001695316327
+    second: fish_steaming_9
+  - first:
+      213: 2336098357299708427
+    second: fish_steaming_10
+  - first:
+      213: -5736374395273967555
+    second: fish_steaming_11
+  - first:
+      213: 7008471816933664610
+    second: fish_steaming_12
+  - first:
+      213: 9106408433297319407
+    second: fish_steaming_13
+  - first:
+      213: -2658483870815654327
+    second: fish_steaming_14
+  - first:
+      213: 8443562575885312314
+    second: fish_steaming_15
+  - first:
+      213: -7511107199556953381
+    second: fish_steaming_16
+  - first:
+      213: -5176049611132317514
+    second: fish_steaming_17
+  - first:
+      213: 8492491104706721724
+    second: fish_steaming_18
+  - first:
+      213: 9091445351320429895
+    second: fish_steaming_19
+  - first:
+      213: 1178821282739789991
+    second: fish_steaming_20
+  - first:
+      213: -884172312382101604
+    second: fish_steaming_21
+  - first:
+      213: -1088459096533558931
+    second: fish_steaming_22
+  - first:
+      213: 2365546587384737990
+    second: fish_steaming_23
+  - first:
+      213: -6241241417965139091
+    second: fish_steaming_24
+  - first:
+      213: 4277975869455170692
+    second: fish_steaming_25
+  - first:
+      213: 1246719016928518824
+    second: fish_steaming_26
+  - first:
+      213: -6889319833513659598
+    second: fish_steaming_27
+  - first:
+      213: 3085725013940257861
+    second: fish_steaming_28
+  - first:
+      213: 7477993718498310206
+    second: fish_steaming_29
+  - first:
+      213: 3893862233513833859
+    second: fish_steaming_30
+  - first:
+      213: 6269956907955115730
+    second: fish_steaming_31
+  - first:
+      213: -1888875560962117272
+    second: fish_steaming_32
+  - first:
+      213: 488442293400912050
+    second: fish_steaming_33
+  - first:
+      213: -503067466934159014
+    second: fish_steaming_34
+  - first:
+      213: 6099225383445748367
+    second: fish_steaming_35
+  - first:
+      213: 6577641503886588287
+    second: fish_steaming_36
+  - first:
+      213: 7323778062141708139
+    second: fish_steaming_37
+  - first:
+      213: 6620969592294035779
+    second: fish_steaming_38
+  - first:
+      213: -7202647353442585042
+    second: fish_steaming_39
+  - first:
+      213: 210367200530024350
+    second: fish_steaming_40
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fish_steaming_0
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 4470
+        width: 756
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ecb85866cb5120a0800000000000000
+      internalID: -6908139445697331994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_1
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 3824
+        width: 782
+        height: 723
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce9f8a0341603c7e0800000000000000
+      internalID: -1746545546704127508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_2
+      rect:
+        serializedVersion: 2
+        x: 2604
+        y: 3749
+        width: 1078
+        height: 798
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49ce57453277ec920800000000000000
+      internalID: 3012476194382015636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_3
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 3771
+        width: 1058
+        height: 776
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e8443de4cf8d1d80800000000000000
+      internalID: -8278302464081114907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_4
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 4241
+        width: 1141
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac2b451cb7248dd90800000000000000
+      internalID: -7072830115493399862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_5
+      rect:
+        serializedVersion: 2
+        x: 5336
+        y: 3371
+        width: 1113
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e04f7accec6029490800000000000000
+      internalID: -7741117324229872626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_6
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 4012
+        width: 892
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62b521fd08cc05f00800000000000000
+      internalID: 1103606762576173862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_7
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 4064
+        width: 153
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50e53ee9545d29a00800000000000000
+      internalID: 761905781974195717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_8
+      rect:
+        serializedVersion: 2
+        x: 3675
+        y: 4166
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb94d8b43ed7d15a0800000000000000
+      internalID: -6548939867948234305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_9
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 3775
+        width: 1318
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 769ae5012eee76f30800000000000000
+      internalID: 4568883001695316327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_10
+      rect:
+        serializedVersion: 2
+        x: 4968
+        y: 3824
+        width: 39
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b02093b241d7b6020800000000000000
+      internalID: 2336098357299708427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_11
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 3266
+        width: 430
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d388c0f41ed4460b0800000000000000
+      internalID: -5736374395273967555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_12
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 2064
+        width: 1922
+        height: 1082
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 267eaaa2cf7134160800000000000000
+      internalID: 7008471816933664610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_13
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 2179
+        width: 195
+        height: 858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe5ee46e836706e70800000000000000
+      internalID: 9106408433297319407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_14
+      rect:
+        serializedVersion: 2
+        x: 2638
+        y: 2179
+        width: 195
+        height: 858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94e6de6310b2b1bd0800000000000000
+      internalID: -2658483870815654327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_15
+      rect:
+        serializedVersion: 2
+        x: 3012
+        y: 2852
+        width: 43
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a312d664d6f8d2570800000000000000
+      internalID: 8443562575885312314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_16
+      rect:
+        serializedVersion: 2
+        x: 3059
+        y: 2891
+        width: 44
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bda578c2ccf23c790800000000000000
+      internalID: -7511107199556953381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_17
+      rect:
+        serializedVersion: 2
+        x: 3101
+        y: 2179
+        width: 411
+        height: 858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b0d8a47d4afa28b0800000000000000
+      internalID: -5176049611132317514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_18
+      rect:
+        serializedVersion: 2
+        x: 3814
+        y: 2176
+        width: 1113
+        height: 982
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb775322aa36bd570800000000000000
+      internalID: 8492491104706721724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_19
+      rect:
+        serializedVersion: 2
+        x: 5367
+        y: 2176
+        width: 1062
+        height: 1010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 745a454e06d4b2e70800000000000000
+      internalID: 9091445351320429895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_20
+      rect:
+        serializedVersion: 2
+        x: 3046
+        y: 2824
+        width: 30
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a0206306b30c5010800000000000000
+      internalID: 1178821282739789991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_21
+      rect:
+        serializedVersion: 2
+        x: 3015
+        y: 2718
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c97aa3867f9cab3f0800000000000000
+      internalID: -884172312382101604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_22
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 1081
+        width: 41
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d691396f73405e0f0800000000000000
+      internalID: -1088459096533558931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_23
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 964
+        width: 153
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c074b8861c14d020800000000000000
+      internalID: 2365546587384737990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_24
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 1066
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6b8bb47ff7a269a0800000000000000
+      internalID: -6241241417965139091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_25
+      rect:
+        serializedVersion: 2
+        x: 2377
+        y: 912
+        width: 321
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48c7198336c6e5b30800000000000000
+      internalID: 4277975869455170692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_26
+      rect:
+        serializedVersion: 2
+        x: 3164
+        y: 935
+        width: 189
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a2afba275c3d4110800000000000000
+      internalID: 1246719016928518824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_27
+      rect:
+        serializedVersion: 2
+        x: 3308
+        y: 1036
+        width: 53
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2337d53dc183460a0800000000000000
+      internalID: -6889319833513659598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_28
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 967
+        width: 124
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54442722d82b2da20800000000000000
+      internalID: 3085725013940257861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_29
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 727
+        width: 213
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e38b1b7baab27c760800000000000000
+      internalID: 7477993718498310206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_30
+      rect:
+        serializedVersion: 2
+        x: 1317
+        y: 870
+        width: 61
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 385b6e02217c90630800000000000000
+      internalID: 3893862233513833859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_31
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 680
+        width: 264
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d6dbaf869c530750800000000000000
+      internalID: 6269956907955115730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_32
+      rect:
+        serializedVersion: 2
+        x: 2567
+        y: 852
+        width: 86
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 861bfeb5fad59c5e0800000000000000
+      internalID: -1888875560962117272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_33
+      rect:
+        serializedVersion: 2
+        x: 3145
+        y: 807
+        width: 55
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b0407f8dab47c600800000000000000
+      internalID: 488442293400912050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_34
+      rect:
+        serializedVersion: 2
+        x: 3244
+        y: 707
+        width: 152
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a59755fddceb409f0800000000000000
+      internalID: -503067466934159014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_35
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 649
+        width: 311
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8a5451db2dc4a450800000000000000
+      internalID: 6099225383445748367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_36
+      rect:
+        serializedVersion: 2
+        x: 2338
+        y: 683
+        width: 152
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f79b603191a784b50800000000000000
+      internalID: 6577641503886588287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_37
+      rect:
+        serializedVersion: 2
+        x: 2658
+        y: 728
+        width: 95
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6751cf285943a560800000000000000
+      internalID: 7323778062141708139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_38
+      rect:
+        serializedVersion: 2
+        x: 2711
+        y: 784
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3415959c3c862eb50800000000000000
+      internalID: 6620969592294035779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_39
+      rect:
+        serializedVersion: 2
+        x: 2859
+        y: 671
+        width: 279
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e26b5afa46e0b0c90800000000000000
+      internalID: -7202647353442585042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_steaming_40
+      rect:
+        serializedVersion: 2
+        x: 3366
+        y: 724
+        width: 39
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e974cf3badf5be200800000000000000
+      internalID: 210367200530024350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fish_steaming_0: -6908139445697331994
+      fish_steaming_1: -1746545546704127508
+      fish_steaming_10: 2336098357299708427
+      fish_steaming_11: -5736374395273967555
+      fish_steaming_12: 7008471816933664610
+      fish_steaming_13: 9106408433297319407
+      fish_steaming_14: -2658483870815654327
+      fish_steaming_15: 8443562575885312314
+      fish_steaming_16: -7511107199556953381
+      fish_steaming_17: -5176049611132317514
+      fish_steaming_18: 8492491104706721724
+      fish_steaming_19: 9091445351320429895
+      fish_steaming_2: 3012476194382015636
+      fish_steaming_20: 1178821282739789991
+      fish_steaming_21: -884172312382101604
+      fish_steaming_22: -1088459096533558931
+      fish_steaming_23: 2365546587384737990
+      fish_steaming_24: -6241241417965139091
+      fish_steaming_25: 4277975869455170692
+      fish_steaming_26: 1246719016928518824
+      fish_steaming_27: -6889319833513659598
+      fish_steaming_28: 3085725013940257861
+      fish_steaming_29: 7477993718498310206
+      fish_steaming_3: -8278302464081114907
+      fish_steaming_30: 3893862233513833859
+      fish_steaming_31: 6269956907955115730
+      fish_steaming_32: -1888875560962117272
+      fish_steaming_33: 488442293400912050
+      fish_steaming_34: -503067466934159014
+      fish_steaming_35: 6099225383445748367
+      fish_steaming_36: 6577641503886588287
+      fish_steaming_37: 7323778062141708139
+      fish_steaming_38: 6620969592294035779
+      fish_steaming_39: -7202647353442585042
+      fish_steaming_4: -7072830115493399862
+      fish_steaming_40: 210367200530024350
+      fish_steaming_5: -7741117324229872626
+      fish_steaming_6: 1103606762576173862
+      fish_steaming_7: 761905781974195717
+      fish_steaming_8: -6548939867948234305
+      fish_steaming_9: 4568883001695316327
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
