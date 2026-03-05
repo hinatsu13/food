@@ -11,6 +11,7 @@ public class FSel_Spawner : MonoBehaviour
     [Header("Spawning Config")]
     [Tooltip("Index of fish to spawn in order, use the index in FishPrefab.")]
     public int[] SpawningQueue;
+    public bool randomMode = true;
 
     [Header("StaticClass config")]
     public GameObject ScoreIndicator;
@@ -23,16 +24,24 @@ public class FSel_Spawner : MonoBehaviour
 
     void Start()
     {
-        lastSpawn = Time.time;
     }
     private void Awake()
     {
-        SpawnFish(queue);
+        lastSpawn = Time.time;
+        if(randomMode)
+        {
+            Debug.Log("Enter");
+            SpawnFish();
+        }
+        else
+        {
+            SpawnFish(queue);
+        }
         FSel_ScoreManager.scoreIndicator = ScoreIndicator;
         FSel_ScoreManager.selectionScore = 0;
         FSel_ScoreManager.DisplayScore();
     }
-    void OnDrawGizmos()
+    void OnDrawGizmos() 
     {
         // Set the color for the gizmo
         Gizmos.color = Color.blue;
@@ -46,7 +55,11 @@ public class FSel_Spawner : MonoBehaviour
     }
     public void OnFishDestroyed()
     {
-        if (queue < SpawningQueue.Length)
+        if (randomMode)
+        {
+            SpawnFish();
+        }
+        else if (queue < SpawningQueue.Length)
         {
             SpawnFish(queue);
         }
@@ -68,6 +81,16 @@ public class FSel_Spawner : MonoBehaviour
         _fih.OnIncorrect.AddListener(FSel_ScoreManager.OnIncorrect);
         _fih.OnDestroyed.AddListener(OnFishDestroyed);
         queue++;
+    }
+    public void SpawnFish()
+    {
+        int rand = Random.Range(0, 7);
+        _fih = Instantiate(FishPrefab[rand], GetComponentInParent<Canvas>().transform);
+        _fih.transform.position = transform.position;
+        FSel_ScoreManager.activeFish = _fih;
+        _fih.OnCorrect.AddListener(FSel_ScoreManager.OnCorrect);
+        _fih.OnIncorrect.AddListener(FSel_ScoreManager.OnIncorrect);
+        _fih.OnDestroyed.AddListener(OnFishDestroyed);
     }
     public void OnEndGame()
     {

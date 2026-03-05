@@ -24,6 +24,8 @@ public class FSel_Fish : MonoBehaviour
     public UnityEvent OnFailed;
     public UnityEvent OnDiscard;
     public UnityEvent OnDestroyed;
+
+    [SerializeField] private LayerMask FishLayer;
     void Start()
     {
         
@@ -117,8 +119,8 @@ public class FSel_Fish : MonoBehaviour
     }
     private bool IsPositionInsideTrigger(Vector2 screenPosition)
     {
-        Collider2D hitcollider = Physics2D.OverlapPoint(screenPosition);
-        //Debug.Log(hitcollider);
+        Collider2D hitcollider = Physics2D.OverlapPoint(screenPosition, FishLayer);
+        //Debug.Log(hitcollider + $"{hitcollider == gameObject.GetComponent<Collider2D>()}");
         return hitcollider == gameObject.GetComponent<Collider2D>();
     }
     private void CheckSort()

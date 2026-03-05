@@ -4,14 +4,14 @@ using UnityEngine;
 public class FSel_Timer : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
-    private float currentTime = 0f;
+    private float currentTime = 60f;
     private bool timerIsRunning = true;
 
     void Update()
     {
         if (timerIsRunning)
         {
-            currentTime += Time.deltaTime; // Increment the time every frame
+            currentTime -= Time.deltaTime; // Increment the time every frame
             DisplayTime(currentTime);
         }
     }
