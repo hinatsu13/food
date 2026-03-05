@@ -20,7 +20,6 @@ public class FSel_Spawner : MonoBehaviour
     FSel_Fish _fih;
     float lastSpawn;
     int queue = 0;
-    public UnityEvent OnEnd;
 
     void Start()
     {
@@ -63,10 +62,6 @@ public class FSel_Spawner : MonoBehaviour
         {
             SpawnFish(queue);
         }
-        else
-        {
-            OnEndGame();
-        }
     }
     public void SpawnFish(int index)
     {
@@ -94,7 +89,10 @@ public class FSel_Spawner : MonoBehaviour
     }
     public void OnEndGame()
     {
+        if(_fih != null)
+        {
+            _fih.endGame();
+        }
         EndingPanel.SetActive(true);
-        OnEnd?.Invoke();
     }
 }

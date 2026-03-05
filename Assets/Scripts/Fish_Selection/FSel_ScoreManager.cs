@@ -6,6 +6,7 @@ public static class FSel_ScoreManager
     public static FSel_Fish activeFish;
     public static int selectionScore;
     public static GameObject scoreIndicator;
+    public static FSel_Timer timer;
     /// <summary>
     /// 
     /// </summary>

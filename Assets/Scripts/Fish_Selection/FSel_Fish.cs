@@ -26,6 +26,7 @@ public class FSel_Fish : MonoBehaviour
     public UnityEvent OnDestroyed;
 
     [SerializeField] private LayerMask FishLayer;
+    private bool isQuitting = false;
     void Start()
     {
         
@@ -42,8 +43,13 @@ public class FSel_Fish : MonoBehaviour
             IsInDiscard = true;
         }
     }
+    void OnApplicationQuit()
+    {
+        isQuitting = true;
+    }
     private void OnDestroy()
     {
+        if (isQuitting) return;
         OnDestroyed?.Invoke();
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -151,5 +157,16 @@ public class FSel_Fish : MonoBehaviour
         {
             transform.position = lastPosition;
         }
+    }
+
+    public void endGame()
+    {
+        Debug.Log("Ending Fish");
+        OnCorrect.RemoveAllListeners();
+        OnDiscard.RemoveAllListeners();
+        OnDestroyed.RemoveAllListeners();
+        OnFailed.RemoveAllListeners();
+        isQuitting = true;
+        Destroy(gameObject);
     }
 }
