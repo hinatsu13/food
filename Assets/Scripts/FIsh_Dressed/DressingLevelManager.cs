@@ -50,7 +50,6 @@ public class DressingLevelManager : MonoBehaviour
             characterRenderer.sprite = characterSprite[data.setID];
             outfitRenderer.gameObject.SetActive(true);
         }
-
         CheckWinCondition();
     }
 
