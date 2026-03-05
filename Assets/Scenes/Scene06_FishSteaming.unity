@@ -253,7 +253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4373849006731891581, guid: 06f663828bf356f44afbd7ce6317e9f7, type: 3}
       propertyPath: m_text
-      value: 
+      value: "\u0E01\u0E30\u0E40"
       objectReference: {fileID: 0}
     - target: {fileID: 4373849006731891581, guid: 06f663828bf356f44afbd7ce6317e9f7, type: 3}
       propertyPath: m_fontSize
@@ -270,7 +270,7 @@ PrefabInstance:
     - target: {fileID: 4373849006731891581, guid: 06f663828bf356f44afbd7ce6317e9f7, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 1858724064707560239, guid: b3425f382d41e0f45996c31c3e55f785, type: 2}
+      objectReference: {fileID: 3173078134828014446, guid: b3425f382d41e0f45996c31c3e55f785, type: 2}
     - target: {fileID: 4373849006731891581, guid: 06f663828bf356f44afbd7ce6317e9f7, type: 3}
       propertyPath: m_enableAutoSizing
       value: 0
