@@ -1,90 +1,129 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro; // แนะนำให้ใช้ TextMeshPro เพื่อความคมชัด
 
 public class DressingLevelManager : MonoBehaviour
 {
-    [Header("Character Display")]
-    public Image gloveRenderer;  // Image บนตัวละครสำหรับถุงมือ
-    public Image outfitRenderer; // Image บนตัวละครสำหรับชุด
-    public Image characterRenderer; // Image of character
+    [Header("Character Images")]
+    public Image gloveRenderer;
+    public Image outfitRenderer;
 
-    [Header("Character Sprite")]
-    public Sprite[] characterSprite;
-    
-    [Header("UI Feedback")]
-    public GameObject successPopup; // หน้าต่างที่จะเด้งเมื่อถูก
-    public TextMeshProUGUI infoText; // ข้อความข้อมูลชุด
-    public Button nextLevelButton;  // ปุ่มไปด่านต่อไป
+    [Header("UI Controls")]
+    public Button confirmButton;
 
-    [Header("Correct dress")]
-    [SerializeField]private int correct_set;
+    [Header("Overlays")]
+    public GameObject successOverlay;
+    public GameObject failOverlay;
 
-    // State ปัจจุบัน
     private ClothingItemData currentGlove;
     private ClothingItemData currentOutfit;
 
     void Start()
     {
-        // ซ่อน Popup ตอนเริ่ม
-        // successPopup.SetActive(false);
-        // nextLevelButton.interactable = false;
+        InitializeGame();
     }
 
-    // ฟังก์ชันรับค่าเมื่อผู้เล่นกดเลือกของ
+    // ==========================================
+    // Core Game Flow Functions (ฟังก์ชันหลัก)
+    // ==========================================
+
+    // ฟังก์ชันนี้ถูกเรียกจากปุ่มเลือกชุด (ItemButton)
     public void SelectItem(ClothingItemData data)
     {
-        // เติมบรรทัดนี้ลงไปเพื่อเช็คว่าปุ่มส่งข้อมูลมาถึง Manager ไหม
-        Debug.Log("ได้รับข้อมูลชุด: " + data.name + " ประเภท: " + data.itemType);
+        ApplyItemData(data);
+        UpdateConfirmButtonState();
+    }
 
+    // ฟังก์ชันนี้ผูกกับปุ่ม Confirm (ตรวจคำตอบ)
+    public void CheckAnswer()
+    {
+        if (!IsFullyDressed()) return;
+
+        if (currentGlove.setID == currentOutfit.setID)
+        {
+            ShowOverlay(successOverlay);
+        }
+        else
+        {
+            ShowOverlay(failOverlay);
+        }
+    }
+
+    // ฟังก์ชันนี้ผูกกับปุ่ม Retry (เริ่มใหม่)
+    public void Retry()
+    {
+        HideAllOverlays();
+        ResetClothing();
+        UpdateConfirmButtonState();
+    }
+
+    // ==========================================
+    // Single Responsibility Helpers (ฟังก์ชันย่อย)
+    // ==========================================
+
+    private void InitializeGame()
+    {
+        HideAllOverlays();
+        ResetClothing();
+        UpdateConfirmButtonState();
+    }
+
+    private void ApplyItemData(ClothingItemData data)
+    {
         if (data.itemType == ItemType.Glove)
         {
             currentGlove = data;
-            gloveRenderer.sprite = data.onCharacterSprite;
-            gloveRenderer.gameObject.SetActive(true);
+            UpdateCharacterVisual(gloveRenderer, data.onCharacterSprite);
         }
         else if (data.itemType == ItemType.Outfit)
         {
             currentOutfit = data;
-            outfitRenderer.sprite = data.onCharacterSprite;
-            characterRenderer.sprite = characterSprite[data.setID];
-            outfitRenderer.gameObject.SetActive(true);
-        }
-        CheckWinCondition();
-    }
-
-    private void CheckWinCondition()
-    {
-        // 1. ต้องใส่ครบทั้ง 2 ส่วน
-        if (currentGlove == null || currentOutfit == null) return;
-
-        // 2. เช็ค ID ว่าตรงกันไหม (Core Logic)
-        if (currentGlove.setID == correct_set && currentOutfit.setID == correct_set)
-        {
-            OnLevelComplete();
-        }
-        else
-        {
-            Debug.Log("ผิดคู่! ลองใหม่");
-            // อาจจะเพิ่ม Effect แจ้งเตือนว่าผิดตรงนี้ได้
+            UpdateCharacterVisual(outfitRenderer, data.onCharacterSprite);
         }
     }
 
-    private void OnLevelComplete()
+    private void UpdateCharacterVisual(Image rendererImage, Sprite newSprite)
     {
-        Debug.Log("ถูกต้อง! setID: " + currentGlove.setID);
+        rendererImage.sprite = newSprite;
+        rendererImage.gameObject.SetActive(true);
         
-        // แสดงข้อมูลของชุด (ดึงมาจาก Outfit หรือ Glove ก็ได้เพราะ ID เดียวกัน)
-        infoText.text = currentOutfit.description;
-        
-        // เปิด Popup และปุ่มไปต่อ
-        successPopup.SetActive(true);
-        // nextLevelButton.interactable = true;
+        // ป้องกันปัญหารูปโปร่งใส
+        var tempColor = rendererImage.color;
+        tempColor.a = 1f;
+        rendererImage.color = tempColor;
     }
-    
-    public void LoadNextScene()
+
+    private void ResetClothing()
     {
-        // โค้ดเปลี่ยน Scene
-        // SceneManager.LoadScene("NextLevelName");
+        // 1. ลบข้อมูลที่จำไว้
+        currentGlove = null;
+        currentOutfit = null;
+
+        // 2. ซ่อนรูปบนตัวละคร
+        if (gloveRenderer != null) gloveRenderer.gameObject.SetActive(false);
+        if (outfitRenderer != null) outfitRenderer.gameObject.SetActive(false);
+    }
+
+    private bool IsFullyDressed()
+    {
+        return currentGlove != null && currentOutfit != null;
+    }
+
+    private void UpdateConfirmButtonState()
+    {
+        if (confirmButton != null)
+        {
+            confirmButton.interactable = IsFullyDressed();
+        }
+    }
+
+    private void ShowOverlay(GameObject overlay)
+    {
+        if (overlay != null) overlay.SetActive(true);
+    }
+
+    private void HideAllOverlays()
+    {
+        if (successOverlay != null) successOverlay.SetActive(false);
+        if (failOverlay != null) failOverlay.SetActive(false);
     }
 }
