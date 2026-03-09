@@ -1,6 +1,6 @@
-using System;
 using UnityEngine;
-using System.Collections;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class fill_image : MonoBehaviour
@@ -9,6 +9,8 @@ public class fill_image : MonoBehaviour
     private bool coolingDown = false;
     public float waitTime = 30.0f;
     private bool stop;
+    public UnityEvent sparkle;
+    private bool calledEvent = false;
 
     private void Start()
     {
@@ -24,7 +26,7 @@ public class fill_image : MonoBehaviour
         {
             if (coolingDown == false)
             {
-                        //Reduce fill amount over 30 seconds
+                //Reduce fill amount over 30 seconds
                 cooldown.fillAmount += 1.0f / waitTime * Time.deltaTime;
             }
             if (coolingDown)
@@ -42,10 +44,23 @@ public class fill_image : MonoBehaviour
                 coolingDown = true;;
             }
             
-            if (cooldown.fillAmount <= 0.42 && cooldown.fillAmount >= 0.4)
+            if (cooldown.fillAmount <= 0.42 && cooldown.fillAmount >= 0.4 && coolingDown)
             {
                 stop = true;
             }
         }
+        else
+        {
+            if (calledEvent == false)
+            {
+                TriggerEvent();
+            }
+        }
+    }
+
+    void TriggerEvent()
+    {
+        calledEvent = true;
+        sparkle?.Invoke();
     }
 }
