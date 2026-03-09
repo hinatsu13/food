@@ -27,6 +27,8 @@ public class Fish_Prep_Handler : MonoBehaviour
     private GameObject showerBoxA;
     [SerializeField]
     private GameObject showerBoxB;
+    [SerializeField]
+    private GameObject sparkle;
 
     public void SplitFish()
     {
@@ -66,5 +68,6 @@ public class Fish_Prep_Handler : MonoBehaviour
         cleanFishCheck.SetActive(false);
         showerBoxA.SetActive(false);
         showerBoxB.SetActive(false);
+        sparkle.SetActive(true);
     }
 }
