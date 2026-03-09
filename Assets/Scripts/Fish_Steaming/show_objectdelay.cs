@@ -3,7 +3,7 @@ using UnityEngine;
 public class show_buttondelay : MonoBehaviour
 {
     [SerializeField] private GameObject button;
-    [SerializeField] private int delay;
+    [SerializeField] private float delay = 10.0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -17,6 +17,10 @@ public class show_buttondelay : MonoBehaviour
         
     }
 
+    public void TriggerButton()
+    {
+        Invoke(nameof(ShowButton), delay);
+    }
     void ShowButton()
     {
         button.SetActive(true);
