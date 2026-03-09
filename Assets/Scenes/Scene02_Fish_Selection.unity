@@ -1746,8 +1746,11 @@ MonoBehaviour:
   - {fileID: 7606043033466370134, guid: 27606a5d49ec78e4c892bbec70f538a2, type: 3}
   - {fileID: 7606043033466370134, guid: 76c5fd25c106e324f98f4b2b74ab9981, type: 3}
   - {fileID: 7606043033466370134, guid: e2cb4f2d1b58eb54f8806c1846b85fc5, type: 3}
+  spawnMode: 1
+  baseSpawnRate: 3.5
+  minSpawnRate: 1.5
+  SpawnRateIncrement: 1.5
   SpawningQueue: 00000000
-  randomMode: 1
   ScoreIndicator: {fileID: 2043696974}
   EndingPanel: {fileID: 373798151}
 --- !u!224 &1586443246
