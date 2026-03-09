@@ -562,72 +562,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fish_prep_9
-      rect:
-        serializedVersion: 2
-        x: 6149
-        y: 2491
-        width: 41
-        height: 60
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f9d70cf2d581e4440800000000000000
-      internalID: 4921898231274700191
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fish_prep_10
-      rect:
-        serializedVersion: 2
-        x: 6183
-        y: 2463
-        width: 29
-        height: 38
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 421e9b7a86b333b60800000000000000
-      internalID: 7724583106547147044
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fish_prep_11
-      rect:
-        serializedVersion: 2
-        x: 6722
-        y: 2483
-        width: 54
-        height: 71
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 48684333495eaaa40800000000000000
-      internalID: 5380365129524479620
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: fish_prep_12
       rect:
         serializedVersion: 2
@@ -760,28 +694,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fish_prep_18
-      rect:
-        serializedVersion: 2
-        x: 6711
-        y: 2447
-        width: 32
-        height: 39
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f0dae9293ac887f90800000000000000
-      internalID: -6955654990306300657
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: fish_prep_19
       rect:
         serializedVersion: 2
@@ -799,72 +711,6 @@ TextureImporter:
       bones: []
       spriteID: dc62bad1343611d60800000000000000
       internalID: 7859171964649940685
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fish_prep_20
-      rect:
-        serializedVersion: 2
-        x: 6152
-        y: 2357
-        width: 28
-        height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ba2e5eca750607ba0800000000000000
-      internalID: -6093264366153112917
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fish_prep_21
-      rect:
-        serializedVersion: 2
-        x: 6719
-        y: 2334
-        width: 31
-        height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2d054e7dd36618450800000000000000
-      internalID: 6089260586982723794
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fish_prep_22
-      rect:
-        serializedVersion: 2
-        x: 6753
-        y: 2375
-        width: 26
-        height: 38
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c9a1e4bf3b15970c0800000000000000
-      internalID: -4577537712788202852
       vertices: []
       indices: 
       edges: []

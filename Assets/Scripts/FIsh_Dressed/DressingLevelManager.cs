@@ -14,6 +14,9 @@ public class DressingLevelManager : MonoBehaviour
     public GameObject successOverlay;
     public GameObject failOverlay;
 
+    [Header("Correct dress")]
+    [SerializeField] private int correct_set;
+
     private ClothingItemData currentGlove;
     private ClothingItemData currentOutfit;
 
@@ -38,7 +41,7 @@ public class DressingLevelManager : MonoBehaviour
     {
         if (!IsFullyDressed()) return;
 
-        if (currentGlove.setID == currentOutfit.setID)
+        if (currentGlove.setID == correct_set && currentOutfit.setID == correct_set)
         {
             ShowOverlay(successOverlay);
         }
