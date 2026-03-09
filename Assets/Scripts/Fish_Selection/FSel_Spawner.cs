@@ -20,6 +20,8 @@ public class FSel_Spawner : MonoBehaviour
     public float minSpawnRate = 1.5f;
     [Tooltip("Used to define a how much to reduce the spawn intervals on correct sorting in percentage. [RandomTimebased Spawnmode]")]
     public float SpawnRateIncrement = 0.1f;
+    [Tooltip("How much speed the fish will get with each combo.")]
+    public float SpeedModifierIncrement = 0.05f;
     [Tooltip("Index of fish to spawn in order, use the index in FishPrefab. [Queue Spawnmode]")]
     public int[] SpawningQueue;
 
@@ -32,6 +34,7 @@ public class FSel_Spawner : MonoBehaviour
     int queue = 0;
     float spawnRate;
     bool isEnd = false;
+    float speedModifier = 1;
 
     public enum SpawnMode
     {
@@ -114,6 +117,7 @@ public class FSel_Spawner : MonoBehaviour
     {
         _fih = Instantiate(FishPrefab[Type], GetComponentInParent<Canvas>().transform);
         _fih.transform.position = transform.position;
+        _fih.moveSpeed += _fih.moveSpeed * speedModifier;
         FSel_ScoreManager.activeFish = _fih;
         _fih.OnCorrect.AddListener(OnCorrect);
         _fih.OnCorrect.AddListener(FSel_ScoreManager.OnCorrect);
@@ -125,6 +129,7 @@ public class FSel_Spawner : MonoBehaviour
     public void OnCorrect(GameObject go)
     {
         spawnRate = Mathf.Clamp(spawnRate - (spawnRate * SpawnRateIncrement), minSpawnRate, baseSpawnRate);
+        speedModifier += SpeedModifierIncrement;
     }
     public void OnDiscard()
     {
@@ -133,6 +138,7 @@ public class FSel_Spawner : MonoBehaviour
     public void OnIncorrect(GameObject go)
     {
         spawnRate = baseSpawnRate;
+        speedModifier = 1;
     }
     public void OnEndGame()
     {

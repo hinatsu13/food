@@ -37,6 +37,7 @@ public class FSel_Timer : MonoBehaviour
     public void StopTime()
     {
         timerIsRunning = false;
+        Time.timeScale = 0;
     }
 
     public void StartTime()
