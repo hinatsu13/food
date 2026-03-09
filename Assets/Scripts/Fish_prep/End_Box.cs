@@ -15,7 +15,7 @@ public class End_Box : MonoBehaviour, IDropHandler
         {
             Debug.Log("Calling Event");
             knife.parentAfterDrag = transform;
-            calledEvent.Invoke();
+            calledEvent?.Invoke();
         }
         
     }
