@@ -9,7 +9,7 @@ public class Tray_Box : MonoBehaviour, IDropHandler
         GameObject dropped = eventData.pointerDrag;
         Gutz guts = dropped.GetComponent<Gutz>();
         guts.parentAfterDrag = transform;
-        Debug.Log("Fishnish the stage");
+        FindFirstObjectByType<Fish_Prep_Handler>().GetComponent<Fish_Prep_Handler>().CleanFish();
     }
     void Update()
     {
