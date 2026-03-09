@@ -4,7 +4,11 @@ using UnityEngine.UI;
 public class Fish_Prep_Handler : MonoBehaviour
 {
     [SerializeField]
-    private GameObject Panel;
+    private GameObject game_Panel;
+    [SerializeField]
+    private GameObject cutscene_Panel;
+    [SerializeField]
+    private GameObject Fish;
     [SerializeField]
     private GameObject topFillet;    // Assign in Inspector
     [SerializeField]
@@ -35,8 +39,7 @@ public class Fish_Prep_Handler : MonoBehaviour
         Debug.Log("The fish is filleted!");
         // Disable the fish
         DragAbleObjective.SetActive(false);
-        // OnlyImage Otherwise the event not working (Maybe)
-        GetComponent<Image>().enabled = false;
+        
         GuideLine.SetActive(false);
         
         // Enable the cut pieces
@@ -45,7 +48,8 @@ public class Fish_Prep_Handler : MonoBehaviour
         Gutz.SetActive(true);
         Tray.SetActive(true);
         GutzBox.SetActive(true);
-        
+        //Fish gone
+        Fish.SetActive(false);
     }
 
     public void CleanFish()
@@ -69,5 +73,12 @@ public class Fish_Prep_Handler : MonoBehaviour
         showerBoxA.SetActive(false);
         showerBoxB.SetActive(false);
         sparkle.SetActive(true);
+        Invoke(nameof(TriggerCutscene), 5.0f);
+    }
+    public void TriggerCutscene()
+    {
+        //Open first hide the close one
+        cutscene_Panel.SetActive(true); 
+        game_Panel.SetActive(false);
     }
 }

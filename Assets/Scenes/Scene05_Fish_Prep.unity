@@ -213,8 +213,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1003593530}
   - {fileID: 818806872}
+  - {fileID: 1003593530}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -972,7 +972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
---- !u!114 &307458162
+--- !u!114 &307458164
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -981,12 +981,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 307458158}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89abd635ad7752f48ab10d6fb9609b67, type: 3}
+  m_Script: {fileID: 11500000, guid: 4aa77b50a0f199a4e89dbcca61b55838, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Gutz
+  m_EditorClassIdentifier: Assembly-CSharp::Dragable_Object
+  Dropbox: {fileID: 1837687033}
   image: {fileID: 307458160}
   parentAfterDrag: {fileID: 0}
-  tray_box: {fileID: 485082031}
 --- !u!1 &327942471
 GameObject:
   m_ObjectHideFlags: 0
@@ -1234,9 +1234,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 485082031}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 249ae9bba9033a041bdbf202049c8ae9, type: 3}
+  m_Script: {fileID: 11500000, guid: d9b7221833b92dc4e8e546d0c87e1bd2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Tray_Box
+  m_EditorClassIdentifier: Assembly-CSharp::End_Box
+  calledEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2034154565}
+        m_TargetAssemblyTypeName: Fish_Prep_Handler, Assembly-CSharp
+        m_MethodName: CleanFish
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &552365111
 GameObject:
   m_ObjectHideFlags: 0
@@ -1347,6 +1362,11 @@ Transform:
   - {fileID: 485082032}
   m_Father: {fileID: 818806872}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &670953662 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4487493215534429674, guid: 31bbea1c14bc7fd46bdf07629a31f813, type: 3}
+  m_PrefabInstance: {fileID: 6671121398501355198}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &703121728
 GameObject:
   m_ObjectHideFlags: 0
@@ -1401,7 +1421,7 @@ MonoBehaviour:
   calledEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1375841872}
+      - m_Target: {fileID: 2034154565}
         m_TargetAssemblyTypeName: Fish_Prep_Handler, Assembly-CSharp
         m_MethodName: Cutscene_Trigger
         m_Mode: 1
@@ -1779,7 +1799,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &818806872
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1793,7 +1813,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 552365112}
-  - {fileID: 1375841869}
   - {fileID: 734415304}
   - {fileID: 1722516466}
   - {fileID: 1830121232}
@@ -2129,7 +2148,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1003593530
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2549,9 +2568,8 @@ GameObject:
   - component: {fileID: 1375841869}
   - component: {fileID: 1375841871}
   - component: {fileID: 1375841870}
-  - component: {fileID: 1375841872}
   m_Layer: 6
-  m_Name: Base_Fish_Handler
+  m_Name: Base_Fish
   m_TagString: Fish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2566,14 +2584,14 @@ RectTransform:
   m_GameObject: {fileID: 1375841868}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.23395832, y: 0.23395832, z: 0.23395832}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 818806872}
+  m_Father: {fileID: 1830121232}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00019741, y: -125}
+  m_AnchoredPosition: {x: 11.340345, y: 19.07016}
   m_SizeDelta: {x: 800.2806, y: 390.00003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1375841870
@@ -2614,30 +2632,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1375841868}
   m_CullTransparentMesh: 1
---- !u!114 &1375841872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1375841868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd17723655b58e44ba68fe3b02ccf888, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Fish_Prep_Handler
-  Panel: {fileID: 0}
-  topFillet: {fileID: 302628507}
-  bottomFillet: {fileID: 1713390504}
-  Gutz: {fileID: 1837687033}
-  GutzBox: {fileID: 307458158}
-  Tray: {fileID: 485082031}
-  GuideLine: {fileID: 898177848}
-  DragAbleObjective: {fileID: 2136522886}
-  showerHead: {fileID: 813808395}
-  cleanFishCheck: {fileID: 1006461212}
-  showerBoxA: {fileID: 281677862}
-  showerBoxB: {fileID: 703121728}
 --- !u!1 &1510293313
 GameObject:
   m_ObjectHideFlags: 0
@@ -2754,7 +2748,7 @@ MonoBehaviour:
   calledEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1375841872}
+      - m_Target: {fileID: 2034154565}
         m_TargetAssemblyTypeName: Fish_Prep_Handler, Assembly-CSharp
         m_MethodName: SplitFish
         m_Mode: 1
@@ -3446,6 +3440,7 @@ Transform:
   m_LocalScale: {x: 4.2742653, y: 4.2742653, z: 4.2742653}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1375841869}
   - {fileID: 898177849}
   - {fileID: 1118728760}
   - {fileID: 1677107133}
@@ -3566,6 +3561,78 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1837687033}
   m_CullTransparentMesh: 1
+--- !u!1 &2034154564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2034154567}
+  - component: {fileID: 2034154566}
+  - component: {fileID: 2034154565}
+  m_Layer: 6
+  m_Name: Base_Fish_Handler
+  m_TagString: Fish
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2034154565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034154564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd17723655b58e44ba68fe3b02ccf888, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Fish_Prep_Handler
+  game_Panel: {fileID: 818806871}
+  cutscene_Panel: {fileID: 1003593529}
+  Fish: {fileID: 1375841868}
+  topFillet: {fileID: 302628507}
+  bottomFillet: {fileID: 1713390504}
+  Gutz: {fileID: 1837687033}
+  GutzBox: {fileID: 307458158}
+  Tray: {fileID: 485082031}
+  GuideLine: {fileID: 898177848}
+  DragAbleObjective: {fileID: 2136522886}
+  showerHead: {fileID: 813808395}
+  cleanFishCheck: {fileID: 1006461212}
+  showerBoxA: {fileID: 281677862}
+  showerBoxB: {fileID: 703121728}
+  sparkle: {fileID: 670953662}
+--- !u!222 &2034154566
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034154564}
+  m_CullTransparentMesh: 1
+--- !u!224 &2034154567
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034154564}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5390625, y: 0.5390625, z: 0.5390625}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 959.99994, y: 521.71014}
+  m_SizeDelta: {x: 800.2806, y: 390.00003}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2074018246
 GameObject:
   m_ObjectHideFlags: 0
@@ -3857,7 +3924,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7631273929010434073, guid: 1c9cf4840de7954448c1c8c27aacb2cb, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 307458162}
+      addedObject: {fileID: 307458164}
   m_SourcePrefab: {fileID: 100100000, guid: 1c9cf4840de7954448c1c8c27aacb2cb, type: 3}
 --- !u!1001 &5618707840317057040
 PrefabInstance:
@@ -4099,3 +4166,4 @@ SceneRoots:
   - {fileID: 1530582016}
   - {fileID: 219597269}
   - {fileID: 65015150}
+  - {fileID: 2034154567}
