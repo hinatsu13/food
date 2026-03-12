@@ -115,7 +115,7 @@ public class FSel_Spawner : MonoBehaviour
     }
     public void Spawn(int Type)
     {
-        _fih = Instantiate(FishPrefab[Type], GetComponentInParent<Canvas>().transform);
+        _fih = Instantiate(FishPrefab[Type], transform);
         _fih.transform.position = transform.position;
         _fih.moveSpeed += _fih.moveSpeed * speedModifier;
         FSel_ScoreManager.activeFish = _fih;
