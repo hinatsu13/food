@@ -73,3 +73,7 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Assets/TextMesh Pro/Fonts/THSarabun Bold SDF.asset
+Assets/TextMesh Pro/Fonts/THSarabun BoldItalic SDF.asset
+Assets/TextMesh Pro/Fonts/THSarabun Italic SDF.asset
+Assets/TextMesh Pro/Fonts/THSarabun SDF.asset

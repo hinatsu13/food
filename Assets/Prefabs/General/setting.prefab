@@ -490,6 +490,7 @@ GameObject:
   - component: {fileID: 2888337070447019052}
   - component: {fileID: 7021471979117528874}
   - component: {fileID: 5207522825429212267}
+  - component: {fileID: 112909930915402757}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -579,6 +580,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 301fd755d88c548409ef2692eb212f4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::setting
+--- !u!114 &112909930915402757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6740388133822587433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a138f27d2bef09545a5adc3a95d9d58c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnterScene
 --- !u!1 &6830623234575047530
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,6 +878,7 @@ GameObject:
   - component: {fileID: 7289655874673170114}
   - component: {fileID: 1098767458171910994}
   - component: {fileID: 3926045355874959544}
+  - component: {fileID: 7039655835010751184}
   m_Layer: 5
   m_Name: agian_btn
   m_TagString: Untagged
@@ -985,7 +999,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 112909930915402757}
         m_TargetAssemblyTypeName: EnterScene, Assembly-CSharp
         m_MethodName: LoadNextScene
         m_Mode: 5
@@ -994,9 +1008,21 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Scenes/Scene06_FishSteaming
+          m_StringArgument: Scenes/Scene01_Fish_Info
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7039655835010751184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7610451916831582579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a138f27d2bef09545a5adc3a95d9d58c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnterScene
 --- !u!1 &8602288333550929891
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,18 +1143,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: EnterScene, Assembly-CSharp
-        m_MethodName: LoadNextScene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Scenes/Scene_Selector
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 5207522825429212267}
         m_TargetAssemblyTypeName: setting, Assembly-CSharp
         m_MethodName: TogglePause
@@ -1139,6 +1153,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 112909930915402757}
+        m_TargetAssemblyTypeName: EnterScene, Assembly-CSharp
+        m_MethodName: LoadNextScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Scenes/Scene_Selector
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &8858480737075828368
@@ -1545,6 +1571,18 @@ MonoBehaviour:
       - m_Target: {fileID: 7021471979117528874}
         m_TargetAssemblyTypeName: Popup_panel, Assembly-CSharp
         m_MethodName: ClosePanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5207522825429212267}
+        m_TargetAssemblyTypeName: setting, Assembly-CSharp
+        m_MethodName: TogglePause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
