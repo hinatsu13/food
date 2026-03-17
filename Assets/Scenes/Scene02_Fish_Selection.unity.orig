@@ -881,6 +881,11 @@ RectTransform:
   m_Children:
   - {fileID: 1614063998}
   - {fileID: 439260819}
+<<<<<<< Updated upstream
+  - {fileID: 1044399147}
+  - {fileID: 1586443246}
+=======
+>>>>>>> Stashed changes
   - {fileID: 2053396607}
   - {fileID: 1393191395}
   - {fileID: 373798152}

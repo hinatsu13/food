@@ -22,15 +22,13 @@ public class FSel_Fish : MonoBehaviour
     public UnityEvent<GameObject> OnCorrect;
     public UnityEvent<GameObject> OnIncorrect;
     public UnityEvent OnFailed;
-    public UnityEvent OnDiscard;
+    public UnityEvent<bool> OnDiscard;
     public UnityEvent OnDestroyed;
 
     [SerializeField] private LayerMask FishLayer;
     private bool isQuitting = false;
-    void Start()
-    {
-        
-    }
+
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Storage"))
@@ -61,8 +59,11 @@ public class FSel_Fish : MonoBehaviour
         }
         if (collision.CompareTag("Edge"))
         {
-            OnFailed?.Invoke();
-            Destroy(gameObject);
+            if(hovered_storage == null && !IsInDiscard)
+            {
+                OnFailed?.Invoke();
+                Destroy(gameObject);
+            }
         }
         if (collision.CompareTag("Discard"))
         {
@@ -151,6 +152,14 @@ public class FSel_Fish : MonoBehaviour
             }
         }else if (IsInDiscard)
         {
+            if(Species < 0)
+            {
+                OnDiscard?.Invoke(true);
+            }
+            else
+            {
+                OnDiscard?.Invoke(false);
+            }            
             Destroy(gameObject);
         }
         else
@@ -159,13 +168,11 @@ public class FSel_Fish : MonoBehaviour
         }
     }
 
+
+
     public void endGame()
     {
         Debug.Log("Ending Fish");
-        OnCorrect.RemoveAllListeners();
-        OnDiscard.RemoveAllListeners();
-        OnDestroyed.RemoveAllListeners();
-        OnFailed.RemoveAllListeners();
         isQuitting = true;
         Destroy(gameObject);
     }

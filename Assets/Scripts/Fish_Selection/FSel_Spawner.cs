@@ -1,12 +1,14 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 public class FSel_Spawner : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [Header("Spawning Data")]
     [Tooltip("Prefab of fish that can spawn.")]
-    public FSel_Fish[] FishPrefab;
+    [SerializeField]public FishSpawning[] FishPrefab;
 
     [Header("Spawning Config")]
     [Tooltip("How does the fish spawn.\n" +
@@ -35,19 +37,26 @@ public class FSel_Spawner : MonoBehaviour
     float spawnRate;
     bool isEnd = false;
     float speedModifier = 1;
-
+    int lastFish;
+    [Serializable]
+    public struct FishSpawning {
+        [SerializeField] public FSel_Fish FishPrefab;
+        [SerializeField] public float spawnRate;
+    }
     public enum SpawnMode
     {
         RandomSingle,
         RandomTimeBased,
         Queue
     }
+    private float totalWeight;
 
     void Start()
     {
     }
     private void Awake()
     {
+        foreach (var fish in FishPrefab) totalWeight += fish.spawnRate;
         lastSpawn = Time.time;
         spawnRate = baseSpawnRate;
         if(spawnMode == SpawnMode.RandomSingle || spawnMode == SpawnMode.RandomTimeBased)
@@ -110,12 +119,29 @@ public class FSel_Spawner : MonoBehaviour
         {
             _fih.OnSorted.RemoveAllListeners();
         }
-        int rand = Random.Range(0, 7);
-        Spawn(rand);
+        //Pick a random point between 0 and the total sum
+        float roll = Random.Range(0, totalWeight);
+        float cumulative = 0;
+        int selectedIndex = 0;
+
+        //Iterate through the prefabs to see where the "roll" landed
+        for (int i = 0; i < FishPrefab.Length; i++)
+        {
+            cumulative += FishPrefab[i].spawnRate;
+            if (roll <= cumulative)
+            {
+                selectedIndex = i;
+                break;
+            }
+        }
+        //int goodBad = Random.Range(0, 2);
+        //int rand = Random.Range(0, 4) + (goodBad * 4);
+        Spawn(selectedIndex);
     }
     public void Spawn(int Type)
     {
-        _fih = Instantiate(FishPrefab[Type], transform);
+        _fih = Instantiate(FishPrefab[Type].FishPrefab, GetComponentInParent<Canvas>().transform);
+        lastFish = Type;
         _fih.transform.position = transform.position;
         _fih.moveSpeed += _fih.moveSpeed * speedModifier;
         FSel_ScoreManager.activeFish = _fih;
@@ -125,15 +151,27 @@ public class FSel_Spawner : MonoBehaviour
         _fih.OnIncorrect.AddListener(FSel_ScoreManager.OnIncorrect);
         _fih.OnDestroyed.AddListener(OnFishDestroyed);
         _fih.OnDiscard.AddListener(OnDiscard);
+        _fih.OnDiscard.AddListener(FSel_ScoreManager.OnDiscard);
+        _fih.OnFailed.AddListener(FSel_ScoreManager.OnFail);
     }
     public void OnCorrect(GameObject go)
     {
         spawnRate = Mathf.Clamp(spawnRate - (spawnRate * SpawnRateIncrement), minSpawnRate, baseSpawnRate);
         speedModifier += SpeedModifierIncrement;
     }
-    public void OnDiscard()
+    public void OnDiscard(bool correct)
     {
-
+        Debug.Log($"Discard correctly: {correct }");
+        if (correct)
+        {
+            spawnRate = Mathf.Clamp(spawnRate - (spawnRate * SpawnRateIncrement), minSpawnRate, baseSpawnRate);
+            speedModifier += SpeedModifierIncrement;
+        }
+        else
+        {
+            spawnRate = baseSpawnRate;
+            speedModifier = 1;
+        }
     }
     public void OnIncorrect(GameObject go)
     {

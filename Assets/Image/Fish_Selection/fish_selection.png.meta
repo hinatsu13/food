@@ -842,6 +842,50 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: FSel_Correct
+      rect:
+        serializedVersion: 2
+        x: 3018
+        y: 1013
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f58da7b6ea0fc6e4cb5b10cf7913701f
+      internalID: -249062218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FSel_Incorrect
+      rect:
+        serializedVersion: 2
+        x: 3403
+        y: 999
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36cc01d45b6916d44a24cf56284d73e2
+      internalID: -359058988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -866,8 +910,10 @@ TextureImporter:
       FSel_BigEye: 9164540552966324854
       FSel_Bonito: -3217858228938379351
       FSel_Btn: -1625052673952996969
+      FSel_Correct: -249062218
       FSel_Discard: 6270590727763942498
       FSel_Happy: -1470343636989468466
+      FSel_Incorrect: -359058988
       FSel_Sad: -413742852495472209
       FSel_SkipJack: 2113096911616276548
       FSel_YellowFin: -5045324502689271748
