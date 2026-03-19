@@ -8,72 +8,46 @@ public class Fish_Prep_Handler : MonoBehaviour
     [SerializeField]
     private GameObject cutscene_Panel;
     [SerializeField]
-    private GameObject Fish;
+    private GameObject fillet_Fish;
     [SerializeField]
-    private GameObject topFillet;    // Assign in Inspector
+    private GameObject guts_The_Fish;
+
+    [SerializeField] 
+    private GameObject clean_Sparkle;// Assign in Inspector
     [SerializeField]
-    private GameObject bottomFillet;
+    private GameObject Clean_Fish;
     [SerializeField]
-    private GameObject Gutz;
+    private GameObject show_After_Cutscene;
     [SerializeField]
-    private GameObject GutzBox;
-    [SerializeField]
-    private GameObject Tray;
-    [SerializeField]
-    private GameObject GuideLine;
-    [SerializeField]
-    private GameObject DragAbleObjective;
-    [SerializeField]
-    private GameObject showerHead;
-    [SerializeField]
-    private GameObject cleanFishCheck;
-    [SerializeField]
-    private GameObject showerBoxA;
-    [SerializeField]
-    private GameObject showerBoxB;
-    [SerializeField]
-    private GameObject sparkle;
+    private GameObject image_Person;    
 
     public void SplitFish()
     {
         Debug.Log("The fish is filleted!");
         // Disable the fish
-        DragAbleObjective.SetActive(false);
-        
-        GuideLine.SetActive(false);
-        
-        // Enable the cut pieces
-        topFillet.SetActive(true);
-        bottomFillet.SetActive(true);
-        Gutz.SetActive(true);
-        Tray.SetActive(true);
-        GutzBox.SetActive(true);
-        //Fish gone
-        Fish.SetActive(false);
+        fillet_Fish.SetActive(false);
+        guts_The_Fish.SetActive(true);
     }
 
     public void CleanFish()
     {
         //Turn Off Old guts
-        Gutz.SetActive(false);
-        Tray.SetActive(false);
-        GutzBox.SetActive(false);
-        
-        //Active new minigame
-        showerHead.SetActive(true);
-        cleanFishCheck.SetActive(true);
-        showerBoxA.SetActive(true);
-        showerBoxB.SetActive(true);
+        guts_The_Fish.SetActive(false);
+        Clean_Fish.SetActive(true);
     }
 
     public void Cutscene_Trigger()
     {
-        showerHead.SetActive(false);
-        cleanFishCheck.SetActive(false);
-        showerBoxA.SetActive(false);
-        showerBoxB.SetActive(false);
-        sparkle.SetActive(true);
+        Clean_Fish.SetActive(false);
+        clean_Sparkle.SetActive(true);
         Invoke(nameof(TriggerCutscene), 5.0f);
+        Invoke(nameof(finish_Sniffing), 10.0f);
+    }
+
+    public void finish_Sniffing()
+    {
+        show_After_Cutscene.SetActive(true);
+        image_Person.SetActive(false);
     }
     public void TriggerCutscene()
     {
