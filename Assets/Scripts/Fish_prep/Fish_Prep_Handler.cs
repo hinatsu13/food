@@ -40,8 +40,16 @@ public class Fish_Prep_Handler : MonoBehaviour
     {
         Clean_Fish.SetActive(false);
         clean_Sparkle.SetActive(true);
-        Invoke(nameof(TriggerCutscene), 5.0f);
-        Invoke(nameof(finish_Sniffing), 10.0f);
+        StartCoroutine(CutsceneSequence());
+    }
+
+    private System.Collections.IEnumerator CutsceneSequence()
+    {
+        yield return new WaitForSeconds(5.0f);
+        TriggerCutscene();
+
+        yield return new WaitForSeconds(5.0f); // 5+5 = 10s total
+        finish_Sniffing();
     }
 
     public void finish_Sniffing()

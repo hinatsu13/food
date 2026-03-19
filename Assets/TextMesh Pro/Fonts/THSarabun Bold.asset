@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09592a7add25448cbd0d0b2acc2e2e53, type: 3}
-  m_Name: THSarabun
+  m_Name: THSarabun Bold
   m_EditorClassIdentifier: PhEngine.ThaiTextCare.Editor::PhEngine.ThaiTextCare.Editor.ThaiFontDoctor
   testerTMPText: {fileID: 0}
   testerTMPSize: {x: 100, y: 100}
