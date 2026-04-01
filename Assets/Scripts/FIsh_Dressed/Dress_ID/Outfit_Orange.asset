@@ -15,5 +15,5 @@ MonoBehaviour:
   setID: 2
   itemType: 1
   iconSprite: {fileID: 5420564607431094225, guid: 8b01ba420c6f640e78c03e1c183377be, type: 3}
-  onCharacterSprite: {fileID: -231637177984180198, guid: 51ca316586b75454387585ef269a4a06, type: 3}
+  onCharacterSprite: {fileID: 7575266865102902573, guid: 3242917a7e1ca8b46a33014d016fb7db, type: 3}
   description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.

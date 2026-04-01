@@ -15,5 +15,5 @@ MonoBehaviour:
   setID: 2
   itemType: 0
   iconSprite: {fileID: 542871116442162030, guid: 9db8e0b4aba6b41a2a9dec0eb488f0a5, type: 3}
-  onCharacterSprite: {fileID: -3638310853048106521, guid: a5f44dcbb1064a744905d49a42d3eab6, type: 3}
+  onCharacterSprite: {fileID: -3164010705793084345, guid: 3242917a7e1ca8b46a33014d016fb7db, type: 3}
   description: Orange Gloves

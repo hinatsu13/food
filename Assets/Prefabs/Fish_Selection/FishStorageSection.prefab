@@ -68,7 +68,7 @@ MonoBehaviour:
   m_text: "Bonito\n\u0E1B\u0E25\u0E32\u0E42\u0E2D\u0E25\u0E32\u0E22\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b3425f382d41e0f45996c31c3e55f785, type: 2}
-  m_sharedMaterial: {fileID: 3173078134828014446, guid: b3425f382d41e0f45996c31c3e55f785, type: 2}
+  m_sharedMaterial: {fileID: 4498445996632614881, guid: b3425f382d41e0f45996c31c3e55f785, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -239,7 +239,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2347277635778750943, guid: c8bf31a123396fc41a1f64ac09a707fa, type: 3}
+  m_Sprite: {fileID: -3367084253171870268, guid: dc2aa29137aef4f458f191c85c6b62b3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -314,7 +314,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3846044230056290081, guid: c8bf31a123396fc41a1f64ac09a707fa, type: 3}
+  m_Sprite: {fileID: 4265715076958708200, guid: dc2aa29137aef4f458f191c85c6b62b3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

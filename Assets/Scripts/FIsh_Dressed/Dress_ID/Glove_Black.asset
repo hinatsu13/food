@@ -15,5 +15,5 @@ MonoBehaviour:
   setID: 1
   itemType: 0
   iconSprite: {fileID: 5241863542692541616, guid: 18c67216b33c745088f51c695e3abc25, type: 3}
-  onCharacterSprite: {fileID: -7257443053270939688, guid: a5f44dcbb1064a744905d49a42d3eab6, type: 3}
+  onCharacterSprite: {fileID: 3298491852550856211, guid: 3242917a7e1ca8b46a33014d016fb7db, type: 3}
   description: Black gloves

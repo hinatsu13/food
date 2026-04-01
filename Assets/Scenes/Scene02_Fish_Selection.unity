@@ -335,7 +335,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4310898191297373490, guid: c8bf31a123396fc41a1f64ac09a707fa, type: 3}
+  m_Sprite: {fileID: 6580821306434007390, guid: 75244c28ae6086c4ca21456c9a7b76be, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -418,8 +418,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3299920230668765699, guid: c8bf31a123396fc41a1f64ac09a707fa, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: -6416704506416456542, guid: 5df97fd88572a104fad9aed79a5ec1ee, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -498,7 +498,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8766846136399225764, guid: c8bf31a123396fc41a1f64ac09a707fa, type: 3}
+  m_Sprite: {fileID: -4629613613065720279, guid: 0115411e006e92e42a9aafe0501642f3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -645,6 +645,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: S003_FishStorageSection
       objectReference: {fileID: 0}
+    - target: {fileID: 6020240198989677864, guid: 0b6660e8dcb6d4b4fb9a0d9064d90767, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4653624803910364760, guid: dc2aa29137aef4f458f191c85c6b62b3, type: 3}
     - target: {fileID: 6209874124844493442, guid: 0b6660e8dcb6d4b4fb9a0d9064d90767, type: 3}
       propertyPath: Species
       value: 1
@@ -657,6 +661,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 4498445996632614881, guid: b3425f382d41e0f45996c31c3e55f785, type: 2}
+    - target: {fileID: 8657608744987344258, guid: 0b6660e8dcb6d4b4fb9a0d9064d90767, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5476061061852845288, guid: dc2aa29137aef4f458f191c85c6b62b3, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1005,7 +1013,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6270590727763942498, guid: c8bf31a123396fc41a1f64ac09a707fa, type: 3}
+  m_Sprite: {fileID: -3185884859051786180, guid: ed36afd81b3d6f446a704ee217539473, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1892,6 +1900,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: S002_FishStorageSection
       objectReference: {fileID: 0}
+    - target: {fileID: 6020240198989677864, guid: 0b6660e8dcb6d4b4fb9a0d9064d90767, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6834218563913819904, guid: dc2aa29137aef4f458f191c85c6b62b3, type: 3}
     - target: {fileID: 6209874124844493442, guid: 0b6660e8dcb6d4b4fb9a0d9064d90767, type: 3}
       propertyPath: Species
       value: 2
@@ -1912,6 +1924,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 4498445996632614881, guid: b3425f382d41e0f45996c31c3e55f785, type: 2}
+    - target: {fileID: 8657608744987344258, guid: 0b6660e8dcb6d4b4fb9a0d9064d90767, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3367084253171870268, guid: dc2aa29137aef4f458f191c85c6b62b3, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2116,7 +2132,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8010994675950807021, guid: c8bf31a123396fc41a1f64ac09a707fa, type: 3}
+  m_Sprite: {fileID: 8544786203624095258, guid: 75244c28ae6086c4ca21456c9a7b76be, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2226,6 +2242,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: S004_FishStorageSection
       objectReference: {fileID: 0}
+    - target: {fileID: 6020240198989677864, guid: 0b6660e8dcb6d4b4fb9a0d9064d90767, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4265715076958708200, guid: dc2aa29137aef4f458f191c85c6b62b3, type: 3}
     - target: {fileID: 6209874124844493442, guid: 0b6660e8dcb6d4b4fb9a0d9064d90767, type: 3}
       propertyPath: Species
       value: 0
@@ -2234,6 +2254,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 4498445996632614881, guid: b3425f382d41e0f45996c31c3e55f785, type: 2}
+    - target: {fileID: 8657608744987344258, guid: 0b6660e8dcb6d4b4fb9a0d9064d90767, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3511478532758601096, guid: dc2aa29137aef4f458f191c85c6b62b3, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2330,6 +2354,10 @@ PrefabInstance:
     - target: {fileID: 2913877314069537592, guid: a3f2e19d9f88fc94db529f723f413a25, type: 3}
       propertyPath: m_Name
       value: setting
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913877314069537592, guid: a3f2e19d9f88fc94db529f723f413a25, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3926045355874959544, guid: a3f2e19d9f88fc94db529f723f413a25, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
@@ -2548,7 +2576,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4072008213666533968, guid: c8bf31a123396fc41a1f64ac09a707fa, type: 3}
+  m_Sprite: {fileID: -5895797641759373032, guid: 75244c28ae6086c4ca21456c9a7b76be, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3259,6 +3287,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ContinueScene
       objectReference: {fileID: 0}
+    - target: {fileID: 4912972749055985659, guid: 6ef750b4c4cd54442b7af0935ee30ad4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8534327929438631955, guid: a301fe533cbf6ca439bbab32e14ecc10, type: 3}
     - target: {fileID: 8292642587236394260, guid: 6ef750b4c4cd54442b7af0935ee30ad4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3440,6 +3472,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: S001_FishStorageSection
       objectReference: {fileID: 0}
+    - target: {fileID: 6020240198989677864, guid: 0b6660e8dcb6d4b4fb9a0d9064d90767, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6265136392211227296, guid: dc2aa29137aef4f458f191c85c6b62b3, type: 3}
     - target: {fileID: 6209874124844493442, guid: 0b6660e8dcb6d4b4fb9a0d9064d90767, type: 3}
       propertyPath: Species
       value: 3
@@ -3460,6 +3496,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 4498445996632614881, guid: b3425f382d41e0f45996c31c3e55f785, type: 2}
+    - target: {fileID: 8657608744987344258, guid: 0b6660e8dcb6d4b4fb9a0d9064d90767, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4734594896056744790, guid: dc2aa29137aef4f458f191c85c6b62b3, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -376,6 +376,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5639121295410248097}
+        m_TargetAssemblyTypeName: Popup_panel, Assembly-CSharp
+        m_MethodName: ClosePanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5314208234000971368
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,6 +518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 071fea4edf3b26e4d9c215e42d127d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Popup_panel
+  popup: 0
 --- !u!1001 &2364349354208871536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -522,6 +535,10 @@ PrefabInstance:
       propertyPath: m_text
       value: 'Lorem ipsum  '
       objectReference: {fileID: 0}
+    - target: {fileID: 4373849006731891581, guid: 06f663828bf356f44afbd7ce6317e9f7, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 4498445996632614881, guid: b3425f382d41e0f45996c31c3e55f785, type: 2}
     - target: {fileID: 5308191615808673558, guid: 06f663828bf356f44afbd7ce6317e9f7, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -692,6 +709,10 @@ PrefabInstance:
       propertyPath: m_fontStyle
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4960531144032022763, guid: 900e777861242ed4abee2b2288acda7f, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 4498445996632614881, guid: b3425f382d41e0f45996c31c3e55f785, type: 2}
     - target: {fileID: 5175454094890056570, guid: 900e777861242ed4abee2b2288acda7f, type: 3}
       propertyPath: m_Name
       value: image
@@ -798,6 +819,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2527072518444033776, guid: 900e777861242ed4abee2b2288acda7f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7648145474069136186}
+    - targetCorrespondingSourceObject: {fileID: 2527072518444033776, guid: 900e777861242ed4abee2b2288acda7f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5639121295410248097}
   m_SourcePrefab: {fileID: 100100000, guid: 900e777861242ed4abee2b2288acda7f, type: 3}
 --- !u!224 &1921802167975381616 stripped
 RectTransform:
@@ -822,6 +846,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::infomation
   targetButtonRect: {fileID: 2217698583663607503}
+--- !u!114 &5639121295410248097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7814087250869150703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 071fea4edf3b26e4d9c215e42d127d1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Popup_panel
+  popup: 0
 --- !u!1001 &7079625017732932250
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1003,6 +1040,10 @@ PrefabInstance:
       propertyPath: m_text
       value: "\u0E21\u0E32\u0E23\u0E39\u0E49\u0E08\u0E31\u0E01\u0E2A\u0E32\u0E22\u0E1E\u0E31\u0E19\u0E18\u0E38\u0E4C\u0E1B\u0E25\u0E32\u0E01\u0E31\u0E19\u0E40\u0E16\u0E2D\u0E30!"
       objectReference: {fileID: 0}
+    - target: {fileID: 4373849006731891581, guid: 06f663828bf356f44afbd7ce6317e9f7, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 4498445996632614881, guid: b3425f382d41e0f45996c31c3e55f785, type: 2}
     - target: {fileID: 5308191615808673558, guid: 06f663828bf356f44afbd7ce6317e9f7, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
