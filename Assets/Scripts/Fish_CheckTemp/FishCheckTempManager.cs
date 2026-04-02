@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using System.Collections;
 
 /// <summary>
@@ -17,11 +18,11 @@ public class FishCheckTempManager : MonoBehaviour
     [SerializeField] private float slideSpeed = 0.5f; // Duration of slide animation
 
     [Header("UI References")]
-    [SerializeField] private Text timerText;
-    [SerializeField] private Text scoreText;
-    [SerializeField] private Text thermometerText;
+    [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI thermometerText;
     [SerializeField] private GameObject gameOverPanel;
-    [SerializeField] private Text gameOverScoreText;
+    [SerializeField] private TextMeshProUGUI gameOverScoreText;
 
     [Header("Fish Image")]
     [SerializeField] private Image fishImage;
@@ -376,7 +377,7 @@ public class FishCheckTempManager : MonoBehaviour
     {
         isGameActive = false;
         if (gameOverPanel != null) gameOverPanel.SetActive(true);
-        if (gameOverScoreText != null) gameOverScoreText.text = "Final Score: " + score.ToString();
+        if (gameOverScoreText != null) gameOverScoreText.text = score.ToString();
     }
 
     private void OnBackPressed() { Debug.Log("Back pressed"); }
