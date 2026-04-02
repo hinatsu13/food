@@ -2,10 +2,11 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 /// <summary>
-/// Drop target for fish spots. When the pen is dropped here,
-/// it triggers the temperature check via the game manager.
+/// Drop target for fish spots. The pen tip detection is handled
+/// entirely by DraggablePen - this script just receives the call.
+/// No IDropHandler so Unity's built-in mouse-based drop doesn't interfere.
 /// </summary>
-public class FishSpotDropTarget : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
+public class FishSpotDropTarget : MonoBehaviour
 {
     [HideInInspector] public int spotIndex; // 0=head, 1=middle, 2=tail
     [HideInInspector] public FishCheckTempManager manager;
@@ -19,29 +20,27 @@ public class FishSpotDropTarget : MonoBehaviour, IDropHandler, IPointerEnterHand
         originalScale = rectTransform.localScale;
     }
 
-    public void OnDrop(PointerEventData eventData)
+    /// <summary>
+    /// Called by DraggablePen when the pen tip overlaps this spot on drop.
+    /// </summary>
+    public void TriggerDrop()
     {
-        // Check if the dropped object is the pen
-        DraggablePen pen = eventData.pointerDrag?.GetComponent<DraggablePen>();
-        if (pen != null && manager != null)
+        if (manager != null)
         {
             manager.OnPenDroppedOnSpot(spotIndex);
         }
-        // Reset highlight
-        rectTransform.localScale = originalScale;
+        ResetHighlight();
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
+    public void SetHighlight(bool highlighted)
     {
-        // Only highlight when something is being dragged
-        if (eventData.pointerDrag != null && eventData.pointerDrag.GetComponent<DraggablePen>() != null)
-        {
-            rectTransform.localScale = originalScale * 1.3f;
-        }
+        if (rectTransform != null)
+            rectTransform.localScale = highlighted ? originalScale * 1.3f : originalScale;
     }
 
-    public void OnPointerExit(PointerEventData eventData)
+    public void ResetHighlight()
     {
-        rectTransform.localScale = originalScale;
+        if (rectTransform != null)
+            rectTransform.localScale = originalScale;
     }
 }

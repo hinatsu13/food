@@ -6,6 +6,7 @@ using System.Collections;
 /// Main game manager for the Fish Temperature Checking mini-game.
 /// Players drag the thermometer pen onto spots on the fish to read temperatures,
 /// then press check or X to judge if the temperature is correct.
+/// On round completion, the fish slides out left and a new random fish slides in from the right.
 /// </summary>
 public class FishCheckTempManager : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class FishCheckTempManager : MonoBehaviour
     [SerializeField] private float gameTime = 60f;
     [SerializeField] private float correctTempMin = 50f;
     [SerializeField] private float correctTempMax = 60f;
+    [SerializeField] private float slideSpeed = 0.5f; // Duration of slide animation
 
     [Header("UI References")]
     [SerializeField] private Text timerText;
@@ -21,10 +23,19 @@ public class FishCheckTempManager : MonoBehaviour
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private Text gameOverScoreText;
 
+    [Header("Fish Image")]
+    [SerializeField] private Image fishImage;
+    [SerializeField] private Sprite[] fishSprites; // All available fish sprites
+
     [Header("Fish Spot Images")]
     [SerializeField] private Image spotHeadImage;
     [SerializeField] private Image spotMiddleImage;
     [SerializeField] private Image spotTailImage;
+
+    [Header("Fish Spot GameObjects (for hiding during transition)")]
+    [SerializeField] private GameObject spotHeadObject;
+    [SerializeField] private GameObject spotMiddleObject;
+    [SerializeField] private GameObject spotTailObject;
 
     [Header("Answer Buttons")]
     [SerializeField] private Button btnCorrect;
@@ -51,10 +62,19 @@ public class FishCheckTempManager : MonoBehaviour
     private bool isGameActive;
     private bool isPaused;
     private int currentSpotIndex = -1;
+    private bool isTransitioning;
 
     // Temperature data per spot
     private float[] spotTemperatures = new float[3];
     private bool[] spotChecked = new bool[3];
+
+    // Fish sprite tracking
+    private int currentFishIndex = -1;
+
+    // Fish image positioning
+    private RectTransform fishRectTransform;
+    private Vector2 fishOnScreenPos;   // The normal resting position
+    private float slideOffsetX = 2200f; // How far off-screen to slide
 
     // Colors
     private readonly Color colorGreen = new Color(0.2f, 0.8f, 0.2f, 1f);
@@ -65,6 +85,14 @@ public class FishCheckTempManager : MonoBehaviour
     private void Start()
     {
         SetupButtons();
+
+        // Cache fish RectTransform and its starting position
+        if (fishImage != null)
+        {
+            fishRectTransform = fishImage.GetComponent<RectTransform>();
+            fishOnScreenPos = fishRectTransform.anchoredPosition;
+        }
+
         InitGame();
     }
 
@@ -86,16 +114,51 @@ public class FishCheckTempManager : MonoBehaviour
         score = 0;
         isGameActive = true;
         isPaused = false;
+        isTransitioning = false;
         currentSpotIndex = -1;
 
         RollTemperatures();
         SetAllSpotColors(colorOrange);
         ResetThermoDots();
+        SetRandomFishSprite();
+        ShowSpots(true);
+
+        // Reset fish position to on-screen
+        if (fishRectTransform != null)
+            fishRectTransform.anchoredPosition = fishOnScreenPos;
 
         if (gameOverPanel != null) gameOverPanel.SetActive(false);
         if (thermometerText != null) thermometerText.text = "--\u00B0C";
 
         RefreshUI();
+    }
+
+    /// <summary>
+    /// Set a random fish sprite, avoiding the same one twice in a row.
+    /// </summary>
+    private void SetRandomFishSprite()
+    {
+        if (fishSprites == null || fishSprites.Length == 0 || fishImage == null) return;
+
+        int newIndex;
+        if (fishSprites.Length == 1)
+        {
+            newIndex = 0;
+        }
+        else
+        {
+            // Pick a different fish than current
+            do
+            {
+                newIndex = Random.Range(0, fishSprites.Length);
+            } while (newIndex == currentFishIndex);
+        }
+
+        currentFishIndex = newIndex;
+        if (fishSprites[newIndex] != null)
+        {
+            fishImage.sprite = fishSprites[newIndex];
+        }
     }
 
     private void RollTemperatures()
@@ -134,6 +197,21 @@ public class FishCheckTempManager : MonoBehaviour
         if (thermoDotTail != null) thermoDotTail.color = Color.white;
     }
 
+    /// <summary>
+    /// Show or hide the fish spot drop targets and their dot indicators.
+    /// </summary>
+    private void ShowSpots(bool show)
+    {
+        if (spotHeadObject != null) spotHeadObject.SetActive(show);
+        if (spotMiddleObject != null) spotMiddleObject.SetActive(show);
+        if (spotTailObject != null) spotTailObject.SetActive(show);
+
+        // Also hide/show the thermometer dots
+        if (thermoDotHead != null) thermoDotHead.gameObject.SetActive(show);
+        if (thermoDotMiddle != null) thermoDotMiddle.gameObject.SetActive(show);
+        if (thermoDotTail != null) thermoDotTail.gameObject.SetActive(show);
+    }
+
     private void Update()
     {
         if (!isGameActive || isPaused) return;
@@ -166,7 +244,7 @@ public class FishCheckTempManager : MonoBehaviour
     /// </summary>
     public void OnPenDroppedOnSpot(int idx)
     {
-        if (!isGameActive || isPaused || spotChecked[idx]) return;
+        if (!isGameActive || isPaused || isTransitioning || spotChecked[idx]) return;
 
         currentSpotIndex = idx;
 
@@ -189,7 +267,7 @@ public class FishCheckTempManager : MonoBehaviour
 
     private void OnAnswerSelected(bool playerSaysCorrect)
     {
-        if (!isGameActive || isPaused || currentSpotIndex < 0) return;
+        if (!isGameActive || isPaused || isTransitioning || currentSpotIndex < 0) return;
 
         float temp = spotTemperatures[currentSpotIndex];
         bool actuallyCorrect = temp >= correctTempMin && temp <= correctTempMax;
@@ -216,20 +294,82 @@ public class FishCheckTempManager : MonoBehaviour
         currentSpotIndex = -1;
         if (thermometerText != null) thermometerText.text = "--\u00B0C";
 
-        // All spots done? Next round
+        // All spots done? Begin fish transition
         if (spotChecked[0] && spotChecked[1] && spotChecked[2])
-            StartCoroutine(BeginNextRound());
+            StartCoroutine(FishTransitionSequence());
 
         RefreshUI();
     }
 
-    private IEnumerator BeginNextRound()
+    /// <summary>
+    /// Full transition: hide dots, slide fish out left, swap sprite, slide in from right, show dots.
+    /// </summary>
+    private IEnumerator FishTransitionSequence()
     {
-        yield return new WaitForSeconds(1f);
+        isTransitioning = true;
+
+        // Brief pause to let player see the results
+        yield return new WaitForSeconds(0.6f);
+
+        // 1) Hide the spots/dots during transition
+        ShowSpots(false);
+
+        // 2) Slide current fish out to the LEFT
+        if (fishRectTransform != null)
+        {
+            Vector2 offScreenLeft = new Vector2(fishOnScreenPos.x - slideOffsetX, fishOnScreenPos.y);
+            yield return StartCoroutine(SlideFish(fishRectTransform.anchoredPosition, offScreenLeft, slideSpeed));
+        }
+
+        // 3) Change to a new random fish sprite
+        SetRandomFishSprite();
+
+        // 4) Position fish off-screen to the RIGHT
+        if (fishRectTransform != null)
+        {
+            Vector2 offScreenRight = new Vector2(fishOnScreenPos.x + slideOffsetX, fishOnScreenPos.y);
+            fishRectTransform.anchoredPosition = offScreenRight;
+        }
+
+        // 5) Roll new temperatures and reset visuals
         RollTemperatures();
         SetAllSpotColors(colorOrange);
         ResetThermoDots();
         if (thermometerText != null) thermometerText.text = "--\u00B0C";
+
+        // 6) Slide new fish in from the RIGHT to center
+        if (fishRectTransform != null)
+        {
+            yield return StartCoroutine(SlideFish(fishRectTransform.anchoredPosition, fishOnScreenPos, slideSpeed));
+        }
+
+        // 7) Show the spots/dots again
+        ShowSpots(true);
+
+        isTransitioning = false;
+    }
+
+    /// <summary>
+    /// Smoothly slide the fish RectTransform from one position to another.
+    /// Uses an ease-in-out curve for a polished feel.
+    /// </summary>
+    private IEnumerator SlideFish(Vector2 from, Vector2 to, float duration)
+    {
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / duration);
+
+            // Smooth step easing (ease-in-out)
+            t = t * t * (3f - 2f * t);
+
+            fishRectTransform.anchoredPosition = Vector2.Lerp(from, to, t);
+            yield return null;
+        }
+
+        fishRectTransform.anchoredPosition = to;
     }
 
     private void EndGame()
@@ -250,6 +390,7 @@ public class FishCheckTempManager : MonoBehaviour
     private void OnRestartPressed()
     {
         Time.timeScale = 1f;
+        StopAllCoroutines(); // Stop any running transitions
         InitGame();
     }
 
