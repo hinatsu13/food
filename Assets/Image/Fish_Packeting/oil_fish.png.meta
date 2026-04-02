@@ -1,0 +1,5317 @@
+fileFormatVersion: 2
+guid: d656260aa749c0c479d86a936f0cb692
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4196145402690743749
+    second: oil_fish_0
+  - first:
+      213: 8776184213724307204
+    second: oil_fish_1
+  - first:
+      213: -585514754458044762
+    second: oil_fish_2
+  - first:
+      213: -6920705206745218561
+    second: oil_fish_3
+  - first:
+      213: -8527151173707508876
+    second: oil_fish_4
+  - first:
+      213: -4769082654363882609
+    second: oil_fish_5
+  - first:
+      213: 8649056741247848359
+    second: oil_fish_6
+  - first:
+      213: -7190186428964465338
+    second: oil_fish_7
+  - first:
+      213: 3063126848952758049
+    second: oil_fish_8
+  - first:
+      213: -2158215055014779931
+    second: oil_fish_9
+  - first:
+      213: 4021664424262338985
+    second: oil_fish_10
+  - first:
+      213: -7888970165615658073
+    second: oil_fish_11
+  - first:
+      213: 318458655527011511
+    second: oil_fish_12
+  - first:
+      213: -3039521476538748271
+    second: oil_fish_13
+  - first:
+      213: 3192250057987296571
+    second: oil_fish_14
+  - first:
+      213: 698963669001039792
+    second: oil_fish_15
+  - first:
+      213: 3207118877728222292
+    second: oil_fish_16
+  - first:
+      213: 3487715855412870090
+    second: oil_fish_17
+  - first:
+      213: 4279420912449437386
+    second: oil_fish_18
+  - first:
+      213: -6567304741404227504
+    second: oil_fish_19
+  - first:
+      213: -7316223303665958457
+    second: oil_fish_20
+  - first:
+      213: -1600721777472090332
+    second: oil_fish_21
+  - first:
+      213: 2753436049592594875
+    second: oil_fish_22
+  - first:
+      213: -293643370653416764
+    second: oil_fish_23
+  - first:
+      213: -940710138078796795
+    second: oil_fish_24
+  - first:
+      213: -2618121429527170864
+    second: oil_fish_25
+  - first:
+      213: -6149311419379311822
+    second: oil_fish_26
+  - first:
+      213: -7592743412432381630
+    second: oil_fish_27
+  - first:
+      213: 4359062559561446529
+    second: oil_fish_28
+  - first:
+      213: 1797677886453596779
+    second: oil_fish_29
+  - first:
+      213: 8390309288163588193
+    second: oil_fish_30
+  - first:
+      213: 1781323920657638684
+    second: oil_fish_31
+  - first:
+      213: 2206715042984165640
+    second: oil_fish_32
+  - first:
+      213: 7019832447887004257
+    second: oil_fish_33
+  - first:
+      213: 3249237237541984431
+    second: oil_fish_34
+  - first:
+      213: 1377454070154216939
+    second: oil_fish_35
+  - first:
+      213: 3925484345498207114
+    second: oil_fish_36
+  - first:
+      213: -1052571620466048681
+    second: oil_fish_37
+  - first:
+      213: 4893193129965905175
+    second: oil_fish_38
+  - first:
+      213: 2838363456253224204
+    second: oil_fish_39
+  - first:
+      213: 2712379416392857338
+    second: oil_fish_40
+  - first:
+      213: -758264233969414633
+    second: oil_fish_41
+  - first:
+      213: -6437781587194882842
+    second: oil_fish_42
+  - first:
+      213: 3306438723366903241
+    second: oil_fish_43
+  - first:
+      213: 5616026248458404402
+    second: oil_fish_44
+  - first:
+      213: 6624518275438414873
+    second: oil_fish_45
+  - first:
+      213: 5485223136459660306
+    second: oil_fish_46
+  - first:
+      213: 3016121913284918493
+    second: oil_fish_47
+  - first:
+      213: 8411293398672951895
+    second: oil_fish_48
+  - first:
+      213: -5044355125596818805
+    second: oil_fish_49
+  - first:
+      213: 8325467038121070746
+    second: oil_fish_50
+  - first:
+      213: 7725022737045643333
+    second: oil_fish_51
+  - first:
+      213: -6604423920820966872
+    second: oil_fish_52
+  - first:
+      213: 1471341329214941292
+    second: oil_fish_53
+  - first:
+      213: -1350706741324788778
+    second: oil_fish_54
+  - first:
+      213: -2809392764285729253
+    second: oil_fish_55
+  - first:
+      213: 3145863689715416897
+    second: oil_fish_56
+  - first:
+      213: 2417645215730843277
+    second: oil_fish_57
+  - first:
+      213: 77507011435632593
+    second: oil_fish_58
+  - first:
+      213: 8427793872165177065
+    second: oil_fish_59
+  - first:
+      213: -4162158984569246105
+    second: oil_fish_60
+  - first:
+      213: 2912076821288065100
+    second: oil_fish_61
+  - first:
+      213: -224344710512664717
+    second: oil_fish_62
+  - first:
+      213: -3508110526137415159
+    second: oil_fish_63
+  - first:
+      213: -321299128538641867
+    second: oil_fish_64
+  - first:
+      213: -1197679769277620235
+    second: oil_fish_65
+  - first:
+      213: 7021699107605919889
+    second: oil_fish_66
+  - first:
+      213: 660624961716368283
+    second: oil_fish_67
+  - first:
+      213: -4366745205329020699
+    second: oil_fish_68
+  - first:
+      213: 3024525172900525874
+    second: oil_fish_69
+  - first:
+      213: 2696560974491184258
+    second: oil_fish_70
+  - first:
+      213: 5083782701345507847
+    second: oil_fish_71
+  - first:
+      213: 7695780256630679783
+    second: oil_fish_72
+  - first:
+      213: 2101176970045931037
+    second: oil_fish_73
+  - first:
+      213: -4521006254242951914
+    second: oil_fish_74
+  - first:
+      213: -7406093264740269906
+    second: oil_fish_75
+  - first:
+      213: -6397750783173752534
+    second: oil_fish_76
+  - first:
+      213: -970522736822459817
+    second: oil_fish_77
+  - first:
+      213: 2459040188077319940
+    second: oil_fish_78
+  - first:
+      213: -6887110446153429423
+    second: oil_fish_79
+  - first:
+      213: -4588992374416487263
+    second: oil_fish_80
+  - first:
+      213: 8988832759509165745
+    second: oil_fish_81
+  - first:
+      213: 974427158458229584
+    second: oil_fish_82
+  - first:
+      213: 495238428432637647
+    second: oil_fish_83
+  - first:
+      213: 1221461434538040537
+    second: oil_fish_84
+  - first:
+      213: 9108595107601168663
+    second: oil_fish_85
+  - first:
+      213: 6288864889784132165
+    second: oil_fish_86
+  - first:
+      213: 8434150707633833986
+    second: oil_fish_87
+  - first:
+      213: 6875211108892824813
+    second: oil_fish_88
+  - first:
+      213: -4340135843569719256
+    second: oil_fish_89
+  - first:
+      213: -8099183200013889170
+    second: oil_fish_90
+  - first:
+      213: -5424211578320114401
+    second: oil_fish_91
+  - first:
+      213: -4993914779210359066
+    second: oil_fish_92
+  - first:
+      213: -6557269563953897713
+    second: oil_fish_93
+  - first:
+      213: -6337032760209152280
+    second: oil_fish_94
+  - first:
+      213: -8638910965119745892
+    second: oil_fish_95
+  - first:
+      213: 4339491893076914235
+    second: oil_fish_96
+  - first:
+      213: 8007377150181316648
+    second: oil_fish_97
+  - first:
+      213: -2164247239327516102
+    second: oil_fish_98
+  - first:
+      213: -5224477242532881827
+    second: oil_fish_99
+  - first:
+      213: -2655741593471303550
+    second: oil_fish_100
+  - first:
+      213: 6799929483999130688
+    second: oil_fish_101
+  - first:
+      213: 6623570214528227714
+    second: oil_fish_102
+  - first:
+      213: -3402535699163498092
+    second: oil_fish_103
+  - first:
+      213: -3283994609287905403
+    second: oil_fish_104
+  - first:
+      213: 2546953152356782857
+    second: oil_fish_105
+  - first:
+      213: 1718555537791102107
+    second: oil_fish_106
+  - first:
+      213: 4774434848819410165
+    second: oil_fish_107
+  - first:
+      213: -1107483564426228725
+    second: oil_fish_108
+  - first:
+      213: 414221950173697465
+    second: oil_fish_109
+  - first:
+      213: 9107503642382900985
+    second: oil_fish_110
+  - first:
+      213: 366022241622178136
+    second: oil_fish_111
+  - first:
+      213: 3970799687959433827
+    second: oil_fish_112
+  - first:
+      213: 5411109119971993606
+    second: oil_fish_113
+  - first:
+      213: -6199435361790639076
+    second: oil_fish_114
+  - first:
+      213: 5112057258460395296
+    second: oil_fish_115
+  - first:
+      213: 4939219777856586195
+    second: oil_fish_116
+  - first:
+      213: 4636321804352139156
+    second: oil_fish_117
+  - first:
+      213: 1689682625259787845
+    second: oil_fish_118
+  - first:
+      213: 1026499752530473706
+    second: oil_fish_119
+  - first:
+      213: -343748031318473207
+    second: oil_fish_120
+  - first:
+      213: 3988813701382208978
+    second: oil_fish_121
+  - first:
+      213: 5969637958561380665
+    second: oil_fish_122
+  - first:
+      213: 8132441861894205483
+    second: oil_fish_123
+  - first:
+      213: 789356444928816893
+    second: oil_fish_124
+  - first:
+      213: -4348473436146936054
+    second: oil_fish_125
+  - first:
+      213: -4457624960652459997
+    second: oil_fish_126
+  - first:
+      213: 5964455175032145337
+    second: oil_fish_127
+  - first:
+      213: -1039880175679485782
+    second: oil_fish_128
+  - first:
+      213: -618026629797881654
+    second: oil_fish_129
+  - first:
+      213: 2686720223877674994
+    second: oil_fish_130
+  - first:
+      213: 1307650970714543783
+    second: oil_fish_131
+  - first:
+      213: 3279615293605673208
+    second: oil_fish_132
+  - first:
+      213: -30327590972813735
+    second: oil_fish_133
+  - first:
+      213: 128465013651638277
+    second: oil_fish_134
+  - first:
+      213: 4157613108110828059
+    second: oil_fish_135
+  - first:
+      213: 4347213385248352130
+    second: oil_fish_136
+  - first:
+      213: 180580425334024599
+    second: oil_fish_137
+  - first:
+      213: 7550161613549583604
+    second: oil_fish_138
+  - first:
+      213: 984993810913668226
+    second: oil_fish_139
+  - first:
+      213: -4292496987783344279
+    second: oil_fish_140
+  - first:
+      213: 5210618608755867542
+    second: oil_fish_141
+  - first:
+      213: -212523651171869785
+    second: oil_fish_142
+  - first:
+      213: 4587856563002897578
+    second: oil_fish_143
+  - first:
+      213: -2439211100489562407
+    second: oil_fish_144
+  - first:
+      213: -186743439377404326
+    second: oil_fish_145
+  - first:
+      213: 5284763486648442142
+    second: oil_fish_146
+  - first:
+      213: -8043955735372423795
+    second: oil_fish_147
+  - first:
+      213: -7652221354142636719
+    second: oil_fish_148
+  - first:
+      213: -237459069022045903
+    second: oil_fish_149
+  - first:
+      213: 4056068707057212040
+    second: oil_fish_150
+  - first:
+      213: -3919990058860220977
+    second: oil_fish_151
+  - first:
+      213: -714779802074136102
+    second: oil_fish_152
+  - first:
+      213: -151030991073966895
+    second: oil_fish_153
+  - first:
+      213: 5832732039177001231
+    second: oil_fish_154
+  - first:
+      213: 4153339510571663330
+    second: oil_fish_155
+  - first:
+      213: 4082217285228148642
+    second: oil_fish_156
+  - first:
+      213: 5029747104840938437
+    second: oil_fish_157
+  - first:
+      213: 5856104755399668664
+    second: oil_fish_158
+  - first:
+      213: 6738947184727899475
+    second: oil_fish_159
+  - first:
+      213: 1795516557678833192
+    second: oil_fish_160
+  - first:
+      213: 1971475186140111274
+    second: oil_fish_161
+  - first:
+      213: 5280826329974193436
+    second: oil_fish_162
+  - first:
+      213: -3399128196909576733
+    second: oil_fish_163
+  - first:
+      213: -5013063781384907162
+    second: oil_fish_164
+  - first:
+      213: -3806362909485576387
+    second: oil_fish_165
+  - first:
+      213: -3330202376229099191
+    second: oil_fish_166
+  - first:
+      213: -2343862513839208627
+    second: oil_fish_167
+  - first:
+      213: -8935507936055485324
+    second: oil_fish_168
+  - first:
+      213: -1355918150932774193
+    second: oil_fish_169
+  - first:
+      213: -7595201592450184647
+    second: oil_fish_170
+  - first:
+      213: 3649753647530083297
+    second: oil_fish_171
+  - first:
+      213: 7412091443314007529
+    second: oil_fish_172
+  - first:
+      213: -8609255894386436208
+    second: oil_fish_173
+  - first:
+      213: 7589281684868496627
+    second: oil_fish_174
+  - first:
+      213: -8064692133988760153
+    second: oil_fish_175
+  - first:
+      213: 2802396896773174992
+    second: oil_fish_176
+  - first:
+      213: -5385775728253450115
+    second: oil_fish_177
+  - first:
+      213: 6549881657624171434
+    second: oil_fish_178
+  - first:
+      213: 4229231146495078826
+    second: oil_fish_179
+  - first:
+      213: -2031188857407569027
+    second: oil_fish_180
+  - first:
+      213: -7880551964233946101
+    second: oil_fish_181
+  - first:
+      213: 184323851805548135
+    second: oil_fish_182
+  - first:
+      213: 1403702108201790451
+    second: oil_fish_183
+  - first:
+      213: -9163565078758203899
+    second: oil_fish_184
+  - first:
+      213: 7473108486653722980
+    second: oil_fish_185
+  - first:
+      213: -7021380176079140855
+    second: oil_fish_186
+  - first:
+      213: -2770918883961991839
+    second: oil_fish_187
+  - first:
+      213: -2505756467917702671
+    second: oil_fish_188
+  - first:
+      213: -4290977195665453488
+    second: oil_fish_189
+  - first:
+      213: -5440386718071081318
+    second: oil_fish_190
+  - first:
+      213: -7224437266954347689
+    second: oil_fish_191
+  - first:
+      213: -6726383839193957458
+    second: oil_fish_192
+  - first:
+      213: 2549761219128224594
+    second: oil_fish_193
+  - first:
+      213: 2180573095877894688
+    second: oil_fish_194
+  - first:
+      213: -237364024294173454
+    second: oil_fish_195
+  - first:
+      213: 5908963956821079068
+    second: oil_fish_196
+  - first:
+      213: -2747087171599387180
+    second: oil_fish_197
+  - first:
+      213: 1511582628019253057
+    second: oil_fish_198
+  - first:
+      213: -1851591985718307198
+    second: oil_fish_199
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: oil_fish_0
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 717
+        width: 321
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b32dab60dfb44c5c0800000000000000
+      internalID: -4196145402690743749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_1
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 717
+        width: 321
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40f9d6e4b054bc970800000000000000
+      internalID: 8776184213724307204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_2
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 717
+        width: 321
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a637c9de65dfd7f0800000000000000
+      internalID: -585514754458044762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_3
+      rect:
+        serializedVersion: 2
+        x: 1521
+        y: 717
+        width: 321
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff141cc2847b4ff90800000000000000
+      internalID: -6920705206745218561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_4
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 669
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 473db11bf2979a980800000000000000
+      internalID: -8527151173707508876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_5
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 667
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8be922f790d0ddb0800000000000000
+      internalID: -4769082654363882609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_6
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 666
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7af8640184f970870800000000000000
+      internalID: 8649056741247848359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_7
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 636
+        width: 18
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6451db0c983573c90800000000000000
+      internalID: -7190186428964465338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_8
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 677
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12f6ac5d3a9628a20800000000000000
+      internalID: 3063126848952758049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_9
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 669
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e3a1f897da7c02e0800000000000000
+      internalID: -2158215055014779931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_10
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 668
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a98bf57c72dfc730800000000000000
+      internalID: 4021664424262338985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_11
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 638
+        width: 18
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7abf2d29e6fb48290800000000000000
+      internalID: -7888970165615658073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_12
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 679
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b4065eb5746b6400800000000000000
+      internalID: 318458655527011511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_13
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 667
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 192bcb7325371d5d0800000000000000
+      internalID: -3039521476538748271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_14
+      rect:
+        serializedVersion: 2
+        x: 1355
+        y: 669
+        width: 21
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3d8d84b3862d4c20800000000000000
+      internalID: 3192250057987296571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_15
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 669
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bfe5b1f0c733b900800000000000000
+      internalID: 698963669001039792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_16
+      rect:
+        serializedVersion: 2
+        x: 1714
+        y: 638
+        width: 17
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45ca07390a9f18c20800000000000000
+      internalID: 3207118877728222292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_17
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 679
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acbb16f771bd66030800000000000000
+      internalID: 3487715855412870090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_18
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 667
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ace3de285ae836b30800000000000000
+      internalID: 4279420912449437386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_19
+      rect:
+        serializedVersion: 2
+        x: 1857
+        y: 669
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 058ccdcf12f3cd4a0800000000000000
+      internalID: -6567304741404227504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_20
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 659
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c14e871bad877a90800000000000000
+      internalID: -7316223303665958457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_21
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 658
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42f4b8d360819c9e0800000000000000
+      internalID: -1600721777472090332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_22
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 628
+        width: 18
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb1b8bfaf7b263620800000000000000
+      internalID: 2753436049592594875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_23
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 657
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c20e8109e4ccebf0800000000000000
+      internalID: -293643370653416764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_24
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 659
+        width: 21
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 504643f0d1de1f2f0800000000000000
+      internalID: -940710138078796795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_25
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 665
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d0f1366e609aabd0800000000000000
+      internalID: -2618121429527170864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_26
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 667
+        width: 21
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23b94a238d149aaa0800000000000000
+      internalID: -6149311419379311822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_27
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 638
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 249d74f281821a690800000000000000
+      internalID: -7592743412432381630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_28
+      rect:
+        serializedVersion: 2
+        x: 1659
+        y: 669
+        width: 25
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1847d587d408e7c30800000000000000
+      internalID: 4359062559561446529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_29
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 629
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6244a26382a2f810800000000000000
+      internalID: 1797677886453596779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_30
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 628
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 168b6a408dd507470800000000000000
+      internalID: 8390309288163588193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_31
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 629
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1564b00ba888b810800000000000000
+      internalID: 1781323920657638684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_32
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 628
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8010591d3a3df9e10800000000000000
+      internalID: 2206715042984165640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_33
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 628
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 162d01f2b647b6160800000000000000
+      internalID: 7019832447887004257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_34
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 628
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa859a66d0c971d20800000000000000
+      internalID: 3249237237541984431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_35
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 629
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be545f1cd23bd1310800000000000000
+      internalID: 1377454070154216939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_36
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 628
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8307c0d63f1a7630800000000000000
+      internalID: 3925484345498207114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_37
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 628
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 751c67d10b38461f0800000000000000
+      internalID: -1052571620466048681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_38
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 629
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 715eff8f93d18e340800000000000000
+      internalID: 4893193129965905175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_39
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 628
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c056c617684e36720800000000000000
+      internalID: 2838363456253224204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_40
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 628
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af67d2a55be44a520800000000000000
+      internalID: 2712379416392857338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_41
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 637
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71e8e5852ba1a75f0800000000000000
+      internalID: -758264233969414633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_42
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 636
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e4d2b951c768a6a0800000000000000
+      internalID: -6437781587194882842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_43
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 637
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cd51e92084d2ed20800000000000000
+      internalID: 3306438723366903241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_44
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 630
+        width: 28
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23202a43e1220fd40800000000000000
+      internalID: 5616026248458404402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_45
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 636
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91c0797f5440feb50800000000000000
+      internalID: 6624518275438414873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_46
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 636
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21c9e62716d6f1c40800000000000000
+      internalID: 5485223136459660306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_47
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 637
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddc7e9866ea6bd920800000000000000
+      internalID: 3016121913284918493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_48
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 636
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75a4d79f7caeab470800000000000000
+      internalID: 8411293398672951895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_49
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 636
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8271e94db9def9b0800000000000000
+      internalID: -5044355125596818805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_50
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 637
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a901e6439200a8370800000000000000
+      internalID: 8325467038121070746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_51
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 636
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 540eb6b104bc43b60800000000000000
+      internalID: 7725022737045643333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_52
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 636
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82aaf5d8f6f5854a0800000000000000
+      internalID: -6604423920820966872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_53
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 639
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c682537b4214b6410800000000000000
+      internalID: 1471341329214941292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_54
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 638
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6db4c970063514de0800000000000000
+      internalID: -1350706741324788778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_55
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 639
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b16423a6a280309d0800000000000000
+      internalID: -2809392764285729253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_56
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 638
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14f7949bb5a58ab20800000000000000
+      internalID: 3145863689715416897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_57
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 638
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8e3f84b3833d8120800000000000000
+      internalID: 2417645215730843277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_58
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 639
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d7193c573c531100800000000000000
+      internalID: 77507011435632593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_59
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 638
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e68e96dfd985f470800000000000000
+      internalID: 8427793872165177065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_60
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 638
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76eac02a47a0d36c0800000000000000
+      internalID: -4162158984569246105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_61
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 639
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c48168ba076c96820800000000000000
+      internalID: 2912076821288065100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_62
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 638
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37f97a6aca7f2ecf0800000000000000
+      internalID: -224344710512664717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_63
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 638
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90a45c03010b05fc0800000000000000
+      internalID: -3508110526137415159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_64
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 639
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53acfc815248a8bf0800000000000000
+      internalID: -321299128538641867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_65
+      rect:
+        serializedVersion: 2
+        x: 1521
+        y: 638
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ff198d689cf06fe0800000000000000
+      internalID: -1197679769277620235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_66
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 639
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1983784c226127160800000000000000
+      internalID: 7021699107605919889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_67
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 638
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b933cdc07e20b2900800000000000000
+      internalID: 660624961716368283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_68
+      rect:
+        serializedVersion: 2
+        x: 1589
+        y: 638
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e839bb2f543663c0800000000000000
+      internalID: -4366745205329020699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_69
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 638
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23776f0ce9549f920800000000000000
+      internalID: 3024525172900525874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_70
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 638
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28c6ab75beb1c6520800000000000000
+      internalID: 2696560974491184258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_71
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 638
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70a89fc8e693d8640800000000000000
+      internalID: 5083782701345507847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_72
+      rect:
+        serializedVersion: 2
+        x: 1686
+        y: 638
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e8afe19e57ecca60800000000000000
+      internalID: 7695780256630679783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_73
+      rect:
+        serializedVersion: 2
+        x: 1732
+        y: 638
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1eb1dd5251e82d10800000000000000
+      internalID: 2101176970045931037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_74
+      rect:
+        serializedVersion: 2
+        x: 1763
+        y: 638
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61d878cd3c82241c0800000000000000
+      internalID: -4521006254242951914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_75
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 639
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea04eb53a65483990800000000000000
+      internalID: -7406093264740269906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_76
+      rect:
+        serializedVersion: 2
+        x: 1816
+        y: 638
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2983773f8f9637a0800000000000000
+      internalID: -6397750783173752534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_77
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 638
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 752e14186b20882f0800000000000000
+      internalID: -970522736822459817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_78
+      rect:
+        serializedVersion: 2
+        x: 1844
+        y: 638
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40722c2c504402220800000000000000
+      internalID: 2459040188077319940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_79
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 616
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15e8428e9811c60a0800000000000000
+      internalID: -6887110446153429423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_80
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 624
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1accdedbfbf9050c0800000000000000
+      internalID: -4588992374416487263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_81
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 621
+        width: 21
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b620f715cfbebc70800000000000000
+      internalID: 8988832759509165745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_82
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 621
+        width: 25
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 053656f765cd58d00800000000000000
+      internalID: 974427158458229584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_83
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 626
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fce99dd0ab07fd600800000000000000
+      internalID: 495238428432637647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_84
+      rect:
+        serializedVersion: 2
+        x: 1498
+        y: 626
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dc9a7004b083f010800000000000000
+      internalID: 1221461434538040537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_85
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 613
+        width: 21
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 719bd6fadfa386e70800000000000000
+      internalID: 9108595107601168663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_86
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 590
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54262042c49864750800000000000000
+      internalID: 6288864889784132165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_87
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 590
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 208cf9ee16f1c0570800000000000000
+      internalID: 8434150707633833986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_88
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 590
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de4506db318a96f50800000000000000
+      internalID: 6875211108892824813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_89
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 591
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 828261ff17db4c3c0800000000000000
+      internalID: -4340135843569719256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_90
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 590
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e615c587acbe99f80800000000000000
+      internalID: -8099183200013889170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_91
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 590
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1d2ba7ee4459b4b0800000000000000
+      internalID: -5424211578320114401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_92
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 591
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6eed79a97fc02bab0800000000000000
+      internalID: -4993914779210359066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_93
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 592
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0f1c00d216eff4a0800000000000000
+      internalID: -6557269563953897713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_94
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 608
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e668b597465e08a0800000000000000
+      internalID: -6337032760209152280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_95
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 593
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c908fc58f3c6c1880800000000000000
+      internalID: -8638910965119745892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_96
+      rect:
+        serializedVersion: 2
+        x: 1239
+        y: 592
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b30798892e8f83c30800000000000000
+      internalID: 4339491893076914235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_97
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 593
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 828132bd71bef1f60800000000000000
+      internalID: 8007377150181316648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_98
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 582
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3a73cd3a9c07f1e0800000000000000
+      internalID: -2164247239327516102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_99
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 582
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5a17bdd0adee77b0800000000000000
+      internalID: -5224477242532881827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_100
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 583
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 280c9e96719e42bd0800000000000000
+      internalID: -2655741593471303550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_101
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 583
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 044397f86d33e5e50800000000000000
+      internalID: 6799929483999130688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_102
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 583
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28910d55406abeb50800000000000000
+      internalID: 6623570214528227714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_103
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 582
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49936cb1fc3c7c0d0800000000000000
+      internalID: -3402535699163498092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_104
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 582
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58fb81d5d48ec62d0800000000000000
+      internalID: -3283994609287905403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_105
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 598
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90399c1d568985320800000000000000
+      internalID: 2546953152356782857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_106
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 582
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9ca1d4082989d710800000000000000
+      internalID: 1718555537791102107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_107
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 582
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f4702fe233324240800000000000000
+      internalID: 4774434848819410165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_108
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 595
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0c8acbd09d61a0f0800000000000000
+      internalID: -1107483564426228725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_109
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 585
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b5d5464bac9fb500800000000000000
+      internalID: 414221950173697465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_110
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 221
+        width: 321
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fe1fc22f4a546e70800000000000000
+      internalID: 9107503642382900985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_111
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 221
+        width: 321
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85938cb1a4f541500800000000000000
+      internalID: 366022241622178136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_112
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 222
+        width: 321
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 362dd0b274d1b1730800000000000000
+      internalID: 3970799687959433827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_113
+      rect:
+        serializedVersion: 2
+        x: 1521
+        y: 222
+        width: 321
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 608aec8431f181b40800000000000000
+      internalID: 5411109119971993606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_114
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 148
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c14497c626e27f9a0800000000000000
+      internalID: -6199435361790639076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_115
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 146
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0273df1edfca1f640800000000000000
+      internalID: 5112057258460395296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_116
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 115
+        width: 18
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d1c9b60832ab8440800000000000000
+      internalID: 4939219777856586195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_117
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 148
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49faec4ed16875040800000000000000
+      internalID: 4636321804352139156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_118
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 117
+        width: 18
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54652c53565f27710800000000000000
+      internalID: 1689682625259787845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_119
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 117
+        width: 20
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae2fa97161cde3e00800000000000000
+      internalID: 1026499752530473706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_120
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 148
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 906c50d9cf2ca3bf0800000000000000
+      internalID: -343748031318473207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_121
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 117
+        width: 18
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ddf8128dec1b5730800000000000000
+      internalID: 3988813701382208978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_122
+      rect:
+        serializedVersion: 2
+        x: 1635
+        y: 158
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9393db5481a68d250800000000000000
+      internalID: 5969637958561380665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_123
+      rect:
+        serializedVersion: 2
+        x: 1635
+        y: 146
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2078be29cc3cd070800000000000000
+      internalID: 8132441861894205483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_124
+      rect:
+        serializedVersion: 2
+        x: 1685
+        y: 148
+        width: 21
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df6b525218b54fa00800000000000000
+      internalID: 789356444928816893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_125
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 147
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a075d33f27e17a3c0800000000000000
+      internalID: -4348473436146936054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_126
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 138
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 320456e37b55322c0800000000000000
+      internalID: -4457624960652459997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_127
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 107
+        width: 18
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b50882716006c250800000000000000
+      internalID: 5964455175032145337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_128
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 136
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa847af5d7a9191f0800000000000000
+      internalID: -1039880175679485782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_129
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 138
+        width: 21
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac85a2dfd045c67f0800000000000000
+      internalID: -618026629797881654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_130
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 146
+        width: 25
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f7361b0fc5294520800000000000000
+      internalID: 2686720223877674994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_131
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 118
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a692af21a5b52210800000000000000
+      internalID: 1307650970714543783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_132
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 117
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f8fd4fbbb8838d20800000000000000
+      internalID: 3279615293605673208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_133
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 118
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95e0c297731449ff0800000000000000
+      internalID: -30327590972813735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_134
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 117
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50885c0df3668c100800000000000000
+      internalID: 128465013651638277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_135
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 117
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b122476081fc2b930800000000000000
+      internalID: 4157613108110828059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_136
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 117
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2872d869a87645c30800000000000000
+      internalID: 4347213385248352130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_137
+      rect:
+        serializedVersion: 2
+        x: 1265
+        y: 117
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7996c69a0fc818200800000000000000
+      internalID: 180580425334024599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_138
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 117
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fcb96c2cff87c860800000000000000
+      internalID: 7550161613549583604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_139
+      rect:
+        serializedVersion: 2
+        x: 1339
+        y: 117
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28ca77df6a66bad00800000000000000
+      internalID: 984993810913668226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_140
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 118
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96f4db37bbcfd64c0800000000000000
+      internalID: -4292496987783344279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_141
+      rect:
+        serializedVersion: 2
+        x: 1523
+        y: 117
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69ffee28406df4840800000000000000
+      internalID: 5210618608755867542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_142
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 118
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ab18818dd6fc0df0800000000000000
+      internalID: -212523651171869785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_143
+      rect:
+        serializedVersion: 2
+        x: 1591
+        y: 117
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa47b3e8c375baf30800000000000000
+      internalID: 4587856563002897578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_144
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 117
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d641277d6e262ed0800000000000000
+      internalID: -2439211100489562407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_145
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 118
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5e66cfc4dd886df0800000000000000
+      internalID: -186743439377404326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_146
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 117
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1d92a72460475940800000000000000
+      internalID: 5284763486648442142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_147
+      rect:
+        serializedVersion: 2
+        x: 1705
+        y: 117
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8d192c90e02e5090800000000000000
+      internalID: -8043955735372423795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_148
+      rect:
+        serializedVersion: 2
+        x: 1734
+        y: 117
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1556babb839ddc590800000000000000
+      internalID: -7652221354142636719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_149
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 117
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 139fe3e1c3064bcf0800000000000000
+      internalID: -237459069022045903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_150
+      rect:
+        serializedVersion: 2
+        x: 1790
+        y: 117
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88a19b4cffc0a4830800000000000000
+      internalID: 4056068707057212040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_151
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 118
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcde29a7fc56999c0800000000000000
+      internalID: -3919990058860220977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_152
+      rect:
+        serializedVersion: 2
+        x: 1837
+        y: 117
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad14fbc9e879416f0800000000000000
+      internalID: -714779802074136102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_153
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 138
+        width: 25
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d406f22d1e67edf0800000000000000
+      internalID: -151030991073966895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_154
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 116
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f095f21f2e602f050800000000000000
+      internalID: 5832732039177001231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_155
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 115
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eff73f8740a3a930800000000000000
+      internalID: 4153339510571663330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_156
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 110
+        width: 28
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a7bbfd0ef2f6a830800000000000000
+      internalID: 4082217285228148642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_157
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 115
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c3f716d7504dc540800000000000000
+      internalID: 5029747104840938437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_158
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 115
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b3b2118f30154150800000000000000
+      internalID: 5856104755399668664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_159
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 115
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35d33d192cc858d50800000000000000
+      internalID: 6738947184727899475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_160
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 115
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82e67c0dbc4fae810800000000000000
+      internalID: 1795516557678833192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_161
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 115
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa1e0698c361c5b10800000000000000
+      internalID: 1971475186140111274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_162
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 115
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1d34ae6193494940800000000000000
+      internalID: 5280826329974193436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_163
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 115
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3edc03d0aeed3d0d0800000000000000
+      internalID: -3399128196909576733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_164
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 108
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6661d2a1d050e6ab0800000000000000
+      internalID: -5013063781384907162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_165
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 107
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3fc3edc9151d2bc0800000000000000
+      internalID: -3806362909485576387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_166
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 108
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 949e3be359eb8c1d0800000000000000
+      internalID: -3330202376229099191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_167
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 107
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d478244467de87fd0800000000000000
+      internalID: -2343862513839208627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_168
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 107
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47c9abfdfd2bef380800000000000000
+      internalID: -8935507936055485324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_169
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 101
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc2c52d20afce2de0800000000000000
+      internalID: -1355918150932774193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_170
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 107
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93a868c846c689690800000000000000
+      internalID: -7595201592450184647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_171
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 107
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e387beea9786a230800000000000000
+      internalID: 3649753647530083297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_172
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 107
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ed917195e90dd660800000000000000
+      internalID: 7412091443314007529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_173
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 107
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09798aab067c58880800000000000000
+      internalID: -8609255894386436208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_174
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 107
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fcf6fe8b7b825960800000000000000
+      internalID: 7589281684868496627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_175
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 108
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a586b29b35741090800000000000000
+      internalID: -8064692133988760153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_176
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 107
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d672df312d14e620800000000000000
+      internalID: 2802396896773174992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_177
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 107
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d78488d9281e145b0800000000000000
+      internalID: -5385775728253450115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_178
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 103
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa319833aaad5ea50800000000000000
+      internalID: 6549881657624171434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_179
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 98
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa17bdff15f31ba30800000000000000
+      internalID: 4229231146495078826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_180
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 100
+        width: 24
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d738d72fe74cfc3e0800000000000000
+      internalID: -2031188857407569027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_181
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 105
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0c24d1ddb7a2a290800000000000000
+      internalID: -7880551964233946101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_182
+      rect:
+        serializedVersion: 2
+        x: 1353
+        y: 105
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76e508e0199de8200800000000000000
+      internalID: 184323851805548135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_183
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 105
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fba5d951a3fa7310800000000000000
+      internalID: 1403702108201790451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_184
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 95
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50e517c8c1a74d080800000000000000
+      internalID: -9163565078758203899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_185
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 92
+        width: 21
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 461c3fa0390d5b760800000000000000
+      internalID: 7473108486653722980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_186
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 92
+        width: 25
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90845d34eeb0f8e90800000000000000
+      internalID: -7021380176079140855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_187
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 69
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16d060cb4f7bb89d0800000000000000
+      internalID: -2770918883961991839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_188
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 70
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f9b02cb4c3c93dd0800000000000000
+      internalID: -2505756467917702671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_189
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 69
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05e0f01a9f26374c0800000000000000
+      internalID: -4290977195665453488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_190
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 70
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a96be94ba1ddf74b0800000000000000
+      internalID: -5440386718071081318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_191
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 69
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75b97191594adbb90800000000000000
+      internalID: -7224437266954347689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_192
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 69
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eab7ae1498517a2a0800000000000000
+      internalID: -6726383839193957458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_193
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 61
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25b6430d152926320800000000000000
+      internalID: 2549761219128224594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_194
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 61
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02263927da3f24e10800000000000000
+      internalID: 2180573095877894688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_195
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 61
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f41d717da6b4bcf0800000000000000
+      internalID: -237364024294173454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_196
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 62
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1438e4696bd00250800000000000000
+      internalID: 5908963956821079068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_197
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 61
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d539c9a5c260e9d0800000000000000
+      internalID: -2747087171599387180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_198
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 61
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14f2db734683af410800000000000000
+      internalID: 1511582628019253057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oil_fish_199
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 62
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 286dc4e26e2dd46e0800000000000000
+      internalID: -1851591985718307198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      oil_fish_0: -4196145402690743749
+      oil_fish_1: 8776184213724307204
+      oil_fish_10: 4021664424262338985
+      oil_fish_100: -2655741593471303550
+      oil_fish_101: 6799929483999130688
+      oil_fish_102: 6623570214528227714
+      oil_fish_103: -3402535699163498092
+      oil_fish_104: -3283994609287905403
+      oil_fish_105: 2546953152356782857
+      oil_fish_106: 1718555537791102107
+      oil_fish_107: 4774434848819410165
+      oil_fish_108: -1107483564426228725
+      oil_fish_109: 414221950173697465
+      oil_fish_11: -7888970165615658073
+      oil_fish_110: 9107503642382900985
+      oil_fish_111: 366022241622178136
+      oil_fish_112: 3970799687959433827
+      oil_fish_113: 5411109119971993606
+      oil_fish_114: -6199435361790639076
+      oil_fish_115: 5112057258460395296
+      oil_fish_116: 4939219777856586195
+      oil_fish_117: 4636321804352139156
+      oil_fish_118: 1689682625259787845
+      oil_fish_119: 1026499752530473706
+      oil_fish_12: 318458655527011511
+      oil_fish_120: -343748031318473207
+      oil_fish_121: 3988813701382208978
+      oil_fish_122: 5969637958561380665
+      oil_fish_123: 8132441861894205483
+      oil_fish_124: 789356444928816893
+      oil_fish_125: -4348473436146936054
+      oil_fish_126: -4457624960652459997
+      oil_fish_127: 5964455175032145337
+      oil_fish_128: -1039880175679485782
+      oil_fish_129: -618026629797881654
+      oil_fish_13: -3039521476538748271
+      oil_fish_130: 2686720223877674994
+      oil_fish_131: 1307650970714543783
+      oil_fish_132: 3279615293605673208
+      oil_fish_133: -30327590972813735
+      oil_fish_134: 128465013651638277
+      oil_fish_135: 4157613108110828059
+      oil_fish_136: 4347213385248352130
+      oil_fish_137: 180580425334024599
+      oil_fish_138: 7550161613549583604
+      oil_fish_139: 984993810913668226
+      oil_fish_14: 3192250057987296571
+      oil_fish_140: -4292496987783344279
+      oil_fish_141: 5210618608755867542
+      oil_fish_142: -212523651171869785
+      oil_fish_143: 4587856563002897578
+      oil_fish_144: -2439211100489562407
+      oil_fish_145: -186743439377404326
+      oil_fish_146: 5284763486648442142
+      oil_fish_147: -8043955735372423795
+      oil_fish_148: -7652221354142636719
+      oil_fish_149: -237459069022045903
+      oil_fish_15: 698963669001039792
+      oil_fish_150: 4056068707057212040
+      oil_fish_151: -3919990058860220977
+      oil_fish_152: -714779802074136102
+      oil_fish_153: -151030991073966895
+      oil_fish_154: 5832732039177001231
+      oil_fish_155: 4153339510571663330
+      oil_fish_156: 4082217285228148642
+      oil_fish_157: 5029747104840938437
+      oil_fish_158: 5856104755399668664
+      oil_fish_159: 6738947184727899475
+      oil_fish_16: 3207118877728222292
+      oil_fish_160: 1795516557678833192
+      oil_fish_161: 1971475186140111274
+      oil_fish_162: 5280826329974193436
+      oil_fish_163: -3399128196909576733
+      oil_fish_164: -5013063781384907162
+      oil_fish_165: -3806362909485576387
+      oil_fish_166: -3330202376229099191
+      oil_fish_167: -2343862513839208627
+      oil_fish_168: -8935507936055485324
+      oil_fish_169: -1355918150932774193
+      oil_fish_17: 3487715855412870090
+      oil_fish_170: -7595201592450184647
+      oil_fish_171: 3649753647530083297
+      oil_fish_172: 7412091443314007529
+      oil_fish_173: -8609255894386436208
+      oil_fish_174: 7589281684868496627
+      oil_fish_175: -8064692133988760153
+      oil_fish_176: 2802396896773174992
+      oil_fish_177: -5385775728253450115
+      oil_fish_178: 6549881657624171434
+      oil_fish_179: 4229231146495078826
+      oil_fish_18: 4279420912449437386
+      oil_fish_180: -2031188857407569027
+      oil_fish_181: -7880551964233946101
+      oil_fish_182: 184323851805548135
+      oil_fish_183: 1403702108201790451
+      oil_fish_184: -9163565078758203899
+      oil_fish_185: 7473108486653722980
+      oil_fish_186: -7021380176079140855
+      oil_fish_187: -2770918883961991839
+      oil_fish_188: -2505756467917702671
+      oil_fish_189: -4290977195665453488
+      oil_fish_19: -6567304741404227504
+      oil_fish_190: -5440386718071081318
+      oil_fish_191: -7224437266954347689
+      oil_fish_192: -6726383839193957458
+      oil_fish_193: 2549761219128224594
+      oil_fish_194: 2180573095877894688
+      oil_fish_195: -237364024294173454
+      oil_fish_196: 5908963956821079068
+      oil_fish_197: -2747087171599387180
+      oil_fish_198: 1511582628019253057
+      oil_fish_199: -1851591985718307198
+      oil_fish_2: -585514754458044762
+      oil_fish_20: -7316223303665958457
+      oil_fish_21: -1600721777472090332
+      oil_fish_22: 2753436049592594875
+      oil_fish_23: -293643370653416764
+      oil_fish_24: -940710138078796795
+      oil_fish_25: -2618121429527170864
+      oil_fish_26: -6149311419379311822
+      oil_fish_27: -7592743412432381630
+      oil_fish_28: 4359062559561446529
+      oil_fish_29: 1797677886453596779
+      oil_fish_3: -6920705206745218561
+      oil_fish_30: 8390309288163588193
+      oil_fish_31: 1781323920657638684
+      oil_fish_32: 2206715042984165640
+      oil_fish_33: 7019832447887004257
+      oil_fish_34: 3249237237541984431
+      oil_fish_35: 1377454070154216939
+      oil_fish_36: 3925484345498207114
+      oil_fish_37: -1052571620466048681
+      oil_fish_38: 4893193129965905175
+      oil_fish_39: 2838363456253224204
+      oil_fish_4: -8527151173707508876
+      oil_fish_40: 2712379416392857338
+      oil_fish_41: -758264233969414633
+      oil_fish_42: -6437781587194882842
+      oil_fish_43: 3306438723366903241
+      oil_fish_44: 5616026248458404402
+      oil_fish_45: 6624518275438414873
+      oil_fish_46: 5485223136459660306
+      oil_fish_47: 3016121913284918493
+      oil_fish_48: 8411293398672951895
+      oil_fish_49: -5044355125596818805
+      oil_fish_5: -4769082654363882609
+      oil_fish_50: 8325467038121070746
+      oil_fish_51: 7725022737045643333
+      oil_fish_52: -6604423920820966872
+      oil_fish_53: 1471341329214941292
+      oil_fish_54: -1350706741324788778
+      oil_fish_55: -2809392764285729253
+      oil_fish_56: 3145863689715416897
+      oil_fish_57: 2417645215730843277
+      oil_fish_58: 77507011435632593
+      oil_fish_59: 8427793872165177065
+      oil_fish_6: 8649056741247848359
+      oil_fish_60: -4162158984569246105
+      oil_fish_61: 2912076821288065100
+      oil_fish_62: -224344710512664717
+      oil_fish_63: -3508110526137415159
+      oil_fish_64: -321299128538641867
+      oil_fish_65: -1197679769277620235
+      oil_fish_66: 7021699107605919889
+      oil_fish_67: 660624961716368283
+      oil_fish_68: -4366745205329020699
+      oil_fish_69: 3024525172900525874
+      oil_fish_7: -7190186428964465338
+      oil_fish_70: 2696560974491184258
+      oil_fish_71: 5083782701345507847
+      oil_fish_72: 7695780256630679783
+      oil_fish_73: 2101176970045931037
+      oil_fish_74: -4521006254242951914
+      oil_fish_75: -7406093264740269906
+      oil_fish_76: -6397750783173752534
+      oil_fish_77: -970522736822459817
+      oil_fish_78: 2459040188077319940
+      oil_fish_79: -6887110446153429423
+      oil_fish_8: 3063126848952758049
+      oil_fish_80: -4588992374416487263
+      oil_fish_81: 8988832759509165745
+      oil_fish_82: 974427158458229584
+      oil_fish_83: 495238428432637647
+      oil_fish_84: 1221461434538040537
+      oil_fish_85: 9108595107601168663
+      oil_fish_86: 6288864889784132165
+      oil_fish_87: 8434150707633833986
+      oil_fish_88: 6875211108892824813
+      oil_fish_89: -4340135843569719256
+      oil_fish_9: -2158215055014779931
+      oil_fish_90: -8099183200013889170
+      oil_fish_91: -5424211578320114401
+      oil_fish_92: -4993914779210359066
+      oil_fish_93: -6557269563953897713
+      oil_fish_94: -6337032760209152280
+      oil_fish_95: -8638910965119745892
+      oil_fish_96: 4339491893076914235
+      oil_fish_97: 8007377150181316648
+      oil_fish_98: -2164247239327516102
+      oil_fish_99: -5224477242532881827
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
