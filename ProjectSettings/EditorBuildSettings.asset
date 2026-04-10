@@ -26,6 +26,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene06_FishSteaming.unity
     guid: b8a1d8a6486784c48a675239fa8525bc
+  - enabled: 1
+    path: Assets/Scenes/Scene07_FishTemp.unity
+    guid: fd93999f02189e945be30455cda16dd9
+  - enabled: 1
+    path: Assets/Scenes/Scene08_Get_Dressed 1.unity
+    guid: 7c1e153079e70f24fb2e52cb201869be
+  - enabled: 1
+    path: Assets/Scenes/Scene09_Packaging.unity
+    guid: f014b609bc38d7d4d91d97e680fcafd6
+  - enabled: 1
+    path: Assets/Scenes/Scene10_Trimming.unity
+    guid: 133816ac5fb4a0e4c817db1cb1c6f607
+  - enabled: 1
+    path: Assets/Scenes/Scene11_Sterilize.unity
+    guid: 9e44bd4a49e452d45aa16142e2ab33ae
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
