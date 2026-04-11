@@ -328,7 +328,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MineralSolid
+      name: Mineral_Flakes
       rect:
         serializedVersion: 2
         x: 1427
@@ -372,7 +372,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MineralFlakesIncorrect
+      name: Mineral_Solid
       rect:
         serializedVersion: 2
         x: 800
@@ -411,8 +411,8 @@ TextureImporter:
       Mineral2: -1890338538239149555
       Mineral3: -8565126807008996060
       Mineral4: -7779101719683677238
-      MineralFlakesIncorrect: 1602354939
-      MineralSolid: -2483831308613983149
+      Mineral_Flakes: -2483831308613983149
+      Mineral_Solid: 1602354939
       "\u0E41\u0E22\u0E01\u0E0B\u0E2D\u0E2A-2_10": 6500571038911906894
       "\u0E41\u0E22\u0E01\u0E0B\u0E2D\u0E2A-2_11": 9088633115142837622
       "\u0E41\u0E22\u0E01\u0E0B\u0E2D\u0E2A-2_12": 1173260223293031851

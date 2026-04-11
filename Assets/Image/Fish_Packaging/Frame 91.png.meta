@@ -100,16 +100,16 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Nozzle
+      name: Frame 91_0
       rect:
         serializedVersion: 2
         x: 0
         y: 582
         width: 1911
-        height: 364
+        height: 494
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 660, y: 0, z: 660, w: 0}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
@@ -121,33 +121,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Head
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 946
-        width: 1911
-        height: 130
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 9, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 43a6cd4797afd0e408c2dee61302e253
-      internalID: 2014585428
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8d6af21e6b494b14cb28941bd6b99903
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -157,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Head: 2014585428
-      Nozzle: 8417198660549739762
+      Frame 91_0: 8417198660549739762
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
