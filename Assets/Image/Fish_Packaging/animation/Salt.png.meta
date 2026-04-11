@@ -262,7 +262,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shoyu1
+      name: Salt1
       rect:
         serializedVersion: 2
         x: 187
@@ -284,7 +284,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shoyu2
+      name: Salt2
       rect:
         serializedVersion: 2
         x: 817
@@ -306,7 +306,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shoyu4
+      name: Salt4
       rect:
         serializedVersion: 2
         x: 183
@@ -328,7 +328,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shoyu_Flake
+      name: Salt_Solid
       rect:
         serializedVersion: 2
         x: 1427
@@ -350,7 +350,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shoyu3
+      name: Salt3
       rect:
         serializedVersion: 2
         x: 1425
@@ -372,7 +372,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soy_0
+      name: Salt_FlakesIncorrect
       rect:
         serializedVersion: 2
         x: 800
@@ -407,12 +407,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Shoyu1: -6218657501936986793
-      Shoyu2: -1890338538239149555
-      Shoyu3: -8565126807008996060
-      Shoyu4: -7779101719683677238
-      Shoyu_Flake: -2483831308613983149
-      Soy_0: 1602354939
+      Salt1: -6218657501936986793
+      Salt2: -1890338538239149555
+      Salt3: -8565126807008996060
+      Salt4: -7779101719683677238
+      Salt_FlakesIncorrect: 1602354939
+      Salt_Solid: -2483831308613983149
       "\u0E41\u0E22\u0E01\u0E0B\u0E2D\u0E2A-2_10": 6500571038911906894
       "\u0E41\u0E22\u0E01\u0E0B\u0E2D\u0E2A-2_11": 9088633115142837622
       "\u0E41\u0E22\u0E01\u0E0B\u0E2D\u0E2A-2_12": 1173260223293031851
