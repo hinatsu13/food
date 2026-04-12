@@ -1,4 +1,5 @@
-using System;
+using System.Linq;
+using TMPro;
 using UnityEngine;
 using static packagingData;
 
@@ -6,6 +7,15 @@ public class PakagingManager : MonoBehaviour
 {
     [Header("Where to display the menu")]
     [SerializeField] public GameObject menuObject;
+    [SerializeField] public GameObject FlackCheck;
+    [SerializeField] public GameObject SolidCheck;
+    [SerializeField] public TextMeshProUGUI Weight_Value;
+    [SerializeField] public TextMeshProUGUI OilName;
+    [Header("Weight Display")]
+    [SerializeField] public TextMeshProUGUI Scale_Value;
+    [Header("Nozzle Text")]
+    [SerializeField] public TextMeshProUGUI Nozzle_Text;
+
     [Header("Animator")]
     [SerializeField] public Animator animator;
 
@@ -14,7 +24,7 @@ public class PakagingManager : MonoBehaviour
     [Header("Use when randomising recipe, if the randomized type of meat is solid, then only the oil in these array are compatible")]
     private int[] solidOil = {(int)OilType.Soy, (int)OilType.Olive, (int)OilType.SunFlower};
     [Header("Use when displaying oil name")]
-    private string[] oilName = {"None", "¹éÓÁÑ¹ÃÊ¾ÃÔ¡", "¹éÓà¡Å×Í", "¹éÓáÃè", "«ÍÊâªÂØ", "¹éÓÁÑ¹¶ÑèÇàËÅ×Í§", "¹éÓÁÑ¹ÁÐ¡Í¡", "¹éÓÁÑ¹´Í·Ò¹µÐÇÑ¹"};
+    private string[] oilName = {"None", "ï¿½ï¿½ï¿½ï¿½Ñ¹ï¿½Ê¾ï¿½Ô¡", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½ï¿½ï¿½Ñ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í§", "ï¿½ï¿½ï¿½ï¿½Ñ¹ï¿½Ð¡Í¡", "ï¿½ï¿½ï¿½ï¿½Ñ¹ï¿½Í·Ò¹ï¿½ï¿½ï¿½Ñ¹"};
 
     [Header("Save the randomized recipe in here")]
     private PackageRecipe goalRecipe;
@@ -27,12 +37,38 @@ public class PakagingManager : MonoBehaviour
     void Awake()
     {
         //randomized type of meat, and assigned it as a boolean
-
+        bool isFlake = UnityEngine.Random.Range(0,2) == 1;
+        int randomIndex = -1;
+        int randomOil = -1;
         //once gotten meat type, use the type to randomized the oil using the flakeOil or solidOil Array
-
+        if (isFlake)
+        {
+            randomIndex = UnityEngine.Random.Range(0,flakeOil.Count());
+            randomOil = flakeOil[randomIndex];
+        }
+        else
+        {
+            randomIndex = UnityEngine.Random.Range(0,solidOil.Count());
+            randomOil = solidOil[randomIndex];
+        }
+        goalRecipe = new PackageRecipe();
         //randomized the weight as 1 2 or 3 to represent the 3 colors
-
+        int currentWeight = UnityEngine.Random.Range(1,4);
         //update the menuObject to reflect the recipe
+        if(randomOil != -1)
+        {
+            goalRecipe.setRecipe(isFlake, currentWeight, randomOil);
+            if (FlackCheck)
+            {
+                FlackCheck.SetActive(true);
+            }
+            else
+            {
+                SolidCheck.SetActive(true);
+            }
+            Weight_Value.text = currentWeight.ToString();
+            OilName.text = oilName[randomOil];
+        }
     }
 
     public void SelectMeat(bool isFlake)
@@ -56,7 +92,8 @@ public class PakagingManager : MonoBehaviour
     {
         //When clicking/tapping the screen when selecting weight
         //Assign value to userRecipe
-
+        userRecipe.weight = weight;
+        Scale_Value.text = weight.ToString();
         //set the button to continue to active
     }
     public void PutOffScale()
@@ -79,19 +116,70 @@ public class PakagingManager : MonoBehaviour
     public void nextOil()
     {
         //use to cycle oil, with the right button on the nozzle
-
-        //update the currentOil
-
+        if (userRecipe.isFlake)
+        {
+            if(System.Array.IndexOf(flakeOil,currentOil)+1 <= flakeOil.Count())
+            {
+                //update the currentOil
+                currentOil = flakeOil[System.Array.IndexOf(flakeOil,currentOil)+1];
+            }
+            else
+            {
+                //update the currentOil
+                currentOil = flakeOil[0];
+            }
+            Nozzle_Text.text = oilName[flakeOil[currentOil]];
+        }
+        else
+        {
+            if(System.Array.IndexOf(solidOil,currentOil)+1 <= solidOil.Count())
+            {
+                //update the currentOil
+                currentOil = solidOil[System.Array.IndexOf(solidOil,currentOil)+1];
+            }
+            else
+            {
+                //update the currentOil
+                currentOil = solidOil[0];
+            }
+            Nozzle_Text.text = oilName[solidOil[currentOil]];
+        }
+        
         //set the oil name in the nozzle using the oilName, the position should be the same as the value in OilType
     }
     public void previousOil()
     {
         //use to cycle oil, with the left button on the nozzle
+        if (userRecipe.isFlake)
+        {
+            if(System.Array.IndexOf(flakeOil,currentOil)-1 >= 0)
+            {
+                //update the currentOil
+                currentOil = flakeOil[System.Array.IndexOf(flakeOil,currentOil)-1];
+            }
+            else
+            {
+                //update the currentOil
+                currentOil = flakeOil[0];
+            }
+        }
+        else
+        {
+            if(System.Array.IndexOf(solidOil,currentOil)-1 >= 0)
+            {
+                //update the currentOil
+                currentOil = solidOil[System.Array.IndexOf(solidOil,currentOil)-1];
+            }
+            else
+            {
+                //update the currentOil
+                currentOil = solidOil[0];
+            }
+        }
 
-
-        //update the currentOil
-
+        
         //set the oil name in the nozzle using the oilName, the position should be the same as the value in OilType
+        Nozzle_Text.text = oilName[currentOil];
     }
     public void check()
     {
@@ -121,4 +209,10 @@ public struct PackageRecipe
     public bool isFlake;
     public int weight;
     public int oilType;
+    public void setRecipe(bool flake, int set_weight, int set_oilType)
+    {
+        isFlake = flake;
+        weight = set_weight;
+        oilType = set_oilType;
+    }
 }

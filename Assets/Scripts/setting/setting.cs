@@ -4,6 +4,10 @@ using UnityEngine.UI;
 public class setting : MonoBehaviour
 {
     private bool isPaused = false;
+    void Awake()
+    {
+        Time.timeScale = 1f;
+    }
     void PauseGame()
     {
         Time.timeScale = 0;

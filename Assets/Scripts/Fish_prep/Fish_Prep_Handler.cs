@@ -19,7 +19,14 @@ public class Fish_Prep_Handler : MonoBehaviour
     [SerializeField]
     private GameObject show_After_Cutscene;
     [SerializeField]
-    private GameObject image_Person;    
+    private GameObject image_Person;
+
+    private Coroutine countdownRoutine;
+    public void Awake()
+    {
+        RestartCountdown();
+        //Time.timeScale = 1f;
+    }
 
     public void SplitFish()
     {
@@ -40,7 +47,16 @@ public class Fish_Prep_Handler : MonoBehaviour
     {
         Clean_Fish.SetActive(false);
         clean_Sparkle.SetActive(true);
-        StartCoroutine(CutsceneSequence());
+        countdownRoutine = StartCoroutine(CutsceneSequence());
+    }
+    public void RestartCountdown()
+    {
+        // If a routine is already running, stop it first
+        if (countdownRoutine != null)
+        {
+            StopCoroutine(countdownRoutine);
+        }
+        
     }
 
     private System.Collections.IEnumerator CutsceneSequence()
