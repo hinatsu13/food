@@ -19,20 +19,23 @@ public class PakagingManager : MonoBehaviour
     [Header("Animator")]
     [SerializeField] public Animator animator;
 
-    [Header("Use when randomising recipe, if the randomized type of meat is flake, then only the oil in these array are compatible")]
+    [Header("Star Displayer")]
+    [SerializeField] public StarDisplay endScreen;
+
+    [Tooltip("Use when randomising recipe, if the randomized type of meat is flake, then only the oil in these array are compatible")]
     private int[] flakeOil = {(int)OilType.Spicy, (int)OilType.Salt, (int)OilType.Mineral, (int)OilType.Shoyu, (int)OilType.Soy};
-    [Header("Use when randomising recipe, if the randomized type of meat is solid, then only the oil in these array are compatible")]
+    [Tooltip("Use when randomising recipe, if the randomized type of meat is solid, then only the oil in these array are compatible")]
     private int[] solidOil = {(int)OilType.Soy, (int)OilType.Olive, (int)OilType.SunFlower};
-    [Header("Use when displaying oil name")]
-    private string[] oilName = {"None", "����ѹ�ʾ�ԡ", "�������", "������", "������", "����ѹ��������ͧ", "����ѹ�С͡", "����ѹ�ͷҹ���ѹ"};
+    [Tooltip("Use when displaying oil name")]
+    private string[] oilName = {"None", "Spicy", "Salt", "Mineral", "Shoyu", "Soy Oil", "Olive Oil", "Sunflower Oil"};
 
-    [Header("Save the randomized recipe in here")]
+    [Tooltip("Save the randomized recipe in here")]
     private PackageRecipe goalRecipe;
-    [Header("Save the recipe that user input in here")]
+    [Tooltip("Save the recipe that user input in here")]
     public PackageRecipe userRecipe;
-    [Header("Use to track the current oil in the nozzle")]
+    [Tooltip("Use to track the current oil in the nozzle")]
     private int currentOil = 0;
-
+    private int score = 0;
     
     void Awake()
     {
@@ -80,6 +83,12 @@ public class PakagingManager : MonoBehaviour
         //call the animator trigger to update the sprite
         animator.SetTrigger("AddFish");
         //set the button to continue to active
+
+        //checking input with recipe
+        if (goalRecipe.isFlake == userRecipe.isFlake)
+        {
+            score++;
+        }
     }
     public void PutOnScale()
     {
@@ -94,6 +103,10 @@ public class PakagingManager : MonoBehaviour
         //Assign value to userRecipe
         userRecipe.weight = weight;
         Scale_Value.text = weight.ToString();
+        if (goalRecipe.weight == userRecipe.weight)
+        {
+            score++;
+        }
         //set the button to continue to active
     }
     public void PutOffScale()
@@ -112,82 +125,38 @@ public class PakagingManager : MonoBehaviour
         //if this broke check the condition in the animator that thing keep unassigning condition
         animator.SetInteger("OilType", currentOil);
         animator.SetTrigger("AddingOil");
+        if (goalRecipe.oilType == userRecipe.oilType)
+        {
+            score++;
+        }
     }
     public void nextOil()
     {
         //use to cycle oil, with the right button on the nozzle
-        if (userRecipe.isFlake)
-        {
-            if(System.Array.IndexOf(flakeOil,currentOil)+1 <= flakeOil.Count())
-            {
-                //update the currentOil
-                currentOil = flakeOil[System.Array.IndexOf(flakeOil,currentOil)+1];
-            }
-            else
-            {
-                //update the currentOil
-                currentOil = flakeOil[0];
-            }
-            Nozzle_Text.text = oilName[flakeOil[currentOil]];
-        }
-        else
-        {
-            if(System.Array.IndexOf(solidOil,currentOil)+1 <= solidOil.Count())
-            {
-                //update the currentOil
-                currentOil = solidOil[System.Array.IndexOf(solidOil,currentOil)+1];
-            }
-            else
-            {
-                //update the currentOil
-                currentOil = solidOil[0];
-            }
-            Nozzle_Text.text = oilName[solidOil[currentOil]];
-        }
+        currentOil++;
+        Nozzle_Text.text = oilName[currentOil % 8];
         
         //set the oil name in the nozzle using the oilName, the position should be the same as the value in OilType
     }
     public void previousOil()
     {
         //use to cycle oil, with the left button on the nozzle
-        if (userRecipe.isFlake)
+        if(currentOil == 0)
         {
-            if(System.Array.IndexOf(flakeOil,currentOil)-1 >= 0)
-            {
-                //update the currentOil
-                currentOil = flakeOil[System.Array.IndexOf(flakeOil,currentOil)-1];
-            }
-            else
-            {
-                //update the currentOil
-                currentOil = flakeOil[0];
-            }
+            currentOil = 7;
         }
         else
         {
-            if(System.Array.IndexOf(solidOil,currentOil)-1 >= 0)
-            {
-                //update the currentOil
-                currentOil = solidOil[System.Array.IndexOf(solidOil,currentOil)-1];
-            }
-            else
-            {
-                //update the currentOil
-                currentOil = solidOil[0];
-            }
+            currentOil--;
         }
+        Nozzle_Text.text = oilName[Mathf.Abs(currentOil % 8)];
 
-        
         //set the oil name in the nozzle using the oilName, the position should be the same as the value in OilType
-        Nozzle_Text.text = oilName[currentOil];
     }
     public void check()
     {
-        //Use to link with the final button after putting in the oil
-
-        //check if the userRecipe have the same component with the goalRecipe
-
         //show the ending screen
+        endScreen.displayStar(score);
     }
 }
 public static class packagingData
