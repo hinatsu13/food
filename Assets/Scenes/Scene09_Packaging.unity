@@ -371,7 +371,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2913877314069537592, guid: a3f2e19d9f88fc94db529f723f413a25, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3926045355874959544, guid: a3f2e19d9f88fc94db529f723f413a25, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -3747,12 +3747,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1135946596}
     - target: {fileID: 8849403378052694191, guid: df23ed19fcfefbf4187330ca2edd82cd, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8849403378052694191, guid: df23ed19fcfefbf4187330ca2edd82cd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8849403378052694191, guid: df23ed19fcfefbf4187330ca2edd82cd, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8849403378052694191, guid: df23ed19fcfefbf4187330ca2edd82cd, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8849403378052694191, guid: df23ed19fcfefbf4187330ca2edd82cd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 159.5651
+      objectReference: {fileID: 0}
+    - target: {fileID: 8849403378052694191, guid: df23ed19fcfefbf4187330ca2edd82cd, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 816.9999
+      value: 788
       objectReference: {fileID: 0}
     - target: {fileID: 8849403378052694191, guid: df23ed19fcfefbf4187330ca2edd82cd, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 695
+      value: 735
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4898,7 +4918,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &9030071600197399183
 MonoBehaviour:
   m_ObjectHideFlags: 0
