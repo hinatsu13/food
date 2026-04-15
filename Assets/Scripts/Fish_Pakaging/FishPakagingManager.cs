@@ -156,6 +156,7 @@ public class PakagingManager : MonoBehaviour
     public void check()
     {
         //show the ending screen
+        animator.SetTrigger("doneOiling");
         endScreen.displayStar(score);
     }
 }

@@ -32,33 +32,51 @@ public class Weight_Select : MonoBehaviour
             float barValue = Mathf.PingPong(timer, 1f);
             Slider.value = barValue;
 
-            // Stop the bar when the player clicks or presses Space
-            if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && RecipeUI.activeSelf == false) 
-            {
-                StopCasting(barValue);
-            }
+                // Stop the bar when the player clicks or presses Space
+                if (Input.touchCount > 0)
+                {
+                    Touch touch = Input.touches[0];
+                    if (touch.phase == TouchPhase.Began)
+                    {
+                        StopCasting(barValue, Input.GetTouch(0).position);
+                    }
+                }else if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && RecipeUI.activeSelf == false)
+                {
+                    StopCasting(barValue, Input.mousePosition);
+                }
         }
     }
     public void StartCasting()
     {
         isCasting = true;
     }
-    void StopCasting(float finalValue) 
+    void StopCasting(float finalValue, Vector3 inputLocation) 
     {
-        isCasting = false;
-        int value;
-        // Determine quality based on how close to '1' (the top) the bar is
-        if (finalValue < 0.33f) {
-            value = 1;
-        } else if(finalValue > 0.33f & finalValue < 0.66f){
-            value = 2;
-        }
-        else
+        Vector2 ray = Camera.main.ScreenToWorldPoint(inputLocation);
+        RaycastHit2D hit = Physics2D.Raycast(ray, Vector2.zero);
+        if (hit.collider != null)
         {
-            value = 3;
+            if (hit.collider.CompareTag("InputArea"))
+            {
+                isCasting = false;
+                int value;
+                // Determine quality based on how close to '1' (the top) the bar is
+                if (finalValue < 0.33f)
+                {
+                    value = 1;
+                }
+                else if (finalValue > 0.33f & finalValue < 0.66f)
+                {
+                    value = 2;
+                }
+                else
+                {
+                    value = 3;
+                }
+                Debug.Log(value);
+                Manager.SelectWeight(value);
+                Continue.SetActive(true);
+            }
         }
-        Debug.Log(value);
-        Manager.SelectWeight(value);
-        Continue.SetActive(true);
     }
 }

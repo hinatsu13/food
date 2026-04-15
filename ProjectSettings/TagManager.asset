@@ -8,6 +8,7 @@ TagManager:
   - Storage
   - Edge
   - Discard
+  - InputArea
   layers:
   - Default
   - TransparentFX
