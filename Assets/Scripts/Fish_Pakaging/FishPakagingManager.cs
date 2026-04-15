@@ -88,6 +88,7 @@ public class PakagingManager : MonoBehaviour
         if (goalRecipe.isFlake == userRecipe.isFlake)
         {
             score++;
+            StateManager.setFishPackaging(score);
         }
     }
     public void PutOnScale()
@@ -106,6 +107,7 @@ public class PakagingManager : MonoBehaviour
         if (goalRecipe.weight == userRecipe.weight)
         {
             score++;
+            StateManager.setFishPackaging(score);
         }
         //set the button to continue to active
     }
@@ -128,6 +130,7 @@ public class PakagingManager : MonoBehaviour
         if (goalRecipe.oilType == userRecipe.oilType)
         {
             score++;
+            StateManager.setFishPackaging(score);
         }
     }
     public void nextOil()
@@ -158,6 +161,7 @@ public class PakagingManager : MonoBehaviour
         //show the ending screen
         animator.SetTrigger("doneOiling");
         endScreen.displayStar(score);
+        StateManager.setFishPackaging(score);
     }
 }
 public static class packagingData
