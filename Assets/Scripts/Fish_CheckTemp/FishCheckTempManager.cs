@@ -109,7 +109,7 @@ public class FishCheckTempManager : MonoBehaviour
         ToggleAnswerButtons(false);
     }
 
-    private void InitGame()
+    public void InitGame()
     {
         currentTime = gameTime;
         score = 0;
