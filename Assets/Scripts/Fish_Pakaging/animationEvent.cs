@@ -2,15 +2,14 @@ using UnityEngine;
 
 public class animationEvent : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public bool isFinal = false;
+    public void finalButton()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (!isFinal)
+        {
+            isFinal = true;
+            GetComponent<Animator>().SetTrigger("doneOiling");
+        }
+        return;
     }
 }

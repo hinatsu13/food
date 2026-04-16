@@ -127,11 +127,6 @@ public class PakagingManager : MonoBehaviour
         //if this broke check the condition in the animator that thing keep unassigning condition
         animator.SetInteger("OilType", currentOil);
         animator.SetTrigger("AddingOil");
-        if (goalRecipe.oilType == userRecipe.oilType)
-        {
-            score++;
-            StateManager.setFishPackaging(score);
-        }
     }
     public void nextOil()
     {
@@ -159,7 +154,11 @@ public class PakagingManager : MonoBehaviour
     public void check()
     {
         //show the ending screen
-        animator.SetTrigger("doneOiling");
+        if (goalRecipe.oilType == userRecipe.oilType)
+        {
+            score++;
+            StateManager.setFishPackaging(score);
+        }
         endScreen.displayStar(score);
         StateManager.setFishPackaging(score);
     }
