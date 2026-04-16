@@ -25,7 +25,7 @@ public class MongoDBService : MonoBehaviour
     // Local testing: "http://localhost:3000"
     // After deploying to Render/Railway: "https://your-app-name.onrender.com"
     [SerializeField]
-    private string apiBaseUrl = "http://localhost:3000";
+    private string apiBaseUrl = "https://food-theta-nine.vercel.app/";
 
     public static string ApiBaseUrl
     {
@@ -41,6 +41,21 @@ public class MongoDBService : MonoBehaviour
     {
         Instance.StartCoroutine(Instance.SendScoreCoroutine(
             playerName, fishSelectionScore, fishPrepScore, fishCheckTempScore, fishPackagingScore, onComplete));
+    }
+
+    /// <summary>
+    /// Parameterless overload — reads all values from StateManager.
+    /// </summary>
+    public static void SendScore(Action<bool> onComplete = null)
+    {
+        SendScore(
+            StateManager.getPlayerName(),
+            StateManager.getFishSelection(),
+            StateManager.getFishPrep(),
+            StateManager.getFishCheckTemp(),
+            StateManager.getFishPackaging(),
+            onComplete
+        );
     }
 
     private IEnumerator SendScoreCoroutine(string playerName, int fishSelectionScore, int fishPrepScore,
@@ -85,6 +100,7 @@ public class MongoDBService : MonoBehaviour
         }
     }
 
+
     [Serializable]
     private class ScorePayload
     {
@@ -93,5 +109,64 @@ public class MongoDBService : MonoBehaviour
         public int fishPrepScore;
         public int fishCheckTempScore;
         public int fishPackagingScore;
+    }
+
+    /// <summary>
+    /// Fetches a player's data from MongoDB. Callback returns PlayerData if found, null if not.
+    /// </summary>
+    public static void GetPlayer(string playerName, Action<PlayerData> onComplete)
+    {
+        Instance.StartCoroutine(Instance.GetPlayerCoroutine(playerName, onComplete));
+    }
+
+    private IEnumerator GetPlayerCoroutine(string playerName, Action<PlayerData> onComplete)
+    {
+        string url = apiBaseUrl.TrimEnd('/') + "/api/player/" + UnityWebRequest.EscapeURL(playerName);
+        Debug.Log("[MongoDBService] Fetching player: " + url);
+
+        using (UnityWebRequest request = UnityWebRequest.Get(url))
+        {
+            yield return request.SendWebRequest();
+
+            if (request.result != UnityWebRequest.Result.Success)
+            {
+                Debug.LogError("[MongoDBService] Failed to fetch player: " + request.error);
+                onComplete?.Invoke(null);
+                yield break;
+            }
+
+            string json = request.downloadHandler.text;
+            Debug.Log("[MongoDBService] Player response: " + json);
+
+            PlayerResponse response = JsonUtility.FromJson<PlayerResponse>(json);
+
+            if (response != null && response.exists && response.data != null)
+            {
+                onComplete?.Invoke(response.data);
+            }
+            else
+            {
+                onComplete?.Invoke(null);
+            }
+        }
+    }
+
+    [Serializable]
+    private class PlayerResponse
+    {
+        public bool success;
+        public bool exists;
+        public PlayerData data;
+    }
+
+    [Serializable]
+    public class PlayerData
+    {
+        public string playerName;
+        public int fishSelectionScore;
+        public int fishPrepScore;
+        public int fishCheckTempScore;
+        public int fishPackagingScore;
+        public int totalScore;
     }
 }

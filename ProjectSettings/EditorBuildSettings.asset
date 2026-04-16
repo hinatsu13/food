@@ -33,7 +33,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene07_FishTemp.unity
     guid: fd93999f02189e945be30455cda16dd9
   - enabled: 1
-    path: Assets/Scenes/Scene08_Get_Dressed 1.unity
+    path: Assets/Scenes/Scene08_Get_Dressed.unity
     guid: 7c1e153079e70f24fb2e52cb201869be
   - enabled: 1
     path: Assets/Scenes/Scene09_Trimming.unity

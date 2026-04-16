@@ -19,7 +19,7 @@ mongoose
 // ── Score Schema ───────────────────────────────────────────
 const scoreSchema = new mongoose.Schema(
   {
-    playerName:        { type: String, required: true },
+    playerName:        { type: String, required: true, unique: true },
     fishSelectionScore:{ type: Number, default: 0 },
     fishPrepScore:     { type: Number, default: 0 },
     fishCheckTempScore:{ type: Number, default: 0 },
@@ -38,7 +38,7 @@ app.get("/", (req, res) => {
   res.json({ status: "ok", message: "Food Score API is running" });
 });
 
-// Save a score
+// Save or update a score (upsert by playerName)
 app.post("/api/scores", async (req, res) => {
   try {
     const {
@@ -59,19 +59,40 @@ app.post("/api/scores", async (req, res) => {
       (fishCheckTempScore || 0) +
       (fishPackagingScore || 0);
 
-    const score = await Score.create({
-      playerName,
-      fishSelectionScore: fishSelectionScore || 0,
-      fishPrepScore: fishPrepScore || 0,
-      fishCheckTempScore: fishCheckTempScore || 0,
-      fishPackagingScore: fishPackagingScore || 0,
-      totalScore,
-    });
+    // Update if player exists, create if not
+    const score = await Score.findOneAndUpdate(
+      { playerName },
+      {
+        playerName,
+        fishSelectionScore: fishSelectionScore || 0,
+        fishPrepScore: fishPrepScore || 0,
+        fishCheckTempScore: fishCheckTempScore || 0,
+        fishPackagingScore: fishPackagingScore || 0,
+        totalScore,
+      },
+      { upsert: true, new: true, setDefaultsOnInsert: true }
+    );
 
-    res.status(201).json({ success: true, data: score });
+    res.status(200).json({ success: true, data: score });
   } catch (err) {
     console.error("Error saving score:", err);
     res.status(500).json({ error: "Failed to save score" });
+  }
+});
+
+// Get a player's scores by name
+app.get("/api/player/:name", async (req, res) => {
+  try {
+    const player = await Score.findOne({ playerName: req.params.name }).select("-__v");
+
+    if (!player) {
+      return res.json({ success: true, exists: false });
+    }
+
+    res.json({ success: true, exists: true, data: player });
+  } catch (err) {
+    console.error("Error fetching player:", err);
+    res.status(500).json({ error: "Failed to fetch player" });
   }
 });
 

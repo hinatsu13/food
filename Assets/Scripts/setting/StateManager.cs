@@ -4,10 +4,10 @@ using UnityEngine;
 public static class StateManager
 {
     private static string PlayerName;
-    private static int FishSelectionScore;
-    private static int FishPrepScore;
-    private static int FishCheckTempScore;
-    private static int FishPackagingScore;
+    private static int FishSelectionScore = 0;
+    private static int FishPrepScore = 0;
+    private static int FishCheckTempScore = 0;
+    private static int FishPackagingScore = 0;
 
     // ── Setters ────────────────────────────────────────────
     public static void setPlayerName(string name)
