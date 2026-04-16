@@ -127,7 +127,12 @@ app.get("/api/scores", async (req, res) => {
   }
 });
 
-// ── Start Server ───────────────────────────────────────────
-app.listen(PORT, () => {
-  console.log("Server running on http://localhost:" + PORT);
-});
+// ── Start Server (local dev) / Export (Vercel) ─────────────
+if (process.env.VERCEL) {
+  // Vercel serverless — just export the app
+  module.exports = app;
+} else {
+  app.listen(PORT, () => {
+    console.log("Server running on http://localhost:" + PORT);
+  });
+}
