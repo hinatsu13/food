@@ -19,8 +19,7 @@ public class LeaderBoardManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI nextRankName;
     [SerializeField] private TextMeshProUGUI nextRankScore;
 
-    [Header("Settings")]
-    [SerializeField] private string apiBaseUrl = "http://localhost:3000";
+
 
     private void Start()
     {
@@ -30,11 +29,11 @@ public class LeaderBoardManager : MonoBehaviour
     private IEnumerator FetchLeaderboard()
     {
         string currentPlayer = StateManager.getPlayerName();
-        string url = apiBaseUrl.TrimEnd('/') + "/api/scores";
+        string url = MongoDBService.ApiBaseUrl.TrimEnd('/') + "/api/scores";
 
         // Include player name so the API returns their exact rank
         if (!string.IsNullOrEmpty(currentPlayer))
-            url += "&playerName=" + UnityWebRequest.EscapeURL(currentPlayer);
+            url += "?playerName=" + UnityWebRequest.EscapeURL(currentPlayer);
 
         Debug.Log("[LeaderBoard] Fetching: " + url);
 
