@@ -11,8 +11,9 @@ public class Weight_Select : MonoBehaviour
     [SerializeField] private GameObject RecipeUI;
     [Header("Slider Bar")]
     [SerializeField] public Slider Slider;
-    [Header("Continue UI")]
+    [Header("Reference")]
     [SerializeField] public GameObject Continue;
+    [SerializeField] public RectTransform inputArea;
 
     [Header("Ping Pong Speed")]
     public float speed = 2f;
@@ -52,31 +53,24 @@ public class Weight_Select : MonoBehaviour
     }
     void StopCasting(float finalValue, Vector3 inputLocation) 
     {
-        Vector2 ray = Camera.main.ScreenToWorldPoint(inputLocation);
-        RaycastHit2D hit = Physics2D.Raycast(ray, Vector2.zero);
-        if (hit.collider != null)
+        bool isInsideArea = RectTransformUtility.RectangleContainsScreenPoint(inputArea, inputLocation, Camera.main);
+
+        if (isInsideArea)
         {
-            if (hit.collider.CompareTag("InputArea"))
-            {
-                isCasting = false;
-                int value;
-                // Determine quality based on how close to '1' (the top) the bar is
-                if (finalValue < 0.33f)
-                {
-                    value = 1;
-                }
-                else if (finalValue > 0.33f & finalValue < 0.66f)
-                {
-                    value = 2;
-                }
-                else
-                {
-                    value = 3;
-                }
-                Debug.Log(value);
-                Manager.SelectWeight(value);
-                Continue.SetActive(true);
-            }
+            isCasting = false;
+            int value;
+
+            if (finalValue <= 0.33f) value = 1;
+            else if (finalValue <= 0.66f) value = 2;
+            else value = 3;
+
+            Debug.Log($"Input Registered in Gameplay Area! Value: {value}");
+            Manager.SelectWeight(value);
+            Continue.SetActive(true);
+        }
+        else
+        {
+            Debug.Log("Click ignored: Outside of the InputArea.");
         }
     }
 }

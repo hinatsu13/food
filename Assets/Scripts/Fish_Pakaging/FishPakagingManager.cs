@@ -30,9 +30,9 @@ public class PakagingManager : MonoBehaviour
     private string[] oilName = {"None", "Spicy", "Salt", "Mineral", "Shoyu", "Soy Oil", "Olive Oil", "Sunflower Oil"};
 
     [Tooltip("Save the randomized recipe in here")]
-    private PackageRecipe goalRecipe;
+    [SerializeField] private PackageRecipe goalRecipe;
     [Tooltip("Save the recipe that user input in here")]
-    public PackageRecipe userRecipe;
+    [SerializeField] public PackageRecipe userRecipe;
     [Tooltip("Use to track the current oil in the nozzle")]
     private int currentOil = 0;
     private int score = 0;
