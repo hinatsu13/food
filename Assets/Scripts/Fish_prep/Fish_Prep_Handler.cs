@@ -21,19 +21,27 @@ public class Fish_Prep_Handler : MonoBehaviour
     [SerializeField]
     private GameObject image_Person;
 
+    private int tracking_Scroe = 0;
+
     private Coroutine countdownRoutine;
     public void Awake()
     {
         RestartCountdown();
         //Time.timeScale = 1f;
     }
-
+    public void AddingScore()
+    {
+        tracking_Scroe += 1;
+        StateManager.setFishPrep(tracking_Scroe);
+    }
     public void SplitFish()
     {
         Debug.Log("The fish is filleted!");
         // Disable the fish
         fillet_Fish.SetActive(false);
         guts_The_Fish.SetActive(true);
+        tracking_Scroe +=1;
+        AddingScore();
     }
 
     public void CleanFish()
@@ -41,6 +49,7 @@ public class Fish_Prep_Handler : MonoBehaviour
         //Turn Off Old guts
         guts_The_Fish.SetActive(false);
         Clean_Fish.SetActive(true);
+        AddingScore();
     }
 
     public void Cutscene_Trigger()
@@ -72,6 +81,7 @@ public class Fish_Prep_Handler : MonoBehaviour
     {
         show_After_Cutscene.SetActive(true);
         image_Person.SetActive(false);
+        AddingScore();
     }
     public void TriggerCutscene()
     {
