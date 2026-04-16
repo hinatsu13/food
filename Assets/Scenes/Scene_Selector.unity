@@ -3268,7 +3268,7 @@ PrefabInstance:
       objectReference: {fileID: 7763277611592621698, guid: c8d0c1b8a38df4143b59676da03d6156, type: 3}
     - target: {fileID: 2128411091775138717, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Scenes/Scene08_Get_Dressed 1
+      value: Scenes/Scene08_Get_Dressed
       objectReference: {fileID: 0}
     - target: {fileID: 3362985322805278346, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
       propertyPath: m_Type

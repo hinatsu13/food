@@ -378,6 +378,8 @@ public class FishCheckTempManager : MonoBehaviour
         isGameActive = false;
         if (gameOverPanel != null) gameOverPanel.SetActive(true);
         if (gameOverScoreText != null) gameOverScoreText.text = score.ToString();
+        StateManager.setFishCheckTemp(score);
+        StateManager.SendPacket();
     }
 
     private void OnBackPressed() { Debug.Log("Back pressed"); }
