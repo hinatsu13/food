@@ -61,7 +61,7 @@ public class PakagingManager : MonoBehaviour
         if(randomOil != -1)
         {
             goalRecipe.setRecipe(isFlake, currentWeight, randomOil);
-            if (FlackCheck)
+            if (isFlake)
             {
                 FlackCheck.SetActive(true);
             }
