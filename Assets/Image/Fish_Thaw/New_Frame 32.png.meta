@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: e7c24ffe9f2f082439f9adaacff3ca55
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4002377021993396092
+    second: New_Frame 32_0
+  - first:
+      213: 3540802984037620479
+    second: New_Frame 32_1
+  - first:
+      213: -7439336937703923423
+    second: New_Frame 32_2
+  - first:
+      213: 3074470106163908078
+    second: New_Frame 32_3
+  - first:
+      213: -8389400001979892218
+    second: New_Frame 32_4
+  - first:
+      213: -521975050110688014
+    second: New_Frame 32_5
+  - first:
+      213: -7244921325797322475
+    second: New_Frame 32_6
+  - first:
+      213: -8846788456874302949
+    second: New_Frame 32_7
+  - first:
+      213: -1744750525927802179
+    second: New_Frame 32_8
+  - first:
+      213: -1785099235209990640
+    second: New_Frame 32_9
+  - first:
+      213: 7480987821793306039
+    second: New_Frame 32_10
+  - first:
+      213: 6808923409850779075
+    second: New_Frame 32_11
+  - first:
+      213: -905702910199299089
+    second: New_Frame 32_12
+  - first:
+      213: 7039254967533224891
+    second: New_Frame 32_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: New_Frame 32_0
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 598
+        width: 280
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c772a1d22bc4b8730800000000000000
+      internalID: 4002377021993396092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Frame 32_1
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 577
+        width: 276
+        height: 406
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffa9433dd85732130800000000000000
+      internalID: 3540802984037620479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Frame 32_2
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 598
+        width: 280
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12127bf687a22c890800000000000000
+      internalID: -7439336937703923423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Frame 32_3
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 333
+        width: 44
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eed0576b546baaa20800000000000000
+      internalID: 3074470106163908078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Frame 32_4
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 321
+        width: 55
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60eb35ba52dd29b80800000000000000
+      internalID: -8389400001979892218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Frame 32_5
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 391
+        width: 180
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f4298c157291c8f0800000000000000
+      internalID: -521975050110688014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Frame 32_6
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 294
+        width: 43
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 511d23e707ed47b90800000000000000
+      internalID: -7244921325797322475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Frame 32_7
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 266
+        width: 31
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b122bf055c4e93580800000000000000
+      internalID: -8846788456874302949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Frame 32_8
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 286
+        width: 35
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbab56804a669c7e0800000000000000
+      internalID: -1744750525927802179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Frame 32_9
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 285
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01eac7414bd0a37e0800000000000000
+      internalID: -1785099235209990640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Frame 32_10
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 172
+        width: 32
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b56307b9cec1d760800000000000000
+      internalID: 7480987821793306039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Frame 32_11
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 213
+        width: 27
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c54ffa14c72e7e50800000000000000
+      internalID: 6808923409850779075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Frame 32_12
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 125
+        width: 691
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe38885700c4e63f0800000000000000
+      internalID: -905702910199299089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Frame 32_13
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 160
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb3c83fe81570b160800000000000000
+      internalID: 7039254967533224891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      New_Frame 32_0: 4002377021993396092
+      New_Frame 32_1: 3540802984037620479
+      New_Frame 32_10: 7480987821793306039
+      New_Frame 32_11: 6808923409850779075
+      New_Frame 32_12: -905702910199299089
+      New_Frame 32_13: 7039254967533224891
+      New_Frame 32_2: -7439336937703923423
+      New_Frame 32_3: 3074470106163908078
+      New_Frame 32_4: -8389400001979892218
+      New_Frame 32_5: -521975050110688014
+      New_Frame 32_6: -7244921325797322475
+      New_Frame 32_7: -8846788456874302949
+      New_Frame 32_8: -1744750525927802179
+      New_Frame 32_9: -1785099235209990640
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
