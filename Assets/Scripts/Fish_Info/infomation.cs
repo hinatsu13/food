@@ -14,6 +14,7 @@ public class infomation : MonoBehaviour
     public void OpenImage()
     {
         gameObject.SetActive(true);
+        ChangeButtonLocation();
     }
 
     public void CloseImage()
