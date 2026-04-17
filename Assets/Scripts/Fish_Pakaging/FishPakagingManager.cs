@@ -1,7 +1,10 @@
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 using static packagingData;
+using Image = UnityEngine.UI.Image;
 
 public class PakagingManager : MonoBehaviour
 {
@@ -25,6 +28,16 @@ public class PakagingManager : MonoBehaviour
 
     [Header("Star Displayer")]
     [SerializeField] public StarDisplay endScreen;
+    [Header("Final Sprite Reference")]
+    [SerializeField] public Image fishCan;
+    [SerializeField] public Sprite SunflowerSteak;
+    [SerializeField] public Sprite SoySteak;
+    [SerializeField] public Sprite OliveSteak;
+    [SerializeField] public Sprite MineralFlakes;
+    [SerializeField] public Sprite SoyFlakes;
+    [SerializeField] public Sprite SaltFlakes;
+    [SerializeField] public Sprite ShoyuFlakes;
+    [SerializeField] public Sprite SpicyFlakes;
 
     [Tooltip("Use when randomising recipe, if the randomized type of meat is flake, then only the oil in these array are compatible")]
     private int[] flakeOil = {(int)OilType.Spicy, (int)OilType.Salt, (int)OilType.Mineral, (int)OilType.Shoyu, (int)OilType.Soy};
@@ -44,7 +57,8 @@ public class PakagingManager : MonoBehaviour
     private int MedValue;
     private int HighValue;
     private int score = 0;
-    
+
+
     void Awake()
     {
     
@@ -196,10 +210,57 @@ public class PakagingManager : MonoBehaviour
         if (goalRecipe.oilType == userRecipe.oilType)
         {
             score++;
+            if (score == 3)
+            {
+                animator.SetBool("Correct", true);
+            }
             StateManager.setFishPackaging(score);
         }
         endScreen.displayStar(score);
         StateManager.setFishPackaging(score);
+    }
+    public void showProduct()
+    {
+        if (userRecipe.isFlake)
+        {
+            switch (userRecipe.oilType)
+            {
+                case 1:
+                    fishCan.sprite = SpicyFlakes;
+                    break; 
+                case 2:
+                    fishCan.sprite = SaltFlakes;
+                    break;
+                case 3:
+                    fishCan.sprite = MineralFlakes;
+                    break;
+                case 4:
+                    fishCan.sprite = ShoyuFlakes;
+                    break;
+                case 5:
+                    fishCan.sprite = SoyFlakes;
+                    break;
+                default:
+                    break;
+            }
+        }
+        else
+        {
+            switch (userRecipe.oilType)
+            {
+                case 6:
+                    fishCan.sprite = OliveSteak;
+                    break;
+                case 7:
+                    fishCan.sprite = SunflowerSteak;
+                    break;
+                case 5:
+                    fishCan.sprite = SoySteak;
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }
 public static class packagingData

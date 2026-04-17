@@ -147,7 +147,7 @@ TextureImporter:
         width: 280
         height: 386
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -169,7 +169,7 @@ TextureImporter:
         width: 276
         height: 406
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -191,7 +191,7 @@ TextureImporter:
         width: 280
         height: 386
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -205,13 +205,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New_Frame 32_3
+      name: FullSparkle
       rect:
         serializedVersion: 2
-        x: 339
-        y: 333
-        width: 44
-        height: 79
+        x: 287
+        y: 139
+        width: 452
+        height: 277
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,28 +227,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New_Frame 32_4
-      rect:
-        serializedVersion: 2
-        x: 669
-        y: 321
-        width: 55
-        height: 73
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 60eb35ba52dd29b80800000000000000
-      internalID: -8389400001979892218
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: New_Frame 32_5
       rect:
         serializedVersion: 2
@@ -257,7 +235,7 @@ TextureImporter:
         width: 180
         height: 103
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -271,138 +249,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New_Frame 32_6
-      rect:
-        serializedVersion: 2
-        x: 292
-        y: 294
-        width: 43
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 511d23e707ed47b90800000000000000
-      internalID: -7244921325797322475
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: New_Frame 32_7
-      rect:
-        serializedVersion: 2
-        x: 326
-        y: 266
-        width: 31
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b122bf055c4e93580800000000000000
-      internalID: -8846788456874302949
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: New_Frame 32_8
-      rect:
-        serializedVersion: 2
-        x: 657
-        y: 286
-        width: 35
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dbab56804a669c7e0800000000000000
-      internalID: -1744750525927802179
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: New_Frame 32_9
-      rect:
-        serializedVersion: 2
-        x: 663
-        y: 285
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 01eac7414bd0a37e0800000000000000
-      internalID: -1785099235209990640
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: New_Frame 32_10
-      rect:
-        serializedVersion: 2
-        x: 666
-        y: 172
-        width: 32
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7b56307b9cec1d760800000000000000
-      internalID: 7480987821793306039
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: New_Frame 32_11
-      rect:
-        serializedVersion: 2
-        x: 700
-        y: 213
-        width: 27
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3c54ffa14c72e7e50800000000000000
-      internalID: 6808923409850779075
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: New_Frame 32_12
       rect:
         serializedVersion: 2
@@ -411,7 +257,7 @@ TextureImporter:
         width: 691
         height: 155
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -424,33 +270,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: New_Frame 32_13
-      rect:
-        serializedVersion: 2
-        x: 295
-        y: 160
-        width: 30
-        height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bb3c83fe81570b160800000000000000
-      internalID: 7039254967533224891
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ac4bd3cfcfff2c347837bae9fe853bf4
     internalID: 0
     vertices: []
     indices: 
@@ -460,6 +284,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      FullSparkle: 3074470106163908078
       New_Frame 32_0: 4002377021993396092
       New_Frame 32_1: 3540802984037620479
       New_Frame 32_10: 7480987821793306039
@@ -467,7 +292,6 @@ TextureImporter:
       New_Frame 32_12: -905702910199299089
       New_Frame 32_13: 7039254967533224891
       New_Frame 32_2: -7439336937703923423
-      New_Frame 32_3: 3074470106163908078
       New_Frame 32_4: -8389400001979892218
       New_Frame 32_5: -521975050110688014
       New_Frame 32_6: -7244921325797322475
