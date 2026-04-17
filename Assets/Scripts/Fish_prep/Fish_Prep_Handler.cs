@@ -11,6 +11,8 @@ public class Fish_Prep_Handler : MonoBehaviour
     private GameObject fillet_Fish;
     [SerializeField]
     private GameObject guts_The_Fish;
+    [SerializeField]
+    private GameObject Bottom_Fish;
 
     [SerializeField] 
     private GameObject clean_Sparkle;// Assign in Inspector
@@ -20,7 +22,7 @@ public class Fish_Prep_Handler : MonoBehaviour
     private GameObject show_After_Cutscene;
     [SerializeField]
     private GameObject image_Person;
-
+    public int Guts_Count;
     private int tracking_Scroe = 0;
 
     private Coroutine countdownRoutine;
@@ -54,6 +56,7 @@ public class Fish_Prep_Handler : MonoBehaviour
 
     public void Cutscene_Trigger()
     {
+        Bottom_Fish.SetActive(false);
         Clean_Fish.SetActive(false);
         clean_Sparkle.SetActive(true);
         countdownRoutine = StartCoroutine(CutsceneSequence());
