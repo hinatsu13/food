@@ -376,7 +376,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5639121295410248097}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Popup_panel, Assembly-CSharp
         m_MethodName: ClosePanel
         m_Mode: 1
@@ -819,9 +819,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2527072518444033776, guid: 900e777861242ed4abee2b2288acda7f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7648145474069136186}
-    - targetCorrespondingSourceObject: {fileID: 2527072518444033776, guid: 900e777861242ed4abee2b2288acda7f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5639121295410248097}
   m_SourcePrefab: {fileID: 100100000, guid: 900e777861242ed4abee2b2288acda7f, type: 3}
 --- !u!224 &1921802167975381616 stripped
 RectTransform:
@@ -846,19 +843,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::infomation
   targetButtonRect: {fileID: 2217698583663607503}
---- !u!114 &5639121295410248097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7814087250869150703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 071fea4edf3b26e4d9c215e42d127d1c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Popup_panel
-  popup: 0
 --- !u!1001 &7079625017732932250
 PrefabInstance:
   m_ObjectHideFlags: 0
