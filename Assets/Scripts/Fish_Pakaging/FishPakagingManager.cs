@@ -13,6 +13,10 @@ public class PakagingManager : MonoBehaviour
     [SerializeField] public TextMeshProUGUI OilName;
     [Header("Weight Display")]
     [SerializeField] public TextMeshProUGUI Scale_Value;
+    [SerializeField] public GameObject Light;
+    [SerializeField] public GameObject Med;
+    [SerializeField] public GameObject Heavy;
+
     [Header("Nozzle Text")]
     [SerializeField] public TextMeshProUGUI Nozzle_Text;
 
@@ -34,11 +38,16 @@ public class PakagingManager : MonoBehaviour
     [Tooltip("Save the recipe that user input in here")]
     [SerializeField] public PackageRecipe userRecipe;
     [Tooltip("Use to track the current oil in the nozzle")]
+    //Mock Weighted Value
     private int currentOil = 0;
+    private int LightValue;
+    private int MedValue;
+    private int HighValue;
     private int score = 0;
     
     void Awake()
     {
+    
         //randomized type of meat, and assigned it as a boolean
         bool isFlake = UnityEngine.Random.Range(0,2) == 1;
         int randomIndex = -1;
@@ -58,6 +67,12 @@ public class PakagingManager : MonoBehaviour
         //randomized the weight as 1 2 or 3 to represent the 3 colors
         int currentWeight = UnityEngine.Random.Range(1,4);
         //update the menuObject to reflect the recipe
+        
+        //Random mock weight
+        LightValue = UnityEngine.Random.Range(9,41);
+        MedValue = UnityEngine.Random.Range(40,91);
+        HighValue = UnityEngine.Random.Range(99,151);
+        
         if(randomOil != -1)
         {
             goalRecipe.setRecipe(isFlake, currentWeight, randomOil);
@@ -69,7 +84,19 @@ public class PakagingManager : MonoBehaviour
             {
                 SolidCheck.SetActive(true);
             }
-            Weight_Value.text = currentWeight.ToString();
+            if (currentWeight == 1)
+            {
+                Light.SetActive(true);
+                Weight_Value.text = LightValue.ToString();
+            }else if (currentWeight == 2)
+            {
+                Med.SetActive(true);
+                Weight_Value.text = MedValue.ToString();
+            }else if (currentWeight == 3)
+            {
+                Heavy.SetActive(true);
+                Weight_Value.text = HighValue.ToString();
+            }
             OilName.text = oilName[randomOil];
         }
     }
@@ -103,7 +130,19 @@ public class PakagingManager : MonoBehaviour
         //When clicking/tapping the screen when selecting weight
         //Assign value to userRecipe
         userRecipe.weight = weight;
-        Scale_Value.text = weight.ToString();
+        if (weight == 1)
+        {
+            Light.SetActive(true);
+            Scale_Value.text = LightValue.ToString();
+        }else if (weight == 2)
+        {
+            Med.SetActive(true);
+            Scale_Value.text = MedValue.ToString();
+        }else if (weight == 3)
+        {
+            Heavy.SetActive(true);
+            Scale_Value.text = HighValue.ToString();
+        }
         if (goalRecipe.weight == userRecipe.weight)
         {
             score++;
