@@ -6,6 +6,7 @@ public class Dragable_Object : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 {
     public GameObject Dropbox;
     public Image image;
+    public Image Ondrag;
     public Transform parentAfterDrag;
     private RectTransform _rectTransform;
     private bool _onCutValid = false;
@@ -20,6 +21,10 @@ public class Dragable_Object : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         transform.SetAsLastSibling();
         image.raycastTarget = false;
         SetValid(true);
+        if(Ondrag != null)
+        {
+            Ondrag.enabled = true;
+        }
     }
     
 
@@ -33,6 +38,10 @@ public class Dragable_Object : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
         transform.SetParent(parentAfterDrag);
         image.raycastTarget = true;
+        if(Ondrag != null)
+        {
+            Ondrag.enabled = false;
+        }
     }
 
     public void SetValid(bool valid)

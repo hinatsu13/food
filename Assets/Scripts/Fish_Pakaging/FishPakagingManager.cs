@@ -1,7 +1,10 @@
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 using static packagingData;
+using Image = UnityEngine.UI.Image;
 
 public class PakagingManager : MonoBehaviour
 {
@@ -13,6 +16,10 @@ public class PakagingManager : MonoBehaviour
     [SerializeField] public TextMeshProUGUI OilName;
     [Header("Weight Display")]
     [SerializeField] public TextMeshProUGUI Scale_Value;
+    [SerializeField] public GameObject Light;
+    [SerializeField] public GameObject Med;
+    [SerializeField] public GameObject Heavy;
+
     [Header("Nozzle Text")]
     [SerializeField] public TextMeshProUGUI Nozzle_Text;
 
@@ -21,6 +28,16 @@ public class PakagingManager : MonoBehaviour
 
     [Header("Star Displayer")]
     [SerializeField] public StarDisplay endScreen;
+    [Header("Final Sprite Reference")]
+    [SerializeField] public Image fishCan;
+    [SerializeField] public Sprite SunflowerSteak;
+    [SerializeField] public Sprite SoySteak;
+    [SerializeField] public Sprite OliveSteak;
+    [SerializeField] public Sprite MineralFlakes;
+    [SerializeField] public Sprite SoyFlakes;
+    [SerializeField] public Sprite SaltFlakes;
+    [SerializeField] public Sprite ShoyuFlakes;
+    [SerializeField] public Sprite SpicyFlakes;
 
     [Tooltip("Use when randomising recipe, if the randomized type of meat is flake, then only the oil in these array are compatible")]
     private int[] flakeOil = {(int)OilType.Spicy, (int)OilType.Salt, (int)OilType.Mineral, (int)OilType.Shoyu, (int)OilType.Soy};
@@ -34,11 +51,17 @@ public class PakagingManager : MonoBehaviour
     [Tooltip("Save the recipe that user input in here")]
     [SerializeField] public PackageRecipe userRecipe;
     [Tooltip("Use to track the current oil in the nozzle")]
+    //Mock Weighted Value
     private int currentOil = 0;
+    private int LightValue;
+    private int MedValue;
+    private int HighValue;
     private int score = 0;
-    
+
+
     void Awake()
     {
+    
         //randomized type of meat, and assigned it as a boolean
         bool isFlake = UnityEngine.Random.Range(0,2) == 1;
         int randomIndex = -1;
@@ -58,6 +81,12 @@ public class PakagingManager : MonoBehaviour
         //randomized the weight as 1 2 or 3 to represent the 3 colors
         int currentWeight = UnityEngine.Random.Range(1,4);
         //update the menuObject to reflect the recipe
+        
+        //Random mock weight
+        LightValue = UnityEngine.Random.Range(9,41);
+        MedValue = UnityEngine.Random.Range(40,91);
+        HighValue = UnityEngine.Random.Range(99,151);
+        
         if(randomOil != -1)
         {
             goalRecipe.setRecipe(isFlake, currentWeight, randomOil);
@@ -69,7 +98,19 @@ public class PakagingManager : MonoBehaviour
             {
                 SolidCheck.SetActive(true);
             }
-            Weight_Value.text = currentWeight.ToString();
+            if (currentWeight == 1)
+            {
+                Light.SetActive(true);
+                Weight_Value.text = LightValue.ToString();
+            }else if (currentWeight == 2)
+            {
+                Med.SetActive(true);
+                Weight_Value.text = MedValue.ToString();
+            }else if (currentWeight == 3)
+            {
+                Heavy.SetActive(true);
+                Weight_Value.text = HighValue.ToString();
+            }
             OilName.text = oilName[randomOil];
         }
     }
@@ -103,7 +144,19 @@ public class PakagingManager : MonoBehaviour
         //When clicking/tapping the screen when selecting weight
         //Assign value to userRecipe
         userRecipe.weight = weight;
-        Scale_Value.text = weight.ToString();
+        if (weight == 1)
+        {
+            Light.SetActive(true);
+            Scale_Value.text = LightValue.ToString();
+        }else if (weight == 2)
+        {
+            Med.SetActive(true);
+            Scale_Value.text = MedValue.ToString();
+        }else if (weight == 3)
+        {
+            Heavy.SetActive(true);
+            Scale_Value.text = HighValue.ToString();
+        }
         if (goalRecipe.weight == userRecipe.weight)
         {
             score++;
@@ -157,10 +210,57 @@ public class PakagingManager : MonoBehaviour
         if (goalRecipe.oilType == userRecipe.oilType)
         {
             score++;
+            if (score == 3)
+            {
+                animator.SetBool("Correct", true);
+            }
             StateManager.setFishPackaging(score);
         }
         endScreen.displayStar(score);
         StateManager.setFishPackaging(score);
+    }
+    public void showProduct()
+    {
+        if (userRecipe.isFlake)
+        {
+            switch (userRecipe.oilType)
+            {
+                case 1:
+                    fishCan.sprite = SpicyFlakes;
+                    break; 
+                case 2:
+                    fishCan.sprite = SaltFlakes;
+                    break;
+                case 3:
+                    fishCan.sprite = MineralFlakes;
+                    break;
+                case 4:
+                    fishCan.sprite = ShoyuFlakes;
+                    break;
+                case 5:
+                    fishCan.sprite = SoyFlakes;
+                    break;
+                default:
+                    break;
+            }
+        }
+        else
+        {
+            switch (userRecipe.oilType)
+            {
+                case 6:
+                    fishCan.sprite = OliveSteak;
+                    break;
+                case 7:
+                    fishCan.sprite = SunflowerSteak;
+                    break;
+                case 5:
+                    fishCan.sprite = SoySteak;
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }
 public static class packagingData

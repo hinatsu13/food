@@ -79,7 +79,8 @@ public class FSel_Fish : MonoBehaviour
         }
         else
         {
-            transform.position = Input.mousePosition;
+            Vector2 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            transform.position = worldPosition;
         }
         if (Input.touchCount > 0)
         {
@@ -126,8 +127,9 @@ public class FSel_Fish : MonoBehaviour
     }
     private bool IsPositionInsideTrigger(Vector2 screenPosition)
     {
-        Collider2D hitcollider = Physics2D.OverlapPoint(screenPosition, FishLayer);
-        //Debug.Log(hitcollider + $"{hitcollider == gameObject.GetComponent<Collider2D>()}");
+        Vector2 worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
+        Collider2D hitcollider = Physics2D.OverlapPoint(worldPosition, FishLayer);
+        //Debug.Log($"Button Down: collider:{hitcollider}  cond:{gameObject.GetComponent<Collider2D>()}");
         return hitcollider == gameObject.GetComponent<Collider2D>();
     }
     private void CheckSort()
@@ -139,13 +141,13 @@ public class FSel_Fish : MonoBehaviour
                 OnSorted.Invoke(hovered_storage.gameObject);
                 if (hovered_storage.Species == Species)
                 {
-                    Debug.Log("Correct sorting");
+                    //Debug.Log("Correct sorting");
                     OnCorrect.Invoke(hovered_storage.gameObject);
                     Destroy(gameObject);
                 }
                 else
                 {
-                    Debug.Log("Incorrect sorting");
+                    //Debug.Log("Incorrect sorting");
                     OnIncorrect.Invoke(hovered_storage.gameObject);
                     Destroy(gameObject);
                 }

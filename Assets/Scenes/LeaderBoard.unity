@@ -797,11 +797,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9166968260291114799, guid: 468c0d12f2a3c5242939db94dcafebd4, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 69.418
+      value: 52.735
       objectReference: {fileID: 0}
     - target: {fileID: 9166968260291114799, guid: 468c0d12f2a3c5242939db94dcafebd4, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 68.006
+      value: 52.713
       objectReference: {fileID: 0}
     - target: {fileID: 9166968260291114799, guid: 468c0d12f2a3c5242939db94dcafebd4, type: 3}
       propertyPath: m_LocalScale.x
@@ -845,11 +845,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9166968260291114799, guid: 468c0d12f2a3c5242939db94dcafebd4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -799
+      value: 847
       objectReference: {fileID: 0}
     - target: {fileID: 9166968260291114799, guid: 468c0d12f2a3c5242939db94dcafebd4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -410
+      value: 404
       objectReference: {fileID: 0}
     - target: {fileID: 9166968260291114799, guid: 468c0d12f2a3c5242939db94dcafebd4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -973,7 +973,6 @@ MonoBehaviour:
   playerRankScore: {fileID: 277573843}
   nextRankName: {fileID: 1098158492}
   nextRankScore: {fileID: 222012669}
-  apiBaseUrl: https://food-theta-nine.vercel.app/
 --- !u!1 &590464507
 GameObject:
   m_ObjectHideFlags: 0
@@ -2570,7 +2569,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 108.65
+  m_fontSize: 109.2
   m_fontSizeBase: 115.1
   m_fontWeight: 400
   m_enableAutoSizing: 1

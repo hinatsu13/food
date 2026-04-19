@@ -46,7 +46,7 @@ AnimationClip:
     - time: 0
       value: {fileID: 6823797367008226197, guid: a933397b4a306114c99009e86b68a5f8, type: 3}
     - time: 0.5
-      value: {fileID: -2483831308613983149, guid: dc0a0d4a9c678814d80a05c25deadb00, type: 3}
+      value: {fileID: -2483831308613983149, guid: 474278fb4d08a284592d03af377f48f0, type: 3}
     attribute: m_Sprite
     path: Fish_can
     classID: 114
@@ -87,7 +87,7 @@ AnimationClip:
     - {fileID: -6218657501936986793, guid: 474278fb4d08a284592d03af377f48f0, type: 3}
     - {fileID: 7482667652216324306, guid: d808c1b566321b745b02a5dd3a285c5e, type: 3}
     - {fileID: 6823797367008226197, guid: a933397b4a306114c99009e86b68a5f8, type: 3}
-    - {fileID: -2483831308613983149, guid: dc0a0d4a9c678814d80a05c25deadb00, type: 3}
+    - {fileID: -2483831308613983149, guid: 474278fb4d08a284592d03af377f48f0, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
