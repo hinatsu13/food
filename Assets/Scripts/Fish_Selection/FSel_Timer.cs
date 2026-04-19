@@ -10,7 +10,7 @@ public class FSel_Timer : MonoBehaviour
     private bool timerIsRunning = false;
 
     public UnityEvent OnEnd;
-    [SerializeField] protected TextMeshProUGUI EndScore;
+    //[SerializeField] protected TextMeshProUGUI EndScore;
 
     private void Awake()
     {
@@ -28,7 +28,7 @@ public class FSel_Timer : MonoBehaviour
         }
         if(currentTime <= 0)
         {
-            EndScore.text = FSel_ScoreManager.selectionScore.ToString();
+            //EndScore.text = FSel_ScoreManager.selectionScore.ToString();
             timerText.text = $"--:--";
             StopTime();
             OnEnd?.Invoke();
