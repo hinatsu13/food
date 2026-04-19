@@ -30,6 +30,9 @@ public class FSel_Spawner : MonoBehaviour
     [Header("StaticClass config")]
     public GameObject ScoreIndicator;
     public GameObject EndingPanel;
+    public StarDisplay star;
+    [Tooltip("How much score corelates to how many stars are displayed, with index representing the number of stars.")]
+    public int[] winCondition;
 
     FSel_Fish _fih;
     float lastSpawn;
@@ -68,6 +71,7 @@ public class FSel_Spawner : MonoBehaviour
         {
             SpawnFish(queue);
         }
+
         FSel_ScoreManager.scoreIndicator = ScoreIndicator;
         FSel_ScoreManager.selectionScore = 0;
         FSel_ScoreManager.DisplayScore();
@@ -184,7 +188,18 @@ public class FSel_Spawner : MonoBehaviour
         {
             _fih.endGame();
         }
+        star.displayStar(GetStarValue(FSel_ScoreManager.selectionScore));
         EndingPanel.SetActive(true);
         isEnd = true;
+    }
+
+    public int GetStarValue(int inputValue)
+    {
+        if (inputValue > winCondition[3]) return 3;
+        if (inputValue > winCondition[2]) return 2;
+        if (inputValue > winCondition[1]) return 1;
+        if (inputValue > winCondition[0]) return 0;
+
+        return 0;
     }
 }
