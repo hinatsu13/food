@@ -3484,6 +3484,15 @@ MonoBehaviour:
   SaltFlakes: {fileID: -74314059440593161, guid: 7a95022c0a67f4a4ab16cdc29d29f6ad, type: 3}
   ShoyuFlakes: {fileID: -3513809937115046718, guid: 7a95022c0a67f4a4ab16cdc29d29f6ad, type: 3}
   SpicyFlakes: {fileID: -2170549349750621386, guid: 7a95022c0a67f4a4ab16cdc29d29f6ad, type: 3}
+  oilName:
+  - "\u0E44\u0E21\u0E48\u0E43\u0E2A\u0E48"
+  - "\u0E19\u0E49\u0E33\u0E21\u0E31\u0E19\u0E23\u0E2A\u0E40\u0E1C\u0E47\u0E14"
+  - "\u0E19\u0E49\u0E33\u0E40\u0E01\u0E25\u0E37\u0E2D"
+  - "\u0E19\u0E49\u0E33\u0E41\u0E23\u0E48"
+  - "\u0E0B\u0E2D\u0E2A\u0E42\u0E0A\u0E22\u0E38"
+  - "\u0E19\u0E49\u0E33\u0E21\u0E31\u0E19\u0E16\u0E31\u0E48\u0E27\u0E40\u0E2B\u0E25\u0E37\u0E2D\u0E07"
+  - "\u0E19\u0E49\u0E33\u0E21\u0E31\u0E19\u0E21\u0E30\u0E01\u0E2D\u0E01"
+  - "\u0E19\u0E49\u0E33\u0E21\u0E31\u0E19\u0E14\u0E2D\u0E01\u0E17\u0E32\u0E19\u0E15\u0E30\u0E27\u0E31\u0E19"
 --- !u!1 &1146915219
 GameObject:
   m_ObjectHideFlags: 0
@@ -4786,7 +4795,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -420.00003, y: 0}
+  m_AnchoredPosition: {x: -420, y: 0}
   m_SizeDelta: {x: -960, y: -10.000008}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1710486553
@@ -6220,6 +6229,10 @@ PrefabInstance:
     - target: {fileID: 3677879960956496029, guid: df23ed19fcfefbf4187330ca2edd82cd, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937712158275098995, guid: df23ed19fcfefbf4187330ca2edd82cd, type: 3}
+      propertyPath: m_text
+      value: "\u0E44\u0E21\u0E48\u0E43\u0E2A\u0E48"
       objectReference: {fileID: 0}
     - target: {fileID: 6110420008186350776, guid: df23ed19fcfefbf4187330ca2edd82cd, type: 3}
       propertyPath: m_Pivot.x

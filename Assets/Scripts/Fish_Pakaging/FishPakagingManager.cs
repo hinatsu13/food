@@ -44,7 +44,8 @@ public class PakagingManager : MonoBehaviour
     [Tooltip("Use when randomising recipe, if the randomized type of meat is solid, then only the oil in these array are compatible")]
     private int[] solidOil = {(int)OilType.Soy, (int)OilType.Olive, (int)OilType.SunFlower};
     [Tooltip("Use when displaying oil name")]
-    private string[] oilName = {"None", "Spicy", "Salt", "Mineral", "Shoyu", "Soy Oil", "Olive Oil", "Sunflower Oil"};
+    [Header("Oil Name")]
+    [SerializeField] private string[] oilName = {"None", "Spicy", "Salt", "Mineral", "Shoyu", "Soy Oil", "Olive Oil", "Sunflower Oil"};
 
     [Tooltip("Save the randomized recipe in here")]
     [SerializeField] private PackageRecipe goalRecipe;
