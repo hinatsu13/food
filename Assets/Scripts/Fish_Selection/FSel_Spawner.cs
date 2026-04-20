@@ -29,6 +29,7 @@ public class FSel_Spawner : MonoBehaviour
 
     [Header("StaticClass config")]
     public GameObject ScoreIndicator;
+    public GameObject endScoreIndicator;
     public GameObject EndingPanel;
     public StarDisplay star;
     [Tooltip("How much score corelates to how many stars are displayed, with index representing the number of stars.")]

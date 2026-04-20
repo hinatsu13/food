@@ -10,9 +10,12 @@ public class animationEvent : MonoBehaviour
         if (!isFinal)
         {
             isFinal = true;
-            pakagingManager.showProduct();
             GetComponent<Animator>().SetTrigger("doneOiling");
         }
         return;
+    }
+    public void assignLable()
+    {
+        pakagingManager.showProduct();
     }
 }
