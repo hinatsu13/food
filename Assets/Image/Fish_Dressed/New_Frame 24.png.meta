@@ -1,40 +1,31 @@
 fileFormatVersion: 2
-guid: 65af5ae670bcc984ebeed71d22006001
+guid: d753e87cef2cfa94185cbb4e1aeea971
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4787052440428230313
-    second: Frame 53_0
+      213: 513870051304848823
+    second: New_Frame 24_0
   - first:
-      213: 5392013435706331355
-    second: Frame 53_1
+      213: -2438445905671072918
+    second: New_Frame 24_1
   - first:
-      213: -222749574213438271
-    second: Frame 53_2
+      213: -3665024144741389073
+    second: New_Frame 24_2
   - first:
-      213: 2535572140519877089
-    second: Frame 53_3
+      213: -8222631014768679692
+    second: New_Frame 24_3
   - first:
-      213: -3120467936885001204
-    second: Frame 53_4
+      213: 1565110873762630509
+    second: New_Frame 24_4
   - first:
-      213: -756694575969430425
-    second: Frame 53_5
+      213: -663239845786257378
+    second: New_Frame 24_5
   - first:
-      213: 6499383278602408602
-    second: Frame 53_6
+      213: -3221988980820489187
+    second: New_Frame 24_6
   - first:
-      213: 7401861043665187759
-    second: Frame 53_7
-  - first:
-      213: -6887299541777067657
-    second: Frame 53_8
-  - first:
-      213: 7804466316810234452
-    second: Frame 53_9
-  - first:
-      213: -340820166027467397
-    second: Frame 53_10
+      213: -6760091617157392379
+    second: New_Frame 24_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -130,13 +121,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Frame 53_0
+      name: New_Frame 24_0
       rect:
         serializedVersion: 2
-        x: 484
-        y: 367
-        width: 321
-        height: 275
+        x: 112
+        y: 56
+        width: 849
+        height: 967
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +136,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9a634e8e4d60f6240800000000000000
-      internalID: 4787052440428230313
+      spriteID: 7bdbcbcc612a12700800000000000000
+      internalID: 513870051304848823
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frame 53_1
+      name: New_Frame 24_1
       rect:
         serializedVersion: 2
-        x: 1271
-        y: 391
-        width: 204
-        height: 158
+        x: 1150
+        y: 714
+        width: 269
+        height: 219
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bd0d863d6a744da40800000000000000
-      internalID: 5392013435706331355
+      spriteID: a6358744e56e82ed0800000000000000
+      internalID: -2438445905671072918
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frame 53_2
+      name: New_Frame 24_2
       rect:
         serializedVersion: 2
-        x: 1415
-        y: 491
-        width: 53
-        height: 52
+        x: 1599
+        y: 712
+        width: 198
+        height: 225
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,20 +180,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1c473234172a8ecf0800000000000000
-      internalID: -222749574213438271
+      spriteID: feca57f55f7332dc0800000000000000
+      internalID: -3665024144741389073
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frame 53_3
+      name: New_Frame 24_3
       rect:
         serializedVersion: 2
-        x: 674
-        y: 307
-        width: 86
-        height: 86
+        x: 1225
+        y: 430
+        width: 180
+        height: 103
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1e960128d69203320800000000000000
-      internalID: 2535572140519877089
+      spriteID: 4f46a9d48a853ed80800000000000000
+      internalID: -8222631014768679692
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frame 53_4
+      name: New_Frame 24_4
       rect:
         serializedVersion: 2
-        x: 1252
-        y: 262
-        width: 55
-        height: 66
+        x: 1301
+        y: 139
+        width: 36
+        height: 51
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -233,85 +224,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c0439f0c1fed1b4d0800000000000000
-      internalID: -3120467936885001204
+      spriteID: d6b09b02c0468b510800000000000000
+      internalID: 1565110873762630509
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frame 53_5
+      name: New_Frame 24_5
       rect:
         serializedVersion: 2
-        x: 1351
-        y: 162
-        width: 152
-        height: 187
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 76490e3da4eaf75f0800000000000000
-      internalID: -756694575969430425
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Frame 53_6
-      rect:
-        serializedVersion: 2
-        x: 445
-        y: 138
-        width: 152
-        height: 125
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a92d53c18a2723a50800000000000000
-      internalID: 6499383278602408602
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Frame 53_7
-      rect:
-        serializedVersion: 2
-        x: 765
-        y: 183
-        width: 95
-        height: 66
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fa337780761b8b660800000000000000
-      internalID: 7401861043665187759
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Frame 53_8
-      rect:
-        serializedVersion: 2
-        x: 818
-        y: 239
-        width: 31
+        x: 1626
+        y: 113
+        width: 26
         height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -321,20 +246,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 771daa6ae856b60a0800000000000000
-      internalID: -6887299541777067657
+      spriteID: e18760fcfd2bbc6f0800000000000000
+      internalID: -663239845786257378
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frame 53_9
+      name: New_Frame 24_6
       rect:
         serializedVersion: 2
-        x: 966
-        y: 126
-        width: 279
-        height: 161
+        x: 1635
+        y: 138
+        width: 40
+        height: 53
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -343,20 +268,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 45aa9fae3c80f4c60800000000000000
-      internalID: 7804466316810234452
+      spriteID: d1cc8ffb7123943d0800000000000000
+      internalID: -3221988980820489187
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frame 53_10
+      name: New_Frame 24_7
       rect:
         serializedVersion: 2
-        x: 1473
-        y: 179
-        width: 39
-        height: 38
+        x: 1289
+        y: 117
+        width: 27
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -365,30 +290,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b75a4af5dd9254bf0800000000000000
-      internalID: -340820166027467397
+      spriteID: 508dc3e9d745f22a0800000000000000
+      internalID: -6760091617157392379
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frame 53_11
+      name: New_Frame 24_8
       rect:
         serializedVersion: 2
-        x: 388
-        y: 71
-        width: 1190
-        height: 641
+        x: 1617
+        y: 111
+        width: 62
+        height: 87
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f414430d9aabf734a8f8e134c0a3f4fc
-      internalID: -1483296892
+      spriteID: 23136bab49a77604a9ec87e829c29fc0
+      internalID: 106043390
       vertices: []
       indices: 
       edges: []
@@ -397,7 +322,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 06c028a9b4cfbed46a38d807cf5b196c
+    spriteID: 410a8790417716b49899be98304711b3
     internalID: 0
     vertices: []
     indices: 
@@ -407,18 +332,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Frame 53_0: 4787052440428230313
-      Frame 53_1: 5392013435706331355
-      Frame 53_10: -340820166027467397
-      Frame 53_11: -1483296892
-      Frame 53_2: -222749574213438271
-      Frame 53_3: 2535572140519877089
-      Frame 53_4: -3120467936885001204
-      Frame 53_5: -756694575969430425
-      Frame 53_6: 6499383278602408602
-      Frame 53_7: 7401861043665187759
-      Frame 53_8: -6887299541777067657
-      Frame 53_9: 7804466316810234452
+      New_Frame 24_0: 513870051304848823
+      New_Frame 24_1: -2438445905671072918
+      New_Frame 24_2: -3665024144741389073
+      New_Frame 24_3: -8222631014768679692
+      New_Frame 24_4: 1565110873762630509
+      New_Frame 24_5: -663239845786257378
+      New_Frame 24_6: -3221988980820489187
+      New_Frame 24_7: -6760091617157392379
+      New_Frame 24_8: 106043390
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
