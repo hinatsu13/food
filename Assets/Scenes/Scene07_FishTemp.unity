@@ -2933,6 +2933,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ending
       objectReference: {fileID: 0}
+    - target: {fileID: 3993087940564284084, guid: 51f3b15553affa44ca16e4f9015431ae, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Scenes/Scene08_Get_Dressed
+      objectReference: {fileID: 0}
     - target: {fileID: 6741286084645594548, guid: 51f3b15553affa44ca16e4f9015431ae, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

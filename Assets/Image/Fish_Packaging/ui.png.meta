@@ -384,7 +384,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Continue
+      name: Package
       rect:
         serializedVersion: 2
         x: 186
@@ -485,12 +485,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Continue: 8852797563311604980
       GreenBorderButton: -7334886338573059942
       Menu: 2697481083480110284
       Oil: 2163036573998151787
       OilSelectorLeft: -7975249404588759376
       OilSelectorRight: -9005941153719796207
+      Package: 8852797563311604980
       ScaleBar: -9080700020481880845
       SelectMeatType: 5707218116961789024
       WeightHeavy: 3556181715638617739
