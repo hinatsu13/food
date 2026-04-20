@@ -225,6 +225,7 @@ public class PakagingManager : MonoBehaviour
     }
     public void showProduct()
     {
+        if (score != 3) return;
         if (userRecipe.isFlake)
         {
             switch (userRecipe.oilType)

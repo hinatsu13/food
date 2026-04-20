@@ -14,7 +14,7 @@ public class FSel_Timer : MonoBehaviour
 
     private void Awake()
     {
-        Time.timeScale = 0;
+        StopTime();
         currentTime = maxTime;
         FSel_ScoreManager.timer = this;
     }
