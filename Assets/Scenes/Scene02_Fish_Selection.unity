@@ -367,11 +367,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 180846682387122284, guid: 51f3b15553affa44ca16e4f9015431ae, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3114815439285230110, guid: 51f3b15553affa44ca16e4f9015431ae, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232982290192949347, guid: 51f3b15553affa44ca16e4f9015431ae, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Scenes/Scene02_Fish_Selection
+      objectReference: {fileID: 0}
+    - target: {fileID: 3993087940564284084, guid: 51f3b15553affa44ca16e4f9015431ae, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Scenes/Scene03_Get_Dressed
       objectReference: {fileID: 0}
     - target: {fileID: 6174030649161738800, guid: 51f3b15553affa44ca16e4f9015431ae, type: 3}
       propertyPath: m_Enabled
@@ -526,7 +534,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -81.24538}
+  m_AnchoredPosition: {x: 0, y: -81.24536}
   m_SizeDelta: {x: 0, y: -162.48999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &439260820
@@ -1764,7 +1772,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 245.00003, y: 101.000015}
+  m_AnchoredPosition: {x: 245, y: 101.000015}
   m_SizeDelta: {x: 100, y: -266.78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &1612730443 stripped
@@ -2790,7 +2798,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  EndScore: {fileID: 0}
 --- !u!1 &2043696974
 GameObject:
   m_ObjectHideFlags: 0
