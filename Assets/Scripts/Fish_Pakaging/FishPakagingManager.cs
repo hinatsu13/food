@@ -10,12 +10,14 @@ public class PakagingManager : MonoBehaviour
 {
     [Header("Where to display the menu")]
     [SerializeField] public GameObject menuObject;
-    [SerializeField] public GameObject FlackCheck;
-    [SerializeField] public GameObject SolidCheck;
-    [SerializeField] public TextMeshProUGUI Weight_Value;
-    [SerializeField] public TextMeshProUGUI OilName;
+    [SerializeField] public GameObject flackCheck;
+    [SerializeField] public GameObject solidCheck;
+    [SerializeField] public TextMeshProUGUI weight_Value;
+    [SerializeField] public TextMeshProUGUI oilText;
+    [Header("Sprite List")]
+    [SerializeField] private Image can_Sprite;
     [Header("Weight Display")]
-    [SerializeField] public TextMeshProUGUI Scale_Value;
+    [SerializeField] public TextMeshProUGUI scale_Value;
     [SerializeField] public GameObject Light;
     [SerializeField] public GameObject Med;
     [SerializeField] public GameObject Heavy;
@@ -93,26 +95,27 @@ public class PakagingManager : MonoBehaviour
             goalRecipe.setRecipe(isFlake, currentWeight, randomOil);
             if (isFlake)
             {
-                FlackCheck.SetActive(true);
+                flackCheck.SetActive(true);
             }
             else
             {
-                SolidCheck.SetActive(true);
+                solidCheck.SetActive(true);
             }
             if (currentWeight == 1)
             {
                 Light.SetActive(true);
-                Weight_Value.text = LightValue.ToString();
+                weight_Value.text = LightValue.ToString();
             }else if (currentWeight == 2)
             {
                 Med.SetActive(true);
-                Weight_Value.text = MedValue.ToString();
+                weight_Value.text = MedValue.ToString();
             }else if (currentWeight == 3)
             {
                 Heavy.SetActive(true);
-                Weight_Value.text = HighValue.ToString();
+                weight_Value.text = HighValue.ToString();
             }
-            OilName.text = oilName[randomOil];
+            oilText.text = oilName[randomOil];
+            GoalProduct();
         }
     }
 
@@ -148,15 +151,15 @@ public class PakagingManager : MonoBehaviour
         if (weight == 1)
         {
             Light.SetActive(true);
-            Scale_Value.text = LightValue.ToString();
+            scale_Value.text = LightValue.ToString();
         }else if (weight == 2)
         {
             Med.SetActive(true);
-            Scale_Value.text = MedValue.ToString();
+            scale_Value.text = MedValue.ToString();
         }else if (weight == 3)
         {
             Heavy.SetActive(true);
-            Scale_Value.text = HighValue.ToString();
+            scale_Value.text = HighValue.ToString();
         }
         if (goalRecipe.weight == userRecipe.weight)
         {
@@ -257,6 +260,49 @@ public class PakagingManager : MonoBehaviour
                     break;
                 case 5:
                     fishCan.sprite = SoySteak;
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+    public void GoalProduct()
+    {
+        if (goalRecipe.isFlake)
+        {
+            switch (goalRecipe.oilType)
+            {
+                case 1:
+                    can_Sprite.sprite = SpicyFlakes;
+                    break; 
+                case 2:
+                    can_Sprite.sprite = SaltFlakes;
+                    break;
+                case 3:
+                    can_Sprite.sprite = MineralFlakes;
+                    break;
+                case 4:
+                    can_Sprite.sprite = ShoyuFlakes;
+                    break;
+                case 5:
+                    can_Sprite.sprite = SoyFlakes;
+                    break;
+                default:
+                    break;
+            }
+        }
+        else
+        {
+            switch (goalRecipe.oilType)
+            {
+                case 6:
+                    can_Sprite.sprite = OliveSteak;
+                    break;
+                case 7:
+                    can_Sprite.sprite = SunflowerSteak;
+                    break;
+                case 5:
+                    can_Sprite.sprite = SoySteak;
                     break;
                 default:
                     break;
