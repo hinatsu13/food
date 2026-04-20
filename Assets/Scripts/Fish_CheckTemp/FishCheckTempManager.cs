@@ -16,13 +16,14 @@ public class FishCheckTempManager : MonoBehaviour
     [SerializeField] private float correctTempMin = 50f;
     [SerializeField] private float correctTempMax = 60f;
     [SerializeField] private float slideSpeed = 0.5f; // Duration of slide animation
+    [SerializeField] private int[] winCondition;
 
     [Header("UI References")]
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI thermometerText;
     [SerializeField] private GameObject gameOverPanel;
-    [SerializeField] private TextMeshProUGUI gameOverScoreText;
+    [SerializeField] private StarDisplay starDisplay;
 
     [Header("Fish Image")]
     [SerializeField] private Image fishImage;
@@ -376,9 +377,10 @@ public class FishCheckTempManager : MonoBehaviour
     private void EndGame()
     {
         isGameActive = false;
-        if (gameOverPanel != null) gameOverPanel.SetActive(true);
-        if (gameOverScoreText != null) gameOverScoreText.text = score.ToString();
+
         StateManager.setFishCheckTemp(score);
+        if (starDisplay != null) starDisplay.displayStar(StateManager.GetStarValue(score, winCondition[2], winCondition[1], winCondition[0]));
+        if (gameOverPanel != null) gameOverPanel.SetActive(true);
         StateManager.SendPacket();
     }
 
