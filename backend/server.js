@@ -76,7 +76,7 @@ app.post("/api/scores", async (req, res) => {
     res.status(200).json({ success: true, data: score });
   } catch (err) {
     console.error("Error saving score:", err);
-    res.status(500).json({ error: "Failed to save score" });
+    res.status(500).json({ error: "Failed to save score", detail: err.message });
   }
 });
 
