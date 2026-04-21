@@ -189,7 +189,7 @@ public class FSel_Spawner : MonoBehaviour
         {
             _fih.endGame();
         }
-        star.displayStar(GetStarValue(FSel_ScoreManager.selectionScore));
+        star.displayStar(GetStarValue(FSel_ScoreManager.selectionScore), FSel_ScoreManager.selectionScore);
         StateManager.setFishSelection(FSel_ScoreManager.selectionScore);
         EndingPanel.SetActive(true);
         isEnd = true;
