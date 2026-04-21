@@ -3769,6 +3769,7 @@ MonoBehaviour:
   SaltFlakes: {fileID: -74314059440593161, guid: 7a95022c0a67f4a4ab16cdc29d29f6ad, type: 3}
   ShoyuFlakes: {fileID: -3513809937115046718, guid: 7a95022c0a67f4a4ab16cdc29d29f6ad, type: 3}
   SpicyFlakes: {fileID: -2170549349750621386, guid: 7a95022c0a67f4a4ab16cdc29d29f6ad, type: 3}
+  IncorrectCan: {fileID: 4875905781510908635, guid: dfe59bdfb9d42364aa98cf7112b4ecbe, type: 3}
   oilName:
   - "\u0E44\u0E21\u0E48\u0E43\u0E2A\u0E48"
   - "\u0E19\u0E49\u0E33\u0E21\u0E31\u0E19\u0E23\u0E2A\u0E40\u0E1C\u0E47\u0E14"

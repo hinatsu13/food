@@ -40,6 +40,7 @@ public class PakagingManager : MonoBehaviour
     [SerializeField] public Sprite SaltFlakes;
     [SerializeField] public Sprite ShoyuFlakes;
     [SerializeField] public Sprite SpicyFlakes;
+    [SerializeField] public Sprite IncorrectCan;
 
     [Tooltip("Use when randomising recipe, if the randomized type of meat is flake, then only the oil in these array are compatible")]
     private int[] flakeOil = {(int)OilType.Spicy, (int)OilType.Salt, (int)OilType.Mineral, (int)OilType.Shoyu, (int)OilType.Soy};
@@ -229,7 +230,6 @@ public class PakagingManager : MonoBehaviour
     }
     public void showProduct()
     {
-        if (score != 3) return;
         if (userRecipe.isFlake)
         {
             switch (userRecipe.oilType)
@@ -250,6 +250,7 @@ public class PakagingManager : MonoBehaviour
                     fishCan.sprite = SoyFlakes;
                     break;
                 default:
+                    fishCan.sprite = IncorrectCan;
                     break;
             }
         }
@@ -267,6 +268,7 @@ public class PakagingManager : MonoBehaviour
                     fishCan.sprite = SoySteak;
                     break;
                 default:
+                    fishCan.sprite = IncorrectCan;
                     break;
             }
         }

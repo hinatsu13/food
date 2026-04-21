@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: dfe59bdfb9d42364aa98cf7112b4ecbe
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4875905781510908635
+    second: fish_notcorret_0
+  - first:
+      213: -4408202571160731648
+    second: fish_notcorret_1
+  - first:
+      213: -4088972253521321105
+    second: fish_notcorret_2
+  - first:
+      213: 8889004487612109827
+    second: fish_notcorret_3
+  - first:
+      213: -6802183140955350469
+    second: fish_notcorret_4
+  - first:
+      213: -5009723701029096069
+    second: fish_notcorret_5
+  - first:
+      213: 4977509845225118339
+    second: fish_notcorret_6
+  - first:
+      213: -8586602252473276244
+    second: fish_notcorret_7
+  - first:
+      213: 5316157887776819510
+    second: fish_notcorret_8
+  - first:
+      213: -599403113725947028
+    second: fish_notcorret_9
+  - first:
+      213: -3408959677518916130
+    second: fish_notcorret_10
+  - first:
+      213: 7051808169777198217
+    second: fish_notcorret_11
+  - first:
+      213: -4221920789013829857
+    second: fish_notcorret_12
+  - first:
+      213: -7770968614241708795
+    second: fish_notcorret_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fish_notcorret_0
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 718
+        width: 315
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bda2b318972baa340800000000000000
+      internalID: 4875905781510908635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_notcorret_1
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 605
+        width: 19
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00040000e1be2d2c0800000000000000
+      internalID: -4408202571160731648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_notcorret_2
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 605
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f63ee64566d0147c0800000000000000
+      internalID: -4088972253521321105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_notcorret_3
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 636
+        width: 21
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30419fa4c761c5b70800000000000000
+      internalID: 8889004487612109827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_notcorret_4
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 636
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3a943a097ac991a0800000000000000
+      internalID: -6802183140955350469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_notcorret_5
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 605
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b753e4926d2e97ab0800000000000000
+      internalID: -5009723701029096069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_notcorret_6
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 621
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38a17ae05daa31540800000000000000
+      internalID: 4977509845225118339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_notcorret_7
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 605
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca8e2c1ceb246d880800000000000000
+      internalID: -8586602252473276244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_notcorret_8
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 606
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63904d6ce69c6c940800000000000000
+      internalID: 5316157887776819510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_notcorret_9
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 605
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c631a193b0e7ea7f0800000000000000
+      internalID: -599403113725947028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_notcorret_10
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 605
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed5dad71c31f0b0d0800000000000000
+      internalID: -3408959677518916130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_notcorret_11
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 606
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98474c71b2e0dd160800000000000000
+      internalID: 7051808169777198217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_notcorret_12
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 606
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f176efc3969b865c0800000000000000
+      internalID: -4221920789013829857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_notcorret_13
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 608
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 505d96bb739f72490800000000000000
+      internalID: -7770968614241708795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fish_notcorret_0: 4875905781510908635
+      fish_notcorret_1: -4408202571160731648
+      fish_notcorret_10: -3408959677518916130
+      fish_notcorret_11: 7051808169777198217
+      fish_notcorret_12: -4221920789013829857
+      fish_notcorret_13: -7770968614241708795
+      fish_notcorret_2: -4088972253521321105
+      fish_notcorret_3: 8889004487612109827
+      fish_notcorret_4: -6802183140955350469
+      fish_notcorret_5: -5009723701029096069
+      fish_notcorret_6: 4977509845225118339
+      fish_notcorret_7: -8586602252473276244
+      fish_notcorret_8: 5316157887776819510
+      fish_notcorret_9: -599403113725947028
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
