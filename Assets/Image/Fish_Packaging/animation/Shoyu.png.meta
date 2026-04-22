@@ -265,9 +265,9 @@ TextureImporter:
       name: Shoyu1
       rect:
         serializedVersion: 2
-        x: 187
+        x: 183
         y: 637
-        width: 310
+        width: 315
         height: 230
       alignment: 2
       pivot: {x: 0.5, y: 1}
@@ -287,9 +287,9 @@ TextureImporter:
       name: Shoyu2
       rect:
         serializedVersion: 2
-        x: 817
+        x: 820
         y: 636
-        width: 310
+        width: 315
         height: 230
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -311,7 +311,7 @@ TextureImporter:
         serializedVersion: 2
         x: 183
         y: 208
-        width: 310
+        width: 315
         height: 230
       alignment: 2
       pivot: {x: 0.5, y: 1}
@@ -353,7 +353,7 @@ TextureImporter:
       name: Shoyu3
       rect:
         serializedVersion: 2
-        x: 1425
+        x: 1430
         y: 632
         width: 310
         height: 230
