@@ -46,6 +46,7 @@ public static class StateManager
     // ── Send Scores to MongoDB ─────────────────────────────
     public static void SendPacket(Action<bool> onComplete = null)
     {
+        Loading.Show();
         Debug.Log("=== Sending Scores to MongoDB ===");
         Debug.Log("Player Name: " + PlayerName);
         Debug.Log("Fish Selection Score: " + FishSelectionScore);
@@ -62,6 +63,7 @@ public static class StateManager
             FishPackagingScore,
             onComplete
         );
+        Loading.Hide();
     }
 
     public static int GetStarValue(int inputValue, int threeStarCond, int twoStarCond, int oneStarCond)

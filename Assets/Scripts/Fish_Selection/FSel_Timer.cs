@@ -12,7 +12,7 @@ public class FSel_Timer : MonoBehaviour
     public UnityEvent OnEnd;
     //[SerializeField] protected TextMeshProUGUI EndScore;
 
-    private void Awake()
+    private void Start()
     {
         StopTime();
         currentTime = maxTime;

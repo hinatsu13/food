@@ -14,6 +14,8 @@ public class EnterNameManager : MonoBehaviour
             string playerName = nameInput.text;
             StateManager.setPlayerName(playerName);
 
+            Loading.Show();
+
             // Check if player exists in DB → load their scores or create new
             MongoDBService.GetPlayer(playerName, (playerData) =>
             {
@@ -33,6 +35,7 @@ public class EnterNameManager : MonoBehaviour
                     MongoDBService.SendScore(playerName, 0, 0, 0, 0);
                 }
 
+                Loading.Hide();
                 SceneManager.LoadScene("Scene_Selector");
             });
         }

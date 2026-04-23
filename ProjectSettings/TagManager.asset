@@ -9,6 +9,7 @@ TagManager:
   - Edge
   - Discard
   - InputArea
+  - Loading
   layers:
   - Default
   - TransparentFX

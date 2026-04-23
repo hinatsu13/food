@@ -28,6 +28,8 @@ public class LeaderBoardManager : MonoBehaviour
 
     private IEnumerator FetchLeaderboard()
     {
+        Loading.Show();
+
         string currentPlayer = StateManager.getPlayerName();
         string url = MongoDBService.ApiBaseUrl.TrimEnd('/') + "/api/scores";
 
@@ -44,6 +46,7 @@ public class LeaderBoardManager : MonoBehaviour
             if (request.result != UnityWebRequest.Result.Success)
             {
                 Debug.LogError("[LeaderBoard] Failed: " + request.error);
+                Loading.Hide();
                 yield break;
             }
 
@@ -54,10 +57,12 @@ public class LeaderBoardManager : MonoBehaviour
             if (response == null || response.data == null)
             {
                 Debug.LogError("[LeaderBoard] Failed to parse response");
+                Loading.Hide();
                 yield break;
             }
 
             PopulateLeaderboard(response);
+            Loading.Hide();
         }
     }
 

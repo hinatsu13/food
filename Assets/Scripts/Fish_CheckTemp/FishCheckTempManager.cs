@@ -378,9 +378,10 @@ public class FishCheckTempManager : MonoBehaviour
     {
         isGameActive = false;
 
+        if (gameOverPanel != null) gameOverPanel.SetActive(true);
+
         StateManager.setFishCheckTemp(score);
         if (starDisplay != null) starDisplay.displayStar(StateManager.GetStarValue(score, winCondition[2], winCondition[1], winCondition[0]), score);
-        if (gameOverPanel != null) gameOverPanel.SetActive(true);
         StateManager.SendPacket();
     }
 
