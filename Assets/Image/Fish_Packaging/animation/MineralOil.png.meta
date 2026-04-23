@@ -1,0 +1,338 @@
+fileFormatVersion: 2
+guid: 81d3129a65a12f74dba9f012647c9225
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5883948360267286764
+    second: MineralOil_0
+  - first:
+      213: 3697369812733015785
+    second: MineralOil_1
+  - first:
+      213: -9069924880245763346
+    second: MineralOil_2
+  - first:
+      213: 5031974948817820847
+    second: MineralOil_3
+  - first:
+      213: 3433854474735300734
+    second: MineralOil_4
+  - first:
+      213: 5009570073560049518
+    second: MineralOil_5
+  - first:
+      213: 2990945149396897117
+    second: MineralOil_6
+  - first:
+      213: 8748871143562175112
+    second: MineralOil_7
+  - first:
+      213: -3621192736785326361
+    second: MineralOil_8
+  - first:
+      213: 920569445288032159
+    second: MineralOil_9
+  - first:
+      213: -4265513659379057131
+    second: MineralOil_10
+  - first:
+      213: 3578411034010492549
+    second: MineralOil_11
+  - first:
+      213: -2904104066034371842
+    second: MineralOil_12
+  - first:
+      213: -1378894318796816006
+    second: MineralOil_13
+  - first:
+      213: 1932852368340025832
+    second: MineralOil_14
+  - first:
+      213: 6544317496494590246
+    second: MineralOil_15
+  - first:
+      213: 7285169051454637341
+    second: MineralOil_16
+  - first:
+      213: -8901173290485552909
+    second: MineralOil_17
+  - first:
+      213: -3051104475934745269
+    second: MineralOil_18
+  - first:
+      213: -962087224078084790
+    second: MineralOil_19
+  - first:
+      213: -9191912875470108010
+    second: MineralOil_20
+  - first:
+      213: 4787235527272074061
+    second: MineralOil_21
+  - first:
+      213: 5648167072881672874
+    second: MineralOil_22
+  - first:
+      213: 7118939142718404935
+    second: MineralOil_23
+  - first:
+      213: -3504743240735763223
+    second: MineralOil_24
+  - first:
+      213: -1491357154250261961
+    second: MineralOil_25
+  - first:
+      213: -1909332866207798127
+    second: MineralOil_26
+  - first:
+      213: -9206134560988359798
+    second: MineralOil_27
+  - first:
+      213: -5349224143849694440
+    second: MineralOil_28
+  - first:
+      213: -453602453323997749
+    second: MineralOil_29
+  - first:
+      213: 2551732474969089587
+    second: MineralOil_30
+  - first:
+      213: -7631047704562099934
+    second: MineralOil_31
+  - first:
+      213: -6049128068108679504
+    second: MineralOil_32
+  - first:
+      213: -9074833472670574452
+    second: MineralOil_33
+  - first:
+      213: 4331041678109525973
+    second: MineralOil_34
+  - first:
+      213: 3232003069100675616
+    second: MineralOil_35
+  - first:
+      213: -99556127915319590
+    second: MineralOil_36
+  - first:
+      213: 5938799654354511614
+    second: MineralOil_37
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MineralOil_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 315
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce84972fbdbf7a150800000000000000
+      internalID: 5883948360267286764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MineralOil_1
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 0
+        width: 315
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e634335142bf4330800000000000000
+      internalID: 3697369812733015785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MineralOil_2
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 0
+        width: 315
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee2597d3067212280800000000000000
+      internalID: -9069924880245763346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MineralOil_3
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 0
+        width: 315
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fac53fe2e8a25d540800000000000000
+      internalID: 5031974948817820847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5196709b77c200243b9758d7aee51040
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":315.0,"y":230.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      MineralOil_0: 5883948360267286764
+      MineralOil_1: 3697369812733015785
+      MineralOil_2: -9069924880245763346
+      MineralOil_3: 5031974948817820847
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

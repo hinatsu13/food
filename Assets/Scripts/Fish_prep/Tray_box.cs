@@ -10,6 +10,8 @@ public class Tray_Box : MonoBehaviour, IDropHandler
     private UnityEvent calledEvent;
     [SerializeField]
     private Fish_Prep_Handler Handler;
+    [Tooltip("For storing the placement of each guts objects.")]
+    [SerializeField] private RectTransform[] gutPlacement;
     public void OnDrop(PointerEventData eventData)
     {
         GameObject dropped = eventData.pointerDrag;
@@ -18,8 +20,11 @@ public class Tray_Box : MonoBehaviour, IDropHandler
         if (Guts.ValidateCut())
         {
             Debug.Log("Calling Event");
-            Guts.parentAfterDrag = transform;
-            Destroy(dropped);
+            dropped.transform.position = gutPlacement[Handler.Guts_Count].position;
+            dropped.transform.SetParent(gutPlacement[Handler.Guts_Count]);
+            Guts.enabled = false;
+            //Guts.parentAfterDrag = transform;
+            //Destroy(dropped);
             Handler.Guts_Count += 1;
         }
         if(Handler.Guts_Count == 5)
