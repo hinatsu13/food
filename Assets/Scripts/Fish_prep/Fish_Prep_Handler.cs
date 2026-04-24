@@ -13,7 +13,8 @@ public class Fish_Prep_Handler : MonoBehaviour
     private GameObject guts_The_Fish;
     [SerializeField]
     private GameObject Bottom_Fish;
-
+    [SerializeField]
+    private GameObject Clear_Fish;
     [SerializeField] 
     private GameObject clean_Sparkle;// Assign in Inspector
     [SerializeField]
@@ -56,6 +57,7 @@ public class Fish_Prep_Handler : MonoBehaviour
 
     public void Cutscene_Trigger()
     {
+        Clear_Fish.SetActive(true);
         Bottom_Fish.SetActive(false);
         Clean_Fish.SetActive(false);
         clean_Sparkle.SetActive(true);
@@ -75,7 +77,7 @@ public class Fish_Prep_Handler : MonoBehaviour
     {
         yield return new WaitForSeconds(5.0f);
         TriggerCutscene();
-
+        
         yield return new WaitForSeconds(5.0f); // 5+5 = 10s total
         finish_Sniffing();
     }
