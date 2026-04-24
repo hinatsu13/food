@@ -1,0 +1,344 @@
+fileFormatVersion: 2
+guid: 3a3eb421d92e66a4189b69b1249959de
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6716770874789644862
+    second: SaltOil_0
+  - first:
+      213: 306414120830459585
+    second: SaltOil_1
+  - first:
+      213: -5786524870094826781
+    second: SaltOil_2
+  - first:
+      213: 4146615099831744456
+    second: SaltOil_3
+  - first:
+      213: 1186843185063275830
+    second: SaltOil_4
+  - first:
+      213: 2445739537792879290
+    second: SaltOil_5
+  - first:
+      213: -6564259485556699792
+    second: SaltOil_6
+  - first:
+      213: -4030302370232143707
+    second: SaltOil_7
+  - first:
+      213: 8412364706777123558
+    second: SaltOil_8
+  - first:
+      213: 4551377114680978600
+    second: SaltOil_9
+  - first:
+      213: -8607193135957145312
+    second: SaltOil_10
+  - first:
+      213: 824236483305602768
+    second: SaltOil_11
+  - first:
+      213: 7018755936369315312
+    second: SaltOil_12
+  - first:
+      213: -4837499739440514254
+    second: SaltOil_13
+  - first:
+      213: -673165383913475142
+    second: SaltOil_14
+  - first:
+      213: -2640162288307291043
+    second: SaltOil_15
+  - first:
+      213: 5636382948021033969
+    second: SaltOil_16
+  - first:
+      213: 2939216394436489052
+    second: SaltOil_17
+  - first:
+      213: 290227346812194730
+    second: SaltOil_18
+  - first:
+      213: 175808529223700384
+    second: SaltOil_19
+  - first:
+      213: -7034629708906411519
+    second: SaltOil_20
+  - first:
+      213: 7033897556550675941
+    second: SaltOil_21
+  - first:
+      213: -5231391927478845270
+    second: SaltOil_22
+  - first:
+      213: -6902213501125123058
+    second: SaltOil_23
+  - first:
+      213: -6199102599639722415
+    second: SaltOil_24
+  - first:
+      213: 6952292469910434623
+    second: SaltOil_25
+  - first:
+      213: 7358487691378326435
+    second: SaltOil_26
+  - first:
+      213: 3563535942910026467
+    second: SaltOil_27
+  - first:
+      213: -5746214970433012592
+    second: SaltOil_28
+  - first:
+      213: 6233080337390104054
+    second: SaltOil_29
+  - first:
+      213: -9195816410729146286
+    second: SaltOil_30
+  - first:
+      213: -4568393970815497452
+    second: SaltOil_31
+  - first:
+      213: -5162983620952717946
+    second: SaltOil_32
+  - first:
+      213: 3418522901161262766
+    second: SaltOil_33
+  - first:
+      213: -8181436699341430183
+    second: SaltOil_34
+  - first:
+      213: 7487123504374882816
+    second: SaltOil_35
+  - first:
+      213: -5470918691317811611
+    second: SaltOil_36
+  - first:
+      213: -3432732917362189050
+    second: SaltOil_37
+  - first:
+      213: -258217472690032296
+    second: SaltOil_38
+  - first:
+      213: -5053449254500215231
+    second: SaltOil_39
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SaltOil_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 315
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c53972f97c39c2a0800000000000000
+      internalID: -6716770874789644862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SaltOil_1
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 0
+        width: 315
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ce534af40a904400800000000000000
+      internalID: 306414120830459585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SaltOil_2
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 0
+        width: 315
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e2d80af94222bfa0800000000000000
+      internalID: -5786524870094826781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SaltOil_3
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 0
+        width: 315
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c7fdbda67cbb8930800000000000000
+      internalID: 4146615099831744456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2335321919e5f32498cf4a25239e98f4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":315.0,"y":230.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      SaltOil_0: -6716770874789644862
+      SaltOil_1: 306414120830459585
+      SaltOil_2: -5786524870094826781
+      SaltOil_3: 4146615099831744456
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

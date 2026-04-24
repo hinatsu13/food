@@ -1,0 +1,344 @@
+fileFormatVersion: 2
+guid: 475044822aa285249bd735a871f9bc1e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5272972688074077161
+    second: SoyOil_0
+  - first:
+      213: -9205212930924489470
+    second: SoyOil_1
+  - first:
+      213: 353788681335131654
+    second: SoyOil_2
+  - first:
+      213: 7468224386855565288
+    second: SoyOil_3
+  - first:
+      213: -9201284350523791839
+    second: SoyOil_4
+  - first:
+      213: 7721109171084922675
+    second: SoyOil_5
+  - first:
+      213: -5167645485684483872
+    second: SoyOil_6
+  - first:
+      213: -6727081838640050261
+    second: SoyOil_7
+  - first:
+      213: -3529970501602153724
+    second: SoyOil_8
+  - first:
+      213: -4106394390546029784
+    second: SoyOil_9
+  - first:
+      213: -5855284730982723850
+    second: SoyOil_10
+  - first:
+      213: -825789747631831019
+    second: SoyOil_11
+  - first:
+      213: 6039364271614238433
+    second: SoyOil_12
+  - first:
+      213: 5222454047225390110
+    second: SoyOil_13
+  - first:
+      213: 5215593185309686932
+    second: SoyOil_14
+  - first:
+      213: 8147273696376943591
+    second: SoyOil_15
+  - first:
+      213: -1091664516788728615
+    second: SoyOil_16
+  - first:
+      213: 7704379922220729365
+    second: SoyOil_17
+  - first:
+      213: 3620861190872032102
+    second: SoyOil_18
+  - first:
+      213: -6633107064151687761
+    second: SoyOil_19
+  - first:
+      213: -623081257527115309
+    second: SoyOil_20
+  - first:
+      213: -6511336088982410462
+    second: SoyOil_21
+  - first:
+      213: 2313580610185418236
+    second: SoyOil_22
+  - first:
+      213: -4077449421677254973
+    second: SoyOil_23
+  - first:
+      213: 4403854055929137669
+    second: SoyOil_24
+  - first:
+      213: -6482564215284613289
+    second: SoyOil_25
+  - first:
+      213: 8096342393569110005
+    second: SoyOil_26
+  - first:
+      213: 4063569820235681327
+    second: SoyOil_27
+  - first:
+      213: 8337589887671525684
+    second: SoyOil_28
+  - first:
+      213: -3061739970185642364
+    second: SoyOil_29
+  - first:
+      213: 3068136630408452522
+    second: SoyOil_30
+  - first:
+      213: 499954583760891447
+    second: SoyOil_31
+  - first:
+      213: -861441887426159663
+    second: SoyOil_32
+  - first:
+      213: -5380025176688653428
+    second: SoyOil_33
+  - first:
+      213: 3619741472377131331
+    second: SoyOil_34
+  - first:
+      213: -7543048025562591546
+    second: SoyOil_35
+  - first:
+      213: -3819448471321594122
+    second: SoyOil_36
+  - first:
+      213: -6949645060515903833
+    second: SoyOil_37
+  - first:
+      213: -4779540949568301017
+    second: SoyOil_38
+  - first:
+      213: -2890351053474571650
+    second: SoyOil_39
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SoyOil_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 315
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71c02011743a2d6b0800000000000000
+      internalID: -5272972688074077161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoyOil_1
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 0
+        width: 315
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 205d9625c93804080800000000000000
+      internalID: -9205212930924489470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoyOil_2
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 0
+        width: 315
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60ec8846ee8e8e400800000000000000
+      internalID: 353788681335131654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoyOil_3
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 0
+        width: 315
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e77f61f28674a760800000000000000
+      internalID: 7468224386855565288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 929ec5acc06d9a04c93d8a9146ca1fd7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":315.0,"y":230.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      SoyOil_0: -5272972688074077161
+      SoyOil_1: -9205212930924489470
+      SoyOil_2: 353788681335131654
+      SoyOil_3: 7468224386855565288
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,344 @@
+fileFormatVersion: 2
+guid: 396f04bf58c7c744baf4dcaf1665a504
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3567398658369472963
+    second: ShoyuOil_0
+  - first:
+      213: 4802819374486624292
+    second: ShoyuOil_1
+  - first:
+      213: 6924020427969387187
+    second: ShoyuOil_2
+  - first:
+      213: 7614288200502904477
+    second: ShoyuOil_3
+  - first:
+      213: -4787777206557289984
+    second: ShoyuOil_4
+  - first:
+      213: 8104270204006777747
+    second: ShoyuOil_5
+  - first:
+      213: -2149664941196445766
+    second: ShoyuOil_6
+  - first:
+      213: 6798604008050386275
+    second: ShoyuOil_7
+  - first:
+      213: -2685797776358492368
+    second: ShoyuOil_8
+  - first:
+      213: 4668168031069232198
+    second: ShoyuOil_9
+  - first:
+      213: 8951427933061190347
+    second: ShoyuOil_10
+  - first:
+      213: -2133459253427368094
+    second: ShoyuOil_11
+  - first:
+      213: 1027789001219100083
+    second: ShoyuOil_12
+  - first:
+      213: -6779043013822247757
+    second: ShoyuOil_13
+  - first:
+      213: -1647107575380845140
+    second: ShoyuOil_14
+  - first:
+      213: -3732047731895525874
+    second: ShoyuOil_15
+  - first:
+      213: 3879116827817377580
+    second: ShoyuOil_16
+  - first:
+      213: 154230718262240297
+    second: ShoyuOil_17
+  - first:
+      213: 4011573221293894237
+    second: ShoyuOil_18
+  - first:
+      213: 3562433542112169971
+    second: ShoyuOil_19
+  - first:
+      213: 745170109139348112
+    second: ShoyuOil_20
+  - first:
+      213: 2621243012857633271
+    second: ShoyuOil_21
+  - first:
+      213: -2482985356601282293
+    second: ShoyuOil_22
+  - first:
+      213: -5633125307373793243
+    second: ShoyuOil_23
+  - first:
+      213: -8032852718076417553
+    second: ShoyuOil_24
+  - first:
+      213: 6073055544092139665
+    second: ShoyuOil_25
+  - first:
+      213: 719174047496447723
+    second: ShoyuOil_26
+  - first:
+      213: 187181563995261196
+    second: ShoyuOil_27
+  - first:
+      213: -4346396845553473633
+    second: ShoyuOil_28
+  - first:
+      213: 4456428324782326652
+    second: ShoyuOil_29
+  - first:
+      213: -295884821364861557
+    second: ShoyuOil_30
+  - first:
+      213: -1983886987320325795
+    second: ShoyuOil_31
+  - first:
+      213: 969094788300466919
+    second: ShoyuOil_32
+  - first:
+      213: 5724758854072532998
+    second: ShoyuOil_33
+  - first:
+      213: -1135815771311423539
+    second: ShoyuOil_34
+  - first:
+      213: 239639124791923006
+    second: ShoyuOil_35
+  - first:
+      213: -256194540254114100
+    second: ShoyuOil_36
+  - first:
+      213: 8426588955606972038
+    second: ShoyuOil_37
+  - first:
+      213: 1132177520280056799
+    second: ShoyuOil_38
+  - first:
+      213: 8378515997656421882
+    second: ShoyuOil_39
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ShoyuOil_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 315
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d36bea332dd0e7ec0800000000000000
+      internalID: -3567398658369472963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShoyuOil_1
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 0
+        width: 315
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42893a056ca07a240800000000000000
+      internalID: 4802819374486624292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShoyuOil_2
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 0
+        width: 315
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bad9aae4ef071060800000000000000
+      internalID: 6924020427969387187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShoyuOil_3
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 0
+        width: 315
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d968c60b6c26ba960800000000000000
+      internalID: 7614288200502904477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b93ccb354a80ea945b44e37bb97d8011
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":315.0,"y":230.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      ShoyuOil_0: -3567398658369472963
+      ShoyuOil_1: 4802819374486624292
+      ShoyuOil_2: 6924020427969387187
+      ShoyuOil_3: 7614288200502904477
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

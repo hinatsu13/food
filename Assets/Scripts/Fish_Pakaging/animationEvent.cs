@@ -18,4 +18,8 @@ public class animationEvent : MonoBehaviour
     {
         pakagingManager.showProduct();
     }
+    public void showOil()
+    {
+        pakagingManager.showOil();
+    }
 }

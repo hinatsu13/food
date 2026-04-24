@@ -28,6 +28,10 @@ public class PakagingManager : MonoBehaviour
     [Header("Animator")]
     [SerializeField] public Animator animator;
 
+    [Header("Final Sprite Reference")]
+    [SerializeField] public Sprite[] flakedOilImage;
+    [SerializeField] public Sprite[] solidOilImage;
+
     [Header("Star Displayer")]
     [SerializeField] public StarDisplay endScreen;
     [Header("Final Sprite Reference")]
@@ -230,6 +234,7 @@ public class PakagingManager : MonoBehaviour
     }
     public void showProduct()
     {
+        Debug.Log("ShowingProduct");
         if (userRecipe.isFlake)
         {
             switch (userRecipe.oilType)
@@ -314,6 +319,19 @@ public class PakagingManager : MonoBehaviour
                 default:
                     break;
             }
+        }
+    }
+
+    public void showOil()
+    {
+        Debug.Log("ShowingOil");
+        if (userRecipe.isFlake)
+        {
+            fishCan.sprite = flakedOilImage[userRecipe.oilType];
+        }
+        else
+        {
+            fishCan.sprite = solidOilImage[userRecipe.oilType];
         }
     }
 }

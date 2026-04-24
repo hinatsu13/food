@@ -1,0 +1,338 @@
+fileFormatVersion: 2
+guid: 743ddd1c591a0624ea351734aa983f1e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5089921871096997263
+    second: OliveOil_0
+  - first:
+      213: -8204945972861098560
+    second: OliveOil_1
+  - first:
+      213: 4580703525600155414
+    second: OliveOil_2
+  - first:
+      213: 3460740908293507566
+    second: OliveOil_3
+  - first:
+      213: -5868248046903824173
+    second: OliveOil_4
+  - first:
+      213: 8552614487437423934
+    second: OliveOil_5
+  - first:
+      213: -7374184682743804617
+    second: OliveOil_6
+  - first:
+      213: -6730548111325230008
+    second: OliveOil_7
+  - first:
+      213: 6785699965166821721
+    second: OliveOil_8
+  - first:
+      213: 1220848252324528785
+    second: OliveOil_9
+  - first:
+      213: 1404908629201799980
+    second: OliveOil_10
+  - first:
+      213: -4483204200573072103
+    second: OliveOil_11
+  - first:
+      213: -8889299686499476910
+    second: OliveOil_12
+  - first:
+      213: -861539021484742854
+    second: OliveOil_13
+  - first:
+      213: 4221459627608904960
+    second: OliveOil_14
+  - first:
+      213: 420961155632684716
+    second: OliveOil_15
+  - first:
+      213: 445123473203543302
+    second: OliveOil_16
+  - first:
+      213: 8614954093415326268
+    second: OliveOil_17
+  - first:
+      213: -9075701176224869398
+    second: OliveOil_18
+  - first:
+      213: -3561343268270676167
+    second: OliveOil_19
+  - first:
+      213: -8063729456854231611
+    second: OliveOil_20
+  - first:
+      213: -5513592829982513520
+    second: OliveOil_21
+  - first:
+      213: 2356633933309676930
+    second: OliveOil_22
+  - first:
+      213: 6923842342881708398
+    second: OliveOil_23
+  - first:
+      213: 5862034773478242164
+    second: OliveOil_24
+  - first:
+      213: -7597038243070969298
+    second: OliveOil_25
+  - first:
+      213: 7544568266670540944
+    second: OliveOil_26
+  - first:
+      213: 2890718347696814089
+    second: OliveOil_27
+  - first:
+      213: -5917451756013059686
+    second: OliveOil_28
+  - first:
+      213: 49195756454680536
+    second: OliveOil_29
+  - first:
+      213: -7176771337062630009
+    second: OliveOil_30
+  - first:
+      213: -7921381836031577637
+    second: OliveOil_31
+  - first:
+      213: -409859129341966473
+    second: OliveOil_32
+  - first:
+      213: 3673138822730381542
+    second: OliveOil_33
+  - first:
+      213: -4882622570338760811
+    second: OliveOil_34
+  - first:
+      213: 3357836462472224327
+    second: OliveOil_35
+  - first:
+      213: -4550751390739098957
+    second: OliveOil_36
+  - first:
+      213: -5496624770685592626
+    second: OliveOil_37
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: OliveOil_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 315
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17a95ca9607fc59b0800000000000000
+      internalID: -5089921871096997263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OliveOil_1
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 0
+        width: 315
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c5a75efb1d222e80800000000000000
+      internalID: -8204945972861098560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OliveOil_2
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 0
+        width: 315
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 617d6c0469de19f30800000000000000
+      internalID: 4580703525600155414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OliveOil_3
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 0
+        width: 315
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee94f723585070030800000000000000
+      internalID: 3460740908293507566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 41e9b3307e42a8c4192ec68e1230b369
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":315.0,"y":230.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      OliveOil_0: -5089921871096997263
+      OliveOil_1: -8204945972861098560
+      OliveOil_2: 4580703525600155414
+      OliveOil_3: 3460740908293507566
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

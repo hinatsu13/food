@@ -1,0 +1,344 @@
+fileFormatVersion: 2
+guid: 642d0b3dce93b3046ad5cbd9c294df27
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6318880846791304893
+    second: SpicyOil_0
+  - first:
+      213: -466172320603342969
+    second: SpicyOil_1
+  - first:
+      213: 3886660821927748438
+    second: SpicyOil_2
+  - first:
+      213: 619714207788678650
+    second: SpicyOil_3
+  - first:
+      213: 2016712165324295609
+    second: SpicyOil_4
+  - first:
+      213: 137397059756093540
+    second: SpicyOil_5
+  - first:
+      213: -2262991485488182000
+    second: SpicyOil_6
+  - first:
+      213: 6930347776892163062
+    second: SpicyOil_7
+  - first:
+      213: 6853202832523036591
+    second: SpicyOil_8
+  - first:
+      213: 3437728172334507233
+    second: SpicyOil_9
+  - first:
+      213: 3908715129141504914
+    second: SpicyOil_10
+  - first:
+      213: -3209418351620897535
+    second: SpicyOil_11
+  - first:
+      213: -2407818848064347075
+    second: SpicyOil_12
+  - first:
+      213: 4198857634650659490
+    second: SpicyOil_13
+  - first:
+      213: 6362664492594731013
+    second: SpicyOil_14
+  - first:
+      213: -5378055905100750715
+    second: SpicyOil_15
+  - first:
+      213: -1223601027929334223
+    second: SpicyOil_16
+  - first:
+      213: -7697133990502770088
+    second: SpicyOil_17
+  - first:
+      213: -8023524695422865112
+    second: SpicyOil_18
+  - first:
+      213: 2611905208404029744
+    second: SpicyOil_19
+  - first:
+      213: 4075073349378345998
+    second: SpicyOil_20
+  - first:
+      213: -7913997472571522111
+    second: SpicyOil_21
+  - first:
+      213: 7739313242369834323
+    second: SpicyOil_22
+  - first:
+      213: 8923717955177589909
+    second: SpicyOil_23
+  - first:
+      213: -6923086433984276704
+    second: SpicyOil_24
+  - first:
+      213: -4963548071280655246
+    second: SpicyOil_25
+  - first:
+      213: 7315620706774725556
+    second: SpicyOil_26
+  - first:
+      213: 2007779582453638294
+    second: SpicyOil_27
+  - first:
+      213: 5550168532293835935
+    second: SpicyOil_28
+  - first:
+      213: -3846671474857836435
+    second: SpicyOil_29
+  - first:
+      213: 3853808247511172102
+    second: SpicyOil_30
+  - first:
+      213: 7400762918344910586
+    second: SpicyOil_31
+  - first:
+      213: 8551506032189850408
+    second: SpicyOil_32
+  - first:
+      213: 5538001352663211733
+    second: SpicyOil_33
+  - first:
+      213: 6681274279784789708
+    second: SpicyOil_34
+  - first:
+      213: 2376462372003451186
+    second: SpicyOil_35
+  - first:
+      213: -4367496830292130670
+    second: SpicyOil_36
+  - first:
+      213: 3332241777837977060
+    second: SpicyOil_37
+  - first:
+      213: 5489373997609401051
+    second: SpicyOil_38
+  - first:
+      213: -5225973519250350319
+    second: SpicyOil_39
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpicyOil_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 315
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db6e30bb6ac21b750800000000000000
+      internalID: 6318880846791304893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpicyOil_1
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 0
+        width: 315
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 787715a8eb2d789f0800000000000000
+      internalID: -466172320603342969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpicyOil_2
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 0
+        width: 315
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6536e65dc6130f530800000000000000
+      internalID: 3886660821927748438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpicyOil_3
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 0
+        width: 315
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afdb181e9caa99800800000000000000
+      internalID: 619714207788678650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 64c5d490ebecd8f41b751388e33eede5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":315.0,"y":230.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      SpicyOil_0: 6318880846791304893
+      SpicyOil_1: -466172320603342969
+      SpicyOil_2: 3886660821927748438
+      SpicyOil_3: 619714207788678650
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
