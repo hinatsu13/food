@@ -8,6 +8,7 @@ public static class StateManager
     private static int FishPrepScore = 0;
     private static int FishCheckTempScore = 0;
     private static int FishPackagingScore = 0;
+    private static int StageCount = 0;
 
     // ── Setters ────────────────────────────────────────────
     public static void setPlayerName(string name)
@@ -34,6 +35,10 @@ public static class StateManager
     {
         FishPackagingScore = score;
     }
+    public static void setStageCount(int count)
+    {
+        StageCount = count;
+    }
 
     // ── Getters ────────────────────────────────────────────
     public static string getPlayerName() => PlayerName;
@@ -42,6 +47,8 @@ public static class StateManager
     public static int getFishCheckTemp() => FishCheckTempScore;
     public static int getFishPackaging() => FishPackagingScore;
     public static int getTotalScore() => FishSelectionScore + FishPrepScore + FishCheckTempScore + FishPackagingScore;
+    public static int getStageCount() => StageCount;
+    public static bool isPlayable(int requirment) => StageCount >= requirment;
 
     // ── Send Scores to MongoDB ─────────────────────────────
     public static void SendPacket(Action<bool> onComplete = null)

@@ -11,4 +11,9 @@ public class EnterScene : MonoBehaviour
 
         StateManager.SendPacket();
     }
+    public void SetCount(int count)
+    {
+        StateManager.setStageCount(count);
+        StateManager.SendPacket();
+    }
 }

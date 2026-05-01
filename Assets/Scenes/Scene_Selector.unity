@@ -495,6 +495,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 177235229}
     m_Modifications:
+    - target: {fileID: 383554059075065610, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
+      propertyPath: stageRec
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 398453523364575458, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -697,6 +701,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 177235229}
     m_Modifications:
+    - target: {fileID: 383554059075065610, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
+      propertyPath: stageRec
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 398453523364575458, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -854,6 +862,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 177235229}
     m_Modifications:
+    - target: {fileID: 383554059075065610, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
+      propertyPath: stageRec
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 398453523364575458, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -939,6 +951,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -749691489267108094, guid: 41590b6231ef91e4687f15db57e44171, type: 3}
     - target: {fileID: 2128411091775138717, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2128411091775138717, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Scenes/Scene02_Fish_Selection
       objectReference: {fileID: 0}
@@ -950,6 +966,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 1586682457877058854, guid: 41590b6231ef91e4687f15db57e44171, type: 3}
+    - target: {fileID: 3362985322805278346, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3362985322805278346, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
       propertyPath: m_PreserveAspect
       value: 1
@@ -1087,7 +1107,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 53.7
+  m_fontSize: 53.65
   m_fontSizeBase: 51.98
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1360,6 +1380,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1748088387}
     m_Modifications:
+    - target: {fileID: 383554059075065610, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
+      propertyPath: stageRec
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 398453523364575458, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1711,6 +1735,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1748088387}
     m_Modifications:
+    - target: {fileID: 383554059075065610, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
+      propertyPath: stageRec
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 398453523364575458, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2303,6 +2331,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 177235229}
     m_Modifications:
+    - target: {fileID: 383554059075065610, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
+      propertyPath: stageRec
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 398453523364575458, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2430,6 +2462,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1748088387}
     m_Modifications:
+    - target: {fileID: 383554059075065610, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
+      propertyPath: stageRec
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 398453523364575458, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3221,6 +3257,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 177235229}
     m_Modifications:
+    - target: {fileID: 383554059075065610, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
+      propertyPath: stageRec
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 398453523364575458, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3795,6 +3835,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1748088387}
     m_Modifications:
+    - target: {fileID: 383554059075065610, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
+      propertyPath: stageRec
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 398453523364575458, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3917,6 +3961,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1748088387}
     m_Modifications:
+    - target: {fileID: 383554059075065610, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
+      propertyPath: stageRec
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 398453523364575458, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4039,6 +4087,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 177235229}
     m_Modifications:
+    - target: {fileID: 383554059075065610, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
+      propertyPath: buttonColor
+      value: 
+      objectReference: {fileID: 3563799097755328272}
     - target: {fileID: 398453523364575458, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4132,6 +4184,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -8896500614104906154, guid: 41590b6231ef91e4687f15db57e44171, type: 3}
     - target: {fileID: 3362985322805278346, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3362985322805278346, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3362985322805278346, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3362985322805278346, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3362985322805278346, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -4153,6 +4221,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 398453523364575458, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
   m_PrefabInstance: {fileID: 3563799097755328267}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3563799097755328272 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3362985322805278346, guid: 6053b9e5081591c458be79c7e8694bea, type: 3}
+  m_PrefabInstance: {fileID: 3563799097755328267}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

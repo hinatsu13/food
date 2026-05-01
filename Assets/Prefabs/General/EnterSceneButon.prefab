@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 5134814053384839577}
   - component: {fileID: 3362985322805278346}
   - component: {fileID: 2128411091775138717}
+  - component: {fileID: 383554059075065610}
   - component: {fileID: 454957506205724247}
   m_Layer: 5
   m_Name: EnterSceneButon
@@ -209,6 +210,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &383554059075065610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6695305234105344654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 041000ce9281f0a42bbfdddf30115303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StageLock
+  stageRec: 0
 --- !u!114 &454957506205724247
 MonoBehaviour:
   m_ObjectHideFlags: 0
