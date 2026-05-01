@@ -27,12 +27,13 @@ public class EnterNameManager : MonoBehaviour
                     StateManager.setFishPrep(playerData.fishPrepScore);
                     StateManager.setFishCheckTemp(playerData.fishCheckTempScore);
                     StateManager.setFishPackaging(playerData.fishPackagingScore);
+                    StateManager.setStageCount(playerData.stageCount);
                 }
                 else
                 {
                     // New player — create record with zeros
                     Debug.Log("[EnterName] New player: " + playerName);
-                    MongoDBService.SendScore(playerName, 0, 0, 0, 0);
+                    MongoDBService.SendScore(playerName, 0, 0, 0, 0, 0);
                 }
 
                 Loading.Hide();

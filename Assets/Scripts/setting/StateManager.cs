@@ -68,6 +68,7 @@ public static class StateManager
             FishPrepScore,
             FishCheckTempScore,
             FishPackagingScore,
+            StageCount,
             onComplete
         );
         Loading.Hide();

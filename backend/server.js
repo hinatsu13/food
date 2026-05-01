@@ -25,6 +25,7 @@ const scoreSchema = new mongoose.Schema(
     fishCheckTempScore:{ type: Number, default: 0 },
     fishPackagingScore:{ type: Number, default: 0 },
     totalScore:        { type: Number, default: 0 },
+    stageCount:        { type: Number, default: 0 },
   },
   { timestamps: true }
 );
@@ -47,6 +48,7 @@ app.post("/api/scores", async (req, res) => {
       fishPrepScore,
       fishCheckTempScore,
       fishPackagingScore,
+      stageCount,
     } = req.body;
 
     if (!playerName) {
@@ -69,6 +71,7 @@ app.post("/api/scores", async (req, res) => {
         fishCheckTempScore: fishCheckTempScore || 0,
         fishPackagingScore: fishPackagingScore || 0,
         totalScore,
+        stageCount: stageCount || 0,
       },
       { upsert: true, new: true, setDefaultsOnInsert: true }
     );

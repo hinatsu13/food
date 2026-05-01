@@ -37,10 +37,10 @@ public class MongoDBService : MonoBehaviour
     /// Sends the score data to MongoDB via the backend API.
     /// </summary>
     public static void SendScore(string playerName, int fishSelectionScore, int fishPrepScore,
-        int fishCheckTempScore, int fishPackagingScore, Action<bool> onComplete = null)
+        int fishCheckTempScore, int fishPackagingScore, int stageCount = 0, Action<bool> onComplete = null)
     {
         Instance.StartCoroutine(Instance.SendScoreCoroutine(
-            playerName, fishSelectionScore, fishPrepScore, fishCheckTempScore, fishPackagingScore, onComplete));
+            playerName, fishSelectionScore, fishPrepScore, fishCheckTempScore, fishPackagingScore, stageCount, onComplete));
     }
 
     /// <summary>
@@ -54,12 +54,13 @@ public class MongoDBService : MonoBehaviour
             StateManager.getFishPrep(),
             StateManager.getFishCheckTemp(),
             StateManager.getFishPackaging(),
+            StateManager.getStageCount(),
             onComplete
         );
     }
 
     private IEnumerator SendScoreCoroutine(string playerName, int fishSelectionScore, int fishPrepScore,
-        int fishCheckTempScore, int fishPackagingScore, Action<bool> onComplete)
+        int fishCheckTempScore, int fishPackagingScore, int stageCount, Action<bool> onComplete)
     {
         // Build JSON payload
         ScorePayload payload = new ScorePayload
@@ -68,7 +69,8 @@ public class MongoDBService : MonoBehaviour
             fishSelectionScore = fishSelectionScore,
             fishPrepScore = fishPrepScore,
             fishCheckTempScore = fishCheckTempScore,
-            fishPackagingScore = fishPackagingScore
+            fishPackagingScore = fishPackagingScore,
+            stageCount = stageCount
         };
 
         string jsonData = JsonUtility.ToJson(payload);
@@ -109,6 +111,7 @@ public class MongoDBService : MonoBehaviour
         public int fishPrepScore;
         public int fishCheckTempScore;
         public int fishPackagingScore;
+        public int stageCount;
     }
 
     /// <summary>
@@ -168,5 +171,6 @@ public class MongoDBService : MonoBehaviour
         public int fishCheckTempScore;
         public int fishPackagingScore;
         public int totalScore;
+        public int stageCount;
     }
 }
