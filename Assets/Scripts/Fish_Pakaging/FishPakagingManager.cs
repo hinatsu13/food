@@ -67,7 +67,7 @@ public class PakagingManager : MonoBehaviour
     private int score = 0;
 
 
-    void Awake()
+    void Start()
     {
     
         //randomized type of meat, and assigned it as a boolean
