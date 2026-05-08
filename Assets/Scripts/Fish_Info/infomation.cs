@@ -4,21 +4,18 @@ using UnityEngine.UI;
 public class infomation : MonoBehaviour
 {
     public RectTransform targetButtonRect;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        //info.text = "what the fox say";
-        gameObject.SetActive(false);
-    }
 
     public void OpenImage()
     {
+        Debug.Log($"[info] Open  {name} pos->570");
         gameObject.SetActive(true);
         ChangeButtonLocation();
     }
 
     public void CloseImage()
     {
+        Debug.Log($"[info] Close {name} pos->970");
+        ResetLocation();
         gameObject.SetActive(false);
     }
 
