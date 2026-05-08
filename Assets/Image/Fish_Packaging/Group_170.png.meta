@@ -122,10 +122,10 @@ TextureImporter:
       name: MenuPannelThin
       rect:
         serializedVersion: 2
-        x: 52
-        y: 0
-        width: 427
-        height: 778
+        x: 60
+        y: 25
+        width: 411
+        height: 671
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,6 +184,50 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Menu
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 734
+        width: 86
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b5bf2cf64fd22c4ab18e132e092a0a1
+      internalID: 144348815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 717
+        width: 165
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e1f789ca4d48394882ba0695872cda9
+      internalID: -1360071395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -200,7 +244,9 @@ TextureImporter:
     nameFileIdTable:
       CheckBox: 5717874644142471851
       Group_170_2: 6633225150852252551
+      Menu: 144348815
       MenuPannelThin: -2617933397315372074
+      Text: -1360071395
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
