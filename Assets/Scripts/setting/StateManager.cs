@@ -76,18 +76,18 @@ public static class StateManager
 
     public static int GetStarValue(int inputValue, int threeStarCond, int twoStarCond, int oneStarCond)
     {
-        if (inputValue > threeStarCond) return 3;
-        if (inputValue > twoStarCond) return 2;
-        if (inputValue > oneStarCond) return 1;
+        if (inputValue >= threeStarCond) return 3;
+        if (inputValue >= twoStarCond) return 2;
+        if (inputValue >= oneStarCond) return 1;
 
         return 0;
     }
     public static int GetStarValue(int inputValue)
     {
         //condition are there to make sure the input value are 0 1 2 or 3
-        if (inputValue > 3) return 3;
-        if (inputValue > 2) return 2;
-        if (inputValue > 1) return 1;
+        if (inputValue == 3) return 3;
+        if (inputValue == 2) return 2;
+        if (inputValue == 1) return 1;
 
         return 0;
     }
