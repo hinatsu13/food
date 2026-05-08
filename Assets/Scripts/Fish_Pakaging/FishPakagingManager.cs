@@ -155,15 +155,15 @@ public class PakagingManager : MonoBehaviour
         userRecipe.weight = weight;
         if (weight == 1)
         {
-            Light.SetActive(true);
+            //Light.SetActive(true);
             scale_Value.text = LightValue.ToString();
         }else if (weight == 2)
         {
-            Med.SetActive(true);
+            //Med.SetActive(true);
             scale_Value.text = MedValue.ToString();
         }else if (weight == 3)
         {
-            Heavy.SetActive(true);
+            //Heavy.SetActive(true);
             scale_Value.text = HighValue.ToString();
         }
         if (goalRecipe.weight == userRecipe.weight)
