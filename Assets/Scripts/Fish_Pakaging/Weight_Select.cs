@@ -41,7 +41,7 @@ public class Weight_Select : MonoBehaviour
                     {
                         StopCasting(barValue, Input.GetTouch(0).position);
                     }
-                }else if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && RecipeUI.activeSelf == false)
+                }else if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)))
                 {
                     StopCasting(barValue, Input.mousePosition);
                 }
