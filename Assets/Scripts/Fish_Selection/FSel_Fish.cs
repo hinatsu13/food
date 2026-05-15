@@ -97,15 +97,7 @@ public class FSel_Fish : MonoBehaviour
             {
                 //for when player release finger
                 IsInTrigger = false;
-                //Check for box
-                if (IsInBox)
-                {
-                    CheckSort();
-                }
-                else
-                {
-                    transform.position = lastPosition;
-                }
+                CheckSort();
             }
         }
         else if (Input.GetMouseButtonDown(0))
@@ -121,8 +113,7 @@ public class FSel_Fish : MonoBehaviour
             //for when player release mouse
             IsInTrigger = false;
             //Check for box
-
-                CheckSort();
+            CheckSort();
         }
     }
     private bool IsPositionInsideTrigger(Vector2 screenPosition)
