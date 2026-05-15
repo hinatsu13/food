@@ -42,6 +42,7 @@ public class Fish_Prep_Handler : MonoBehaviour
         Debug.Log("The fish is filleted!");
         // Disable the fish
         fillet_Fish.SetActive(false);
+        Destroy(fillet_Fish);
         guts_The_Fish.SetActive(true);
         tracking_Scroe +=1;
         AddingScore();
@@ -51,6 +52,7 @@ public class Fish_Prep_Handler : MonoBehaviour
     {
         //Turn Off Old guts
         guts_The_Fish.SetActive(false);
+        Destroy(guts_The_Fish);
         Clean_Fish.SetActive(true);
         AddingScore();
     }
@@ -59,7 +61,9 @@ public class Fish_Prep_Handler : MonoBehaviour
     {
         Clear_Fish.SetActive(true);
         Bottom_Fish.SetActive(false);
+        Destroy(Bottom_Fish);
         Clean_Fish.SetActive(false);
+        Destroy(Clean_Fish);
         clean_Sparkle.SetActive(true);
         countdownRoutine = StartCoroutine(CutsceneSequence());
     }
