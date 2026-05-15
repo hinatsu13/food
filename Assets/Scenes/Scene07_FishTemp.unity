@@ -2856,9 +2856,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4267983170704688626, guid: 5a552a221a34695428ebe1cc743bc154, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4267983170704688626, guid: 5a552a221a34695428ebe1cc743bc154, type: 3}
       propertyPath: m_Resource
       value: 
       objectReference: {fileID: 8300000, guid: e5c0e23e88fbc1d4aa587393c234ad3f, type: 3}
+    - target: {fileID: 4267983170704688626, guid: 5a552a221a34695428ebe1cc743bc154, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4867975143635265569, guid: 5a552a221a34695428ebe1cc743bc154, type: 3}
       propertyPath: m_Name
       value: Sound_system
@@ -2906,8 +2914,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4867975143635265569, guid: 5a552a221a34695428ebe1cc743bc154, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6163236610040230088}
   m_SourcePrefab: {fileID: 100100000, guid: 5a552a221a34695428ebe1cc743bc154, type: 3}
+--- !u!1 &6163236610040230086 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4867975143635265569, guid: 5a552a221a34695428ebe1cc743bc154, type: 3}
+  m_PrefabInstance: {fileID: 6163236610040230085}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &6163236610040230087 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4267983170704688626, guid: 5a552a221a34695428ebe1cc743bc154, type: 3}
+  m_PrefabInstance: {fileID: 6163236610040230085}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6163236610040230088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6163236610040230086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf06fb83507b0b746b298d738065642b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Music_Manager
+  Music_Theme: {fileID: 6163236610040230087}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

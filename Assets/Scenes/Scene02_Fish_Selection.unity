@@ -1877,6 +1877,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1548572910}
   - component: {fileID: 1548572909}
+  - component: {fileID: 1548572911}
   m_Layer: 0
   m_Name: Sound_system
   m_TagString: Untagged
@@ -1896,10 +1897,10 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: e5c0e23e88fbc1d4aa587393c234ad3f, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1996,6 +1997,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1548572911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548572908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf06fb83507b0b746b298d738065642b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Music_Manager
+  Music_Theme: {fileID: 1548572909}
 --- !u!1 &1586443244
 GameObject:
   m_ObjectHideFlags: 0
@@ -2069,7 +2083,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 244.99994, y: 79.000015}
+  m_AnchoredPosition: {x: 244.99997, y: 79.000015}
   m_SizeDelta: {x: 100, y: -266.78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &1612730443 stripped

@@ -2569,7 +2569,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 109.2
+  m_fontSize: 108.6
   m_fontSizeBase: 115.1
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2914,6 +2914,101 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1781301718}
   m_CullTransparentMesh: 1
+--- !u!1001 &1888905132
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4267983170704688626, guid: 5a552a221a34695428ebe1cc743bc154, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4267983170704688626, guid: 5a552a221a34695428ebe1cc743bc154, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: ea075870c45be9548aad1f84bb73f99e, type: 3}
+    - target: {fileID: 4267983170704688626, guid: 5a552a221a34695428ebe1cc743bc154, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867975143635265569, guid: 5a552a221a34695428ebe1cc743bc154, type: 3}
+      propertyPath: m_Name
+      value: Sound_system
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028757281307824709, guid: 5a552a221a34695428ebe1cc743bc154, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.51423
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028757281307824709, guid: 5a552a221a34695428ebe1cc743bc154, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.09065
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028757281307824709, guid: 5a552a221a34695428ebe1cc743bc154, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028757281307824709, guid: 5a552a221a34695428ebe1cc743bc154, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028757281307824709, guid: 5a552a221a34695428ebe1cc743bc154, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028757281307824709, guid: 5a552a221a34695428ebe1cc743bc154, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028757281307824709, guid: 5a552a221a34695428ebe1cc743bc154, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028757281307824709, guid: 5a552a221a34695428ebe1cc743bc154, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028757281307824709, guid: 5a552a221a34695428ebe1cc743bc154, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028757281307824709, guid: 5a552a221a34695428ebe1cc743bc154, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4867975143635265569, guid: 5a552a221a34695428ebe1cc743bc154, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1888905135}
+  m_SourcePrefab: {fileID: 100100000, guid: 5a552a221a34695428ebe1cc743bc154, type: 3}
+--- !u!1 &1888905133 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4867975143635265569, guid: 5a552a221a34695428ebe1cc743bc154, type: 3}
+  m_PrefabInstance: {fileID: 1888905132}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1888905134 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4267983170704688626, guid: 5a552a221a34695428ebe1cc743bc154, type: 3}
+  m_PrefabInstance: {fileID: 1888905132}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1888905135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888905133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf06fb83507b0b746b298d738065642b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Music_Manager
+  Music_Theme: {fileID: 1888905134}
 --- !u!1 &1939813490
 GameObject:
   m_ObjectHideFlags: 0
@@ -3133,3 +3228,4 @@ SceneRoots:
   - {fileID: 309131156}
   - {fileID: 642129706}
   - {fileID: 742235829}
+  - {fileID: 1888905132}

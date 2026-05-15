@@ -1107,7 +1107,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 53.9
+  m_fontSize: 53.7
   m_fontSizeBase: 51.98
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3204,6 +3204,10 @@ PrefabInstance:
       propertyPath: m_Resource
       value: 
       objectReference: {fileID: 8300000, guid: ea075870c45be9548aad1f84bb73f99e, type: 3}
+    - target: {fileID: 4267983170704688626, guid: 5a552a221a34695428ebe1cc743bc154, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4867975143635265569, guid: 5a552a221a34695428ebe1cc743bc154, type: 3}
       propertyPath: m_Name
       value: Sound_system
@@ -3251,8 +3255,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4867975143635265569, guid: 5a552a221a34695428ebe1cc743bc154, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1560184339}
   m_SourcePrefab: {fileID: 100100000, guid: 5a552a221a34695428ebe1cc743bc154, type: 3}
+--- !u!1 &1560184337 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4867975143635265569, guid: 5a552a221a34695428ebe1cc743bc154, type: 3}
+  m_PrefabInstance: {fileID: 1560184336}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1560184338 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4267983170704688626, guid: 5a552a221a34695428ebe1cc743bc154, type: 3}
+  m_PrefabInstance: {fileID: 1560184336}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1560184339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560184337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf06fb83507b0b746b298d738065642b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Music_Manager
+  Music_Theme: {fileID: 1560184338}
 --- !u!1001 &1624154769
 PrefabInstance:
   m_ObjectHideFlags: 0
