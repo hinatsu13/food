@@ -37,7 +37,10 @@ public static class StateManager
     }
     public static void setStageCount(int count)
     {
-        StageCount = count;
+        if(count > StageCount)
+        {
+            StageCount = count;
+        }
     }
 
     // ── Getters ────────────────────────────────────────────
