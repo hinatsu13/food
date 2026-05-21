@@ -148,7 +148,7 @@ food/
 │   │   │   └── StarDisplay.cs         # 0–3 star UI helper
 │   │   ├── Fish_Info/            # Scene 01 — informational pop-ups
 │   │   ├── Fish_Selection/       # Scene 02 — scored: belt-based fish picking
-│   │   ├── FIsh_Dressed/         # Scene 03 & 08 — drag-and-drop hygiene dressing
+│   │   ├── FIsh_Dressed/         # Scene 03 & 08 — Click_Select hygiene dressing
 │   │   ├── Fish_Thaw/            # Scene 04 — thawing mini-game
 │   │   ├── Fish_prep/            # Scene 05 — scored: gutting and cleaning
 │   │   ├── Fish_Steaming/        # Scene 06 — timed steaming
