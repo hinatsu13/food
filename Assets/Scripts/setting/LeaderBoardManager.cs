@@ -30,12 +30,12 @@ public class LeaderBoardManager : MonoBehaviour
     {
         Loading.Show();
 
-        string currentPlayer = StateManager.getPlayerName();
-        string url = MongoDBService.ApiBaseUrl.TrimEnd('/') + "/api/scores";
+        string currentPlayerCode = StateManager.getPlayerCode();
+        string url = MSSqlService.ApiBaseUrl.TrimEnd('/') + "/api/scores";
 
-        // Include player name so the API returns their exact rank
-        if (!string.IsNullOrEmpty(currentPlayer))
-            url += "?playerName=" + UnityWebRequest.EscapeURL(currentPlayer);
+        // Include personCode so the API returns this player's exact rank
+        if (!string.IsNullOrEmpty(currentPlayerCode))
+            url += "?personCode=" + UnityWebRequest.EscapeURL(currentPlayerCode);
 
         Debug.Log("[LeaderBoard] Fetching: " + url);
 
@@ -72,17 +72,17 @@ public class LeaderBoardManager : MonoBehaviour
 
         // ── Fill Pedestal Top 3 ────────────────────────────
         if (scores.Length > 0 && firstPlaceName != null)
-            firstPlaceName.text = scores[0].playerName;
+            firstPlaceName.text = BuildDisplayName(scores[0].nickName, scores[0].fnameE, scores[0].lnameE, scores[0].personCode);
         if (scores.Length > 1 && secondPlaceName != null)
-            secondPlaceName.text = scores[1].playerName;
+            secondPlaceName.text = BuildDisplayName(scores[1].nickName, scores[1].fnameE, scores[1].lnameE, scores[1].personCode);
         if (scores.Length > 2 && thirdPlaceName != null)
-            thirdPlaceName.text = scores[2].playerName;
+            thirdPlaceName.text = BuildDisplayName(scores[2].nickName, scores[2].fnameE, scores[2].lnameE, scores[2].personCode);
 
         // ── Fill Player Rank Row (from server-computed rank) ──
-        if (response.player != null && !string.IsNullOrEmpty(response.player.playerName))
+        if (response.player != null && !string.IsNullOrEmpty(response.player.personCode))
         {
             if (playerRankName != null)
-                playerRankName.text = response.player.playerName;
+                playerRankName.text = BuildDisplayName(response.player.nickName, response.player.fnameE, response.player.lnameE, response.player.personCode);
             if (playerRankScore != null)
                 playerRankScore.text = response.player.totalScore.ToString();
         }
@@ -96,10 +96,10 @@ public class LeaderBoardManager : MonoBehaviour
         }
 
         // ── Fill Next Rank Row (person above the player) ──
-        if (response.nextRank != null && !string.IsNullOrEmpty(response.nextRank.playerName))
+        if (response.nextRank != null && !string.IsNullOrEmpty(response.nextRank.personCode))
         {
             if (nextRankName != null)
-                nextRankName.text = response.nextRank.playerName;
+                nextRankName.text = BuildDisplayName(response.nextRank.nickName, response.nextRank.fnameE, response.nextRank.lnameE, response.nextRank.personCode);
             if (nextRankScore != null)
                 nextRankScore.text = response.nextRank.totalScore.ToString();
         }
@@ -113,13 +113,21 @@ public class LeaderBoardManager : MonoBehaviour
         }
     }
 
+    // Same display-name preference used by EnterNameManager: NickName → "FnameE LnameE" → PersonCode.
+    private static string BuildDisplayName(string nickName, string fnameE, string lnameE, string personCode)
+    {
+        if (!string.IsNullOrEmpty(nickName)) return nickName;
+        string combined = ((fnameE ?? "") + " " + (lnameE ?? "")).Trim();
+        if (!string.IsNullOrEmpty(combined)) return combined;
+        return personCode ?? "---";
+    }
+
     // ── JSON Data Classes ──────────────────────────────────
     [Serializable]
     private class LeaderboardResponse
     {
         public bool success;
         public ScoreEntry[] data;
-        public int totalPlayers;
         public RankInfo player;
         public RankInfo nextRank;
     }
@@ -127,21 +135,22 @@ public class LeaderBoardManager : MonoBehaviour
     [Serializable]
     private class ScoreEntry
     {
-        public string _id;
-        public string playerName;
-        public int fishSelectionScore;
-        public int fishPrepScore;
-        public int fishCheckTempScore;
-        public int fishPackagingScore;
+        public string personCode;
         public int totalScore;
-        public string createdAt;
+        public string lastUpdated;
+        public string fnameE;
+        public string lnameE;
+        public string nickName;
     }
 
     [Serializable]
     private class RankInfo
     {
         public int rank;
-        public string playerName;
+        public string personCode;
         public int totalScore;
+        public string fnameE;
+        public string lnameE;
+        public string nickName;
     }
 }

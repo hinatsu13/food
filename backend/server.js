@@ -1,159 +1,238 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const mongoose = require("mongoose");
+const sql = require("mssql");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// ── Middleware ──────────────────────────────────────────────
 app.use(cors());
 app.use(express.json());
 
-// ── MongoDB Connection ─────────────────────────────────────
-mongoose
-  .connect(process.env.MONGODB_URI)
-  .then(() => console.log("Connected to MongoDB"))
-  .catch((err) => console.error("MongoDB connection error:", err));
-
-// ── Score Schema ───────────────────────────────────────────
-const scoreSchema = new mongoose.Schema(
-  {
-    playerName:        { type: String, required: true, unique: true },
-    fishSelectionScore:{ type: Number, default: 0 },
-    fishPrepScore:     { type: Number, default: 0 },
-    fishCheckTempScore:{ type: Number, default: 0 },
-    fishPackagingScore:{ type: Number, default: 0 },
-    totalScore:        { type: Number, default: 0 },
-    stageCount:        { type: Number, default: 0 },
+// ── SQL Server connection pool ─────────────────────────────
+const dbConfig = {
+  user: process.env.MSSQL_USER || "sa",
+  password: process.env.MSSQL_PASSWORD,
+  server: process.env.MSSQL_HOST || "localhost",
+  port: parseInt(process.env.MSSQL_PORT || "1433", 10),
+  database: process.env.MSSQL_DATABASE || "HRIS",
+  options: {
+    encrypt: process.env.MSSQL_ENCRYPT === "true",
+    trustServerCertificate: true,
   },
-  { timestamps: true }
-);
+  pool: { max: 10, min: 0, idleTimeoutMillis: 30000 },
+};
 
-const Score = mongoose.model("Score", scoreSchema);
+let poolPromise = null;
+function getPool() {
+  if (!poolPromise) {
+    poolPromise = sql.connect(dbConfig)
+      .then((pool) => { console.log("Connected to SQL Server"); return pool; })
+      .catch((err) => { poolPromise = null; throw err; });
+  }
+  return poolPromise;
+}
+
+// Trimmed projection of PersonDetail — the full row is heavy (image column,
+// dozens of unused fields). Add columns here when the game needs more of them.
+const PERSON_FIELDS = `
+  pd.PersonID, pd.PersonCode, pd.FnameT, pd.LnameT, pd.FnameE, pd.LnameE,
+  pd.NickName, pd.PositionNameT, pd.Company_NameT
+`;
+
+function mapPerson(row) {
+  return {
+    personID:      row.PersonID,
+    personCode:    row.PersonCode,
+    fnameT:        row.FnameT,
+    lnameT:        row.LnameT,
+    fnameE:        row.FnameE,
+    lnameE:        row.LnameE,
+    nickName:      row.NickName,
+    positionNameT: row.PositionNameT,
+    companyNameT:  row.Company_NameT,
+  };
+}
+
+function mapGameData(row) {
+  return {
+    fishSelectionScore: row.FishSelectionScore ?? 0,
+    fishPrepScore:      row.FishPrepScore ?? 0,
+    fishCheckTempScore: row.FishCheckTempScore ?? 0,
+    fishPackagingScore: row.FishPackagingScore ?? 0,
+    stageCount:         row.StageCount ?? 0,
+    totalScore:         row.TotalScore ?? 0,
+  };
+}
 
 // ── Routes ─────────────────────────────────────────────────
 
-// Health check
 app.get("/", (req, res) => {
   res.json({ status: "ok", message: "Food Score API is running" });
 });
 
-// Save or update a score (upsert by playerName)
+// Lookup by PersonCode. Returns 404 if the code is not in the HRIS roster
+// so the client can reject the login. Game data joins via PersonID.
+app.get("/api/person/:code", async (req, res) => {
+  try {
+    const pool = await getPool();
+    const result = await pool.request()
+      .input("code", sql.VarChar(50), req.params.code)
+      .query(`
+        SELECT ${PERSON_FIELDS},
+               gd.FishSelectionScore, gd.FishPrepScore, gd.FishCheckTempScore,
+               gd.FishPackagingScore, gd.StageCount, gd.TotalScore
+        FROM dbo.PersonDetail pd
+        LEFT JOIN dbo.PersonGameData gd ON gd.PersonID = pd.PersonID
+        WHERE pd.PersonCode = @code
+      `);
+
+    if (result.recordset.length === 0) {
+      return res.status(404).json({
+        success: false,
+        exists: false,
+        error: "PersonCode not found in HRIS roster",
+      });
+    }
+
+    const row = result.recordset[0];
+    res.json({
+      success: true,
+      exists: true,
+      person:   mapPerson(row),
+      gameData: mapGameData(row),
+    });
+  } catch (err) {
+    console.error("Error fetching person:", err);
+    res.status(500).json({ error: "Failed to fetch person", detail: err.message });
+  }
+});
+
+// Upsert game data by PersonCode. Resolves to PersonID server-side; rejects
+// unknown codes.
 app.post("/api/scores", async (req, res) => {
   try {
     const {
-      playerName,
-      fishSelectionScore,
-      fishPrepScore,
-      fishCheckTempScore,
-      fishPackagingScore,
-      stageCount,
+      personCode,
+      fishSelectionScore = 0,
+      fishPrepScore      = 0,
+      fishCheckTempScore = 0,
+      fishPackagingScore = 0,
+      stageCount         = 0,
     } = req.body;
 
-    if (!playerName) {
-      return res.status(400).json({ error: "playerName is required" });
+    if (!personCode) {
+      return res.status(400).json({ error: "personCode is required" });
     }
 
-    const totalScore =
-      (fishSelectionScore || 0) +
-      (fishPrepScore || 0) +
-      (fishCheckTempScore || 0) +
-      (fishPackagingScore || 0);
+    const pool = await getPool();
 
-    // Update if player exists, create if not
-    const score = await Score.findOneAndUpdate(
-      { playerName },
-      {
-        playerName,
-        fishSelectionScore: fishSelectionScore || 0,
-        fishPrepScore: fishPrepScore || 0,
-        fishCheckTempScore: fishCheckTempScore || 0,
-        fishPackagingScore: fishPackagingScore || 0,
-        totalScore,
-        stageCount: stageCount || 0,
-      },
-      { upsert: true, new: true, setDefaultsOnInsert: true }
-    );
+    const lookup = await pool.request()
+      .input("code", sql.VarChar(50), personCode)
+      .query("SELECT PersonID FROM dbo.PersonDetail WHERE PersonCode = @code");
 
-    res.status(200).json({ success: true, data: score });
+    if (lookup.recordset.length === 0) {
+      return res.status(404).json({
+        success: false,
+        error: "PersonCode not found in HRIS roster",
+      });
+    }
+
+    const personID = lookup.recordset[0].PersonID;
+
+    await pool.request()
+      .input("pid",   sql.Numeric(18, 0), personID)
+      .input("sel",   sql.Int, fishSelectionScore)
+      .input("prep",  sql.Int, fishPrepScore)
+      .input("temp",  sql.Int, fishCheckTempScore)
+      .input("pack",  sql.Int, fishPackagingScore)
+      .input("stage", sql.Int, stageCount)
+      .query(`
+        MERGE dbo.PersonGameData AS target
+        USING (SELECT @pid AS PersonID) AS source
+          ON target.PersonID = source.PersonID
+        WHEN MATCHED THEN UPDATE SET
+          FishSelectionScore = @sel,
+          FishPrepScore      = @prep,
+          FishCheckTempScore = @temp,
+          FishPackagingScore = @pack,
+          StageCount         = @stage,
+          LastUpdated        = GETDATE()
+        WHEN NOT MATCHED THEN
+          INSERT (PersonID, FishSelectionScore, FishPrepScore, FishCheckTempScore, FishPackagingScore, StageCount)
+          VALUES (@pid, @sel, @prep, @temp, @pack, @stage);
+      `);
+
+    const fetched = await pool.request()
+      .input("pid", sql.Numeric(18, 0), personID)
+      .query(`
+        SELECT FishSelectionScore, FishPrepScore, FishCheckTempScore,
+               FishPackagingScore, StageCount, TotalScore, LastUpdated
+        FROM dbo.PersonGameData
+        WHERE PersonID = @pid
+      `);
+
+    res.json({ success: true, data: mapGameData(fetched.recordset[0]) });
   } catch (err) {
     console.error("Error saving score:", err);
     res.status(500).json({ error: "Failed to save score", detail: err.message });
   }
 });
 
-// Get a player's scores by name
-app.get("/api/player/:name", async (req, res) => {
-  try {
-    const player = await Score.findOne({ playerName: req.params.name }).select("-__v");
-
-    if (!player) {
-      return res.json({ success: true, exists: false });
-    }
-
-    res.json({ success: true, exists: true, data: player });
-  } catch (err) {
-    console.error("Error fetching player:", err);
-    res.status(500).json({ error: "Failed to fetch player" });
-  }
-});
-
-// Get leaderboard: top 3 + current player rank + person above
-// Query: ?playerName=xxx
+// Leaderboard: top 3 + caller's rank + the player one rank above.
 app.get("/api/scores", async (req, res) => {
   try {
-    const playerName = req.query.playerName;
+    const personCode = req.query.personCode;
+    const pool = await getPool();
 
-    // Top 3 only
-    const top3 = await Score.find()
-      .sort({ totalScore: -1, createdAt: 1 })
-      .limit(3)
-      .select("-__v");
+    const top3 = await pool.request().query(`
+      SELECT TOP 3
+             pd.PersonCode, gd.TotalScore, gd.LastUpdated,
+             pd.FnameE, pd.LnameE, pd.NickName
+      FROM dbo.PersonGameData gd
+      JOIN dbo.PersonDetail   pd ON pd.PersonID = gd.PersonID
+      ORDER BY gd.TotalScore DESC, gd.LastUpdated ASC
+    `);
 
-    const result = {
-      success: true,
-      data: top3,
-    };
+    const result = { success: true, data: top3.recordset };
 
-    // Find current player's rank + person above
-    if (playerName) {
-      const allSorted = await Score.find()
-        .sort({ totalScore: -1, createdAt: 1 })
-        .select("playerName totalScore -_id")
-        .lean();
+    if (personCode) {
+      const ranks = await pool.request()
+        .input("code", sql.VarChar(50), personCode)
+        .query(`
+          WITH ranked AS (
+            SELECT pd.PersonCode, gd.TotalScore,
+                   ROW_NUMBER() OVER (ORDER BY gd.TotalScore DESC, gd.LastUpdated ASC) AS rnk,
+                   pd.FnameE, pd.LnameE, pd.NickName
+            FROM dbo.PersonGameData gd
+            JOIN dbo.PersonDetail   pd ON pd.PersonID = gd.PersonID
+          )
+          SELECT * FROM ranked
+          WHERE rnk IN (
+            SELECT rnk     FROM ranked WHERE PersonCode = @code
+            UNION
+            SELECT rnk - 1 FROM ranked WHERE PersonCode = @code
+          )
+          ORDER BY rnk;
+        `);
 
-      const playerIndex = allSorted.findIndex(
-        (s) => s.playerName === playerName
-      );
+      const rows  = ranks.recordset;
+      const me    = rows.find((r) => r.PersonCode === personCode);
+      const above = me ? rows.find((r) => r.rnk === me.rnk - 1) : null;
 
-      if (playerIndex >= 0) {
-        result.player = {
-          rank: playerIndex + 1,
-          playerName: allSorted[playerIndex].playerName,
-          totalScore: allSorted[playerIndex].totalScore,
-        };
-
-        if (playerIndex > 0) {
-          result.nextRank = {
-            rank: playerIndex,
-            playerName: allSorted[playerIndex - 1].playerName,
-            totalScore: allSorted[playerIndex - 1].totalScore,
-          };
-        }
-      }
+      if (me)    result.player   = { rank: me.rnk,    personCode: me.PersonCode,    totalScore: me.TotalScore,    fnameE: me.FnameE,    lnameE: me.LnameE,    nickName: me.NickName };
+      if (above) result.nextRank = { rank: above.rnk, personCode: above.PersonCode, totalScore: above.TotalScore, fnameE: above.FnameE, lnameE: above.LnameE, nickName: above.NickName };
     }
 
     res.json(result);
   } catch (err) {
     console.error("Error fetching scores:", err);
-    res.status(500).json({ error: "Failed to fetch scores" });
+    res.status(500).json({ error: "Failed to fetch scores", detail: err.message });
   }
 });
 
 // ── Start Server (local dev) / Export (Vercel) ─────────────
 if (process.env.VERCEL) {
-  // Vercel serverless — just export the app
   module.exports = app;
 } else {
   app.listen(PORT, () => {

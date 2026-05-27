@@ -3,6 +3,7 @@ using UnityEngine;
 
 public static class StateManager
 {
+    private static string PlayerCode;
     private static string PlayerName;
     private static int FishSelectionScore = 0;
     private static int FishPrepScore = 0;
@@ -11,6 +12,11 @@ public static class StateManager
     private static int StageCount = 0;
 
     // ── Setters ────────────────────────────────────────────
+    public static void setPlayerCode(string code)
+    {
+        PlayerCode = code;
+    }
+
     public static void setPlayerName(string name)
     {
         PlayerName = name;
@@ -20,7 +26,7 @@ public static class StateManager
     {
         FishSelectionScore = score;
     }
-    
+
     public static void setFishPrep(int score)
     {
         FishPrepScore = score;
@@ -44,6 +50,7 @@ public static class StateManager
     }
 
     // ── Getters ────────────────────────────────────────────
+    public static string getPlayerCode() => PlayerCode;
     public static string getPlayerName() => PlayerName;
     public static int getFishSelection() => FishSelectionScore;
     public static int getFishPrep() => FishPrepScore;
@@ -53,11 +60,12 @@ public static class StateManager
     public static int getStageCount() => StageCount;
     public static bool isPlayable(int requirment) => StageCount >= requirment;
 
-    // ── Send Scores to MongoDB ─────────────────────────────
+    // ── Send Scores to backend ─────────────────────────────
     public static void SendPacket(Action<bool> onComplete = null)
     {
         Loading.Show();
-        Debug.Log("=== Sending Scores to MongoDB ===");
+        Debug.Log("=== Sending Scores ===");
+        Debug.Log("Player Code: " + PlayerCode);
         Debug.Log("Player Name: " + PlayerName);
         Debug.Log("Fish Selection Score: " + FishSelectionScore);
         Debug.Log("Fish Prep Score: " + FishPrepScore);
@@ -65,8 +73,8 @@ public static class StateManager
         Debug.Log("Fish Packaging Score: " + FishPackagingScore);
         Debug.Log("Total Score: " + getTotalScore());
 
-        MongoDBService.SendScore(
-            PlayerName,
+        MSSqlService.SendScore(
+            PlayerCode,
             FishSelectionScore,
             FishPrepScore,
             FishCheckTempScore,
