@@ -2,9 +2,28 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const sql = require("mssql");
+const jwt = require("jsonwebtoken");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+if (!process.env.JWT_SECRET) {
+  console.error("FATAL: JWT_SECRET env var is required");
+  process.exit(1);
+}
+const JWT_SECRET = process.env.JWT_SECRET;
+const JWT_EXPIRY = "12h";
+
+// Legitimate maxima per sub-score. Loose v1 values — tune down after
+// observing real gameplay. The monotonic MERGE below does the heavy
+// lifting; the clamp only exists to block INT_MAX-style garbage.
+const MAX_SCORES = {
+  fishSelectionScore: 1000,
+  fishPrepScore:      1000,
+  fishCheckTempScore: 1000,
+  fishPackagingScore: 1000,
+  stageCount:         11,
+};
 
 app.use(cors());
 app.use(express.json());
@@ -65,14 +84,39 @@ function mapGameData(row) {
   };
 }
 
+function clamp(value, max) {
+  const n = Number.isFinite(value) ? Math.floor(value) : 0;
+  if (n < 0) return 0;
+  if (n > max) return max;
+  return n;
+}
+
+// ── Auth middleware ────────────────────────────────────────
+function requireAuth(req, res, next) {
+  const header = req.headers.authorization || "";
+  const match = header.match(/^Bearer\s+(.+)$/i);
+  if (!match) {
+    return res.status(401).json({ error: "Missing or malformed Authorization header" });
+  }
+  try {
+    const payload = jwt.verify(match[1], JWT_SECRET);
+    req.auth = { personID: payload.personID, personCode: payload.personCode };
+    next();
+  } catch (err) {
+    return res.status(401).json({ error: "Invalid or expired token" });
+  }
+}
+
 // ── Routes ─────────────────────────────────────────────────
 
 app.get("/", (req, res) => {
   res.json({ status: "ok", message: "Food Score API is running" });
 });
 
-// Lookup by PersonCode. Returns 404 if the code is not in the HRIS roster
-// so the client can reject the login. Game data joins via PersonID.
+// Login. Lookup by PersonCode against the HRIS roster. Returns 404 if the
+// code is not in the roster so the client can reject the login. Game data
+// joins via PersonID. On success, issues a JWT bound to PersonID — all
+// score writes must present this token.
 app.get("/api/person/:code", async (req, res) => {
   try {
     const pool = await getPool();
@@ -96,11 +140,18 @@ app.get("/api/person/:code", async (req, res) => {
     }
 
     const row = result.recordset[0];
+    const token = jwt.sign(
+      { personID: row.PersonID, personCode: row.PersonCode },
+      JWT_SECRET,
+      { expiresIn: JWT_EXPIRY }
+    );
+
     res.json({
       success: true,
       exists: true,
       person:   mapPerson(row),
       gameData: mapGameData(row),
+      token,
     });
   } catch (err) {
     console.error("Error fetching person:", err);
@@ -108,55 +159,37 @@ app.get("/api/person/:code", async (req, res) => {
   }
 });
 
-// Upsert game data by PersonCode. Resolves to PersonID server-side; rejects
-// unknown codes.
-app.post("/api/scores", async (req, res) => {
+// Upsert game data. PersonID comes from the verified JWT, NOT the body —
+// any client-supplied personCode is ignored. Sub-scores are clamped to
+// MAX_SCORES, and the MERGE only overwrites a column when the new value
+// is greater than the stored one (monotonic).
+app.post("/api/scores", requireAuth, async (req, res) => {
   try {
-    const {
-      personCode,
-      fishSelectionScore = 0,
-      fishPrepScore      = 0,
-      fishCheckTempScore = 0,
-      fishPackagingScore = 0,
-      stageCount         = 0,
-    } = req.body;
-
-    if (!personCode) {
-      return res.status(400).json({ error: "personCode is required" });
-    }
+    const sel   = clamp(req.body.fishSelectionScore, MAX_SCORES.fishSelectionScore);
+    const prep  = clamp(req.body.fishPrepScore,      MAX_SCORES.fishPrepScore);
+    const temp  = clamp(req.body.fishCheckTempScore, MAX_SCORES.fishCheckTempScore);
+    const pack  = clamp(req.body.fishPackagingScore, MAX_SCORES.fishPackagingScore);
+    const stage = clamp(req.body.stageCount,         MAX_SCORES.stageCount);
 
     const pool = await getPool();
 
-    const lookup = await pool.request()
-      .input("code", sql.VarChar(50), personCode)
-      .query("SELECT PersonID FROM dbo.PersonDetail WHERE PersonCode = @code");
-
-    if (lookup.recordset.length === 0) {
-      return res.status(404).json({
-        success: false,
-        error: "PersonCode not found in HRIS roster",
-      });
-    }
-
-    const personID = lookup.recordset[0].PersonID;
-
     await pool.request()
-      .input("pid",   sql.Numeric(18, 0), personID)
-      .input("sel",   sql.Int, fishSelectionScore)
-      .input("prep",  sql.Int, fishPrepScore)
-      .input("temp",  sql.Int, fishCheckTempScore)
-      .input("pack",  sql.Int, fishPackagingScore)
-      .input("stage", sql.Int, stageCount)
+      .input("pid",   sql.Numeric(18, 0), req.auth.personID)
+      .input("sel",   sql.Int, sel)
+      .input("prep",  sql.Int, prep)
+      .input("temp",  sql.Int, temp)
+      .input("pack",  sql.Int, pack)
+      .input("stage", sql.Int, stage)
       .query(`
         MERGE dbo.PersonGameData AS target
         USING (SELECT @pid AS PersonID) AS source
           ON target.PersonID = source.PersonID
         WHEN MATCHED THEN UPDATE SET
-          FishSelectionScore = @sel,
-          FishPrepScore      = @prep,
-          FishCheckTempScore = @temp,
-          FishPackagingScore = @pack,
-          StageCount         = @stage,
+          FishSelectionScore = CASE WHEN @sel   > FishSelectionScore THEN @sel   ELSE FishSelectionScore END,
+          FishPrepScore      = CASE WHEN @prep  > FishPrepScore      THEN @prep  ELSE FishPrepScore      END,
+          FishCheckTempScore = CASE WHEN @temp  > FishCheckTempScore THEN @temp  ELSE FishCheckTempScore END,
+          FishPackagingScore = CASE WHEN @pack  > FishPackagingScore THEN @pack  ELSE FishPackagingScore END,
+          StageCount         = CASE WHEN @stage > StageCount         THEN @stage ELSE StageCount         END,
           LastUpdated        = GETDATE()
         WHEN NOT MATCHED THEN
           INSERT (PersonID, FishSelectionScore, FishPrepScore, FishCheckTempScore, FishPackagingScore, StageCount)
@@ -164,7 +197,7 @@ app.post("/api/scores", async (req, res) => {
       `);
 
     const fetched = await pool.request()
-      .input("pid", sql.Numeric(18, 0), personID)
+      .input("pid", sql.Numeric(18, 0), req.auth.personID)
       .query(`
         SELECT FishSelectionScore, FishPrepScore, FishCheckTempScore,
                FishPackagingScore, StageCount, TotalScore, LastUpdated

@@ -34,12 +34,18 @@ public class MSSqlService : MonoBehaviour
         set => Instance.apiBaseUrl = value;
     }
 
+    // JWT issued by GET /api/person/:code; required on score writes. Lives
+    // only in memory — a fresh login is required after app restart or
+    // token expiry (server-side default: 12h).
+    private static string _token;
+    public static bool HasSession => !string.IsNullOrEmpty(_token);
+
     // ── Send scores ────────────────────────────────────────
-    public static void SendScore(string personCode, int fishSelectionScore, int fishPrepScore,
+    public static void SendScore(int fishSelectionScore, int fishPrepScore,
         int fishCheckTempScore, int fishPackagingScore, int stageCount = 0, Action<bool> onComplete = null)
     {
         Instance.StartCoroutine(Instance.SendScoreCoroutine(
-            personCode, fishSelectionScore, fishPrepScore, fishCheckTempScore, fishPackagingScore, stageCount, onComplete));
+            fishSelectionScore, fishPrepScore, fishCheckTempScore, fishPackagingScore, stageCount, onComplete));
     }
 
     /// <summary>
@@ -48,7 +54,6 @@ public class MSSqlService : MonoBehaviour
     public static void SendScore(Action<bool> onComplete = null)
     {
         SendScore(
-            StateManager.getPlayerCode(),
             StateManager.getFishSelection(),
             StateManager.getFishPrep(),
             StateManager.getFishCheckTemp(),
@@ -58,12 +63,18 @@ public class MSSqlService : MonoBehaviour
         );
     }
 
-    private IEnumerator SendScoreCoroutine(string personCode, int fishSelectionScore, int fishPrepScore,
+    private IEnumerator SendScoreCoroutine(int fishSelectionScore, int fishPrepScore,
         int fishCheckTempScore, int fishPackagingScore, int stageCount, Action<bool> onComplete)
     {
+        if (string.IsNullOrEmpty(_token))
+        {
+            Debug.LogError("[MSSqlService] No auth token — log in first");
+            onComplete?.Invoke(false);
+            yield break;
+        }
+
         ScorePayload payload = new ScorePayload
         {
-            personCode = personCode,
             fishSelectionScore = fishSelectionScore,
             fishPrepScore = fishPrepScore,
             fishCheckTempScore = fishCheckTempScore,
@@ -83,6 +94,7 @@ public class MSSqlService : MonoBehaviour
             request.uploadHandler = new UploadHandlerRaw(bodyRaw);
             request.downloadHandler = new DownloadHandlerBuffer();
             request.SetRequestHeader("Content-Type", "application/json");
+            request.SetRequestHeader("Authorization", "Bearer " + _token);
 
             yield return request.SendWebRequest();
 
@@ -93,8 +105,18 @@ public class MSSqlService : MonoBehaviour
             }
             else
             {
-                Debug.LogError($"[MSSqlService] Failed to save score: {request.error}");
-                Debug.LogError($"[MSSqlService] Response: {request.downloadHandler.text}");
+                // 401 means the server rejected the token (missing/expired). The
+                // caller should treat this as "session expired, log in again".
+                if (request.responseCode == 401)
+                {
+                    Debug.LogError("[MSSqlService] Session expired — token rejected");
+                    _token = null;
+                }
+                else
+                {
+                    Debug.LogError($"[MSSqlService] Failed to save score: {request.error}");
+                    Debug.LogError($"[MSSqlService] Response: {request.downloadHandler.text}");
+                }
                 onComplete?.Invoke(false);
             }
         }
@@ -103,7 +125,6 @@ public class MSSqlService : MonoBehaviour
     [Serializable]
     private class ScorePayload
     {
-        public string personCode;
         public int fishSelectionScore;
         public int fishPrepScore;
         public int fishCheckTempScore;
@@ -115,7 +136,8 @@ public class MSSqlService : MonoBehaviour
     /// <summary>
     /// Fetches a person by PersonCode. Returns the response (with exists=true
     /// and person/gameData) on success, or null if the PersonCode is not in
-    /// the HRIS roster (HTTP 404) or the request failed.
+    /// the HRIS roster (HTTP 404) or the request failed. As a side effect,
+    /// stores the JWT from the response for use on subsequent score writes.
     /// </summary>
     public static void GetPerson(string personCode, Action<PersonResponse> onComplete)
     {
@@ -154,6 +176,7 @@ public class MSSqlService : MonoBehaviour
 
             if (response != null && response.exists)
             {
+                _token = response.token;
                 onComplete?.Invoke(response);
             }
             else
@@ -170,6 +193,7 @@ public class MSSqlService : MonoBehaviour
         public bool exists;
         public PersonInfo person;
         public GameData gameData;
+        public string token;
     }
 
     [Serializable]

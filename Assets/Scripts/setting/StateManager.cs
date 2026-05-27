@@ -74,7 +74,6 @@ public static class StateManager
         Debug.Log("Total Score: " + getTotalScore());
 
         MSSqlService.SendScore(
-            PlayerCode,
             FishSelectionScore,
             FishPrepScore,
             FishCheckTempScore,
