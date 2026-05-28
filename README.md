@@ -149,6 +149,21 @@ curl -X POST http://localhost:3000/api/scores \
   -d '{"fishSelectionScore":80,"fishPrepScore":4,"fishCheckTempScore":30,"fishPackagingScore":3,"stageCount":10}'
 ```
 
+### Testing the API in Postman
+
+A ready-to-import collection lives at [`backend/postman/PatayaFood.postman_collection.json`](backend/postman/PatayaFood.postman_collection.json). It covers the full verification matrix: login happy/sad paths, the JWT auth gate (missing header, bogus token), the impersonation defense (body `personCode` is ignored), the clamp, the monotonic-only rule, and the leaderboard.
+
+To run it:
+
+1. **Postman → File → Import** → drop the JSON file in.
+2. Click the imported collection → **Variables** tab → set the **Current Value** column (not just Initial Value, which Postman silently ignores at runtime) for:
+   - `validPersonCode` — a real PersonCode from your HRIS roster.
+   - `victimPersonCode` — a second real PersonCode used as the impersonation target. Use a throwaway test account — one of the tests will bump its `StageCount` to 11.
+3. **Save** (Ctrl+S).
+4. **Run Collection** (▶ at the top of the collection sidebar). All 10 tests should pass.
+
+Note: tests 8 (clamp) and 9 (monotonic) are intentionally order-dependent — #8 pushes the row to the cap, then #9 confirms a lower POST can't deflate it. Run the collection top-to-bottom, not individual requests.
+
 ### Deploying the backend
 
 The codebase still contains `vercel.json` and a Vercel export branch in `server.js`, but the project has moved off Vercel — Vercel can't reach an on-prem SQL Server, and the production deployment now runs on internal infrastructure. The Vercel files are kept only for historical reference; treat the canonical deployment path as "your own intranet host with Node 18+ and network access to the HRIS database".
