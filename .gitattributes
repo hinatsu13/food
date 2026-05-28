@@ -161,3 +161,9 @@ Packages/packages-lock.json linguist-generated
 
 # Exceptions for .asset files such as lightning pre-baking
 LightingData.asset     binary
+
+# Files consumed by Linux containers must keep LF line endings even when
+# checked out on Windows — bash and sqlcmd choke on CR characters.
+*.sh                    text eol=lf
+backend/docker/**/*.sql text eol=lf
+backend/docker/**/*.ini text eol=lf
