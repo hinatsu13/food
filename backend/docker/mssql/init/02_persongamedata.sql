@@ -1,6 +1,11 @@
 USE [HRIS];
 GO
 
+-- Required for tables with PERSISTED computed columns (TotalScore below).
+SET QUOTED_IDENTIFIER ON;
+SET ANSI_NULLS ON;
+GO
+
 -- PersonGameData keyed by PersonID (PersonDetail's existing PK). The API
 -- accepts PersonCode from the client and translates to PersonID server-side.
 CREATE TABLE dbo.PersonGameData (
