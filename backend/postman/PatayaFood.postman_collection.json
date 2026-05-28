@@ -1,0 +1,289 @@
+{
+  "info": {
+    "name": "PatayaFood API",
+    "description": "End-to-end tests for the SQL Server + JWT score API. Set `validPersonCode` and `victimPersonCode` in the collection variables to two real HRIS roster entries before running. The `token` and `victimToken` variables populate automatically from the login requests.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:3000", "type": "string" },
+    { "key": "validPersonCode", "value": "REPLACE_ME", "type": "string" },
+    { "key": "victimPersonCode", "value": "REPLACE_ME", "type": "string" },
+    { "key": "unknownPersonCode", "value": "DEFINITELY_NOT_IN_HRIS_999", "type": "string" },
+    { "key": "token", "value": "", "type": "string" },
+    { "key": "victimToken", "value": "", "type": "string" },
+    { "key": "victimBaseline", "value": "", "type": "string" }
+  ],
+  "item": [
+    {
+      "name": "1. Login (valid PersonCode) — captures token",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "{{baseUrl}}/api/person/{{validPersonCode}}", "host": ["{{baseUrl}}"], "path": ["api", "person", "{{validPersonCode}}"] }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('200 OK', () => pm.response.to.have.status(200));",
+              "const body = pm.response.json();",
+              "pm.test('exists=true', () => pm.expect(body.exists).to.eql(true));",
+              "pm.test('returns token', () => pm.expect(body.token).to.be.a('string').and.not.empty);",
+              "pm.test('returns person + gameData', () => {",
+              "  pm.expect(body.person).to.be.an('object');",
+              "  pm.expect(body.gameData).to.be.an('object');",
+              "});",
+              "pm.collectionVariables.set('token', body.token);"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "2. Login (unknown PersonCode) — expect 404",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "{{baseUrl}}/api/person/{{unknownPersonCode}}", "host": ["{{baseUrl}}"], "path": ["api", "person", "{{unknownPersonCode}}"] }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('404 Not Found', () => pm.response.to.have.status(404));",
+              "const body = pm.response.json();",
+              "pm.test('exists=false', () => pm.expect(body.exists).to.eql(false));",
+              "pm.test('no token leaked', () => pm.expect(body.token).to.be.undefined);"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "3. Score POST without token — expect 401",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"fishSelectionScore\": 50,\n  \"fishPrepScore\": 2,\n  \"fishCheckTempScore\": 20,\n  \"fishPackagingScore\": 1,\n  \"stageCount\": 1\n}"
+        },
+        "url": { "raw": "{{baseUrl}}/api/scores", "host": ["{{baseUrl}}"], "path": ["api", "scores"] }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('401 Unauthorized', () => pm.response.to.have.status(401));"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "4. Score POST with bogus token — expect 401",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer not.a.real.token" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"fishSelectionScore\": 50,\n  \"fishPrepScore\": 2,\n  \"fishCheckTempScore\": 20,\n  \"fishPackagingScore\": 1,\n  \"stageCount\": 1\n}"
+        },
+        "url": { "raw": "{{baseUrl}}/api/scores", "host": ["{{baseUrl}}"], "path": ["api", "scores"] }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('401 Unauthorized', () => pm.response.to.have.status(401));"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "5. Capture victim baseline (login as victim, save scores, capture victim token)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "{{baseUrl}}/api/person/{{victimPersonCode}}", "host": ["{{baseUrl}}"], "path": ["api", "person", "{{victimPersonCode}}"] }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('200 OK', () => pm.response.to.have.status(200));",
+              "const body = pm.response.json();",
+              "pm.collectionVariables.set('victimToken', body.token);",
+              "pm.collectionVariables.set('victimBaseline', JSON.stringify(body.gameData));",
+              "console.log('Victim baseline stored:', body.gameData);"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "6. Impersonation attempt — login as A, POST with victim's personCode in body",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"personCode\": \"{{victimPersonCode}}\",\n  \"fishSelectionScore\": 999,\n  \"fishPrepScore\": 999,\n  \"fishCheckTempScore\": 999,\n  \"fishPackagingScore\": 999,\n  \"stageCount\": 11\n}"
+        },
+        "url": { "raw": "{{baseUrl}}/api/scores", "host": ["{{baseUrl}}"], "path": ["api", "scores"] }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('200 OK (write succeeds — but for A, not victim)', () => pm.response.to.have.status(200));",
+              "// The point is in test #7: confirm victim's row is UNCHANGED."
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "7. Verify victim untouched after impersonation attempt",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "{{baseUrl}}/api/person/{{victimPersonCode}}", "host": ["{{baseUrl}}"], "path": ["api", "person", "{{victimPersonCode}}"] }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('200 OK', () => pm.response.to.have.status(200));",
+              "const body = pm.response.json();",
+              "const baseline = JSON.parse(pm.collectionVariables.get('victimBaseline'));",
+              "pm.test('victim sub-scores unchanged (server ignored body personCode)', () => {",
+              "  pm.expect(body.gameData.fishSelectionScore).to.eql(baseline.fishSelectionScore);",
+              "  pm.expect(body.gameData.fishPrepScore).to.eql(baseline.fishPrepScore);",
+              "  pm.expect(body.gameData.fishCheckTempScore).to.eql(baseline.fishCheckTempScore);",
+              "  pm.expect(body.gameData.fishPackagingScore).to.eql(baseline.fishPackagingScore);",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "8. Clamp — POST INT_MAX, expect server to cap at MAX_SCORES",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"fishSelectionScore\": 999999,\n  \"fishPrepScore\": 999999,\n  \"fishCheckTempScore\": 999999,\n  \"fishPackagingScore\": 999999,\n  \"stageCount\": 999\n}"
+        },
+        "url": { "raw": "{{baseUrl}}/api/scores", "host": ["{{baseUrl}}"], "path": ["api", "scores"] }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('200 OK', () => pm.response.to.have.status(200));",
+              "const data = pm.response.json().data;",
+              "pm.test('fishSelectionScore clamped to <= 1000', () => pm.expect(data.fishSelectionScore).to.be.at.most(1000));",
+              "pm.test('fishPrepScore clamped to <= 1000',      () => pm.expect(data.fishPrepScore).to.be.at.most(1000));",
+              "pm.test('fishCheckTempScore clamped to <= 1000', () => pm.expect(data.fishCheckTempScore).to.be.at.most(1000));",
+              "pm.test('fishPackagingScore clamped to <= 1000', () => pm.expect(data.fishPackagingScore).to.be.at.most(1000));",
+              "pm.test('stageCount clamped to <= 11', () => pm.expect(data.stageCount).to.be.at.most(11));"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "9. Monotonic — POST a lower score, expect stored value unchanged",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"fishSelectionScore\": 1,\n  \"fishPrepScore\": 1,\n  \"fishCheckTempScore\": 1,\n  \"fishPackagingScore\": 1,\n  \"stageCount\": 0\n}"
+        },
+        "url": { "raw": "{{baseUrl}}/api/scores", "host": ["{{baseUrl}}"], "path": ["api", "scores"] }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('200 OK', () => pm.response.to.have.status(200));",
+              "const data = pm.response.json().data;",
+              "// After test #8 the row should be at the clamped max (1000s, stage 11).",
+              "// Posting 1s must not deflate it.",
+              "pm.test('fishSelectionScore did NOT decrease', () => pm.expect(data.fishSelectionScore).to.be.above(1));",
+              "pm.test('fishPrepScore did NOT decrease',      () => pm.expect(data.fishPrepScore).to.be.above(1));",
+              "pm.test('fishCheckTempScore did NOT decrease', () => pm.expect(data.fishCheckTempScore).to.be.above(1));",
+              "pm.test('fishPackagingScore did NOT decrease', () => pm.expect(data.fishPackagingScore).to.be.above(1));",
+              "pm.test('stageCount did NOT decrease',         () => pm.expect(data.stageCount).to.be.above(0));"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "10. Leaderboard (no auth required)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/scores?personCode={{validPersonCode}}",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "scores"],
+          "query": [{ "key": "personCode", "value": "{{validPersonCode}}" }]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('200 OK', () => pm.response.to.have.status(200));",
+              "const body = pm.response.json();",
+              "pm.test('returns data array (up to top 3)', () => {",
+              "  pm.expect(body.data).to.be.an('array');",
+              "  pm.expect(body.data.length).to.be.at.most(3);",
+              "});",
+              "pm.test('returns caller rank row', () => pm.expect(body.player).to.be.an('object'));"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    }
+  ]
+}
