@@ -31,7 +31,7 @@ public class LeaderBoardManager : MonoBehaviour
         Loading.Show();
 
         string currentPlayerCode = StateManager.getPlayerCode();
-        string url = MSSqlService.ApiBaseUrl.TrimEnd('/') + "/api/scores";
+        string url = MongoDBService.ApiBaseUrl.TrimEnd('/') + "/api/scores";
 
         // Include personCode so the API returns this player's exact rank
         if (!string.IsNullOrEmpty(currentPlayerCode))
@@ -72,17 +72,17 @@ public class LeaderBoardManager : MonoBehaviour
 
         // ── Fill Pedestal Top 3 ────────────────────────────
         if (scores.Length > 0 && firstPlaceName != null)
-            firstPlaceName.text = BuildDisplayName(scores[0].nickName, scores[0].fnameE, scores[0].lnameE, scores[0].personCode);
+            firstPlaceName.text = DisplayCode(scores[0].personCode);
         if (scores.Length > 1 && secondPlaceName != null)
-            secondPlaceName.text = BuildDisplayName(scores[1].nickName, scores[1].fnameE, scores[1].lnameE, scores[1].personCode);
+            secondPlaceName.text = DisplayCode(scores[1].personCode);
         if (scores.Length > 2 && thirdPlaceName != null)
-            thirdPlaceName.text = BuildDisplayName(scores[2].nickName, scores[2].fnameE, scores[2].lnameE, scores[2].personCode);
+            thirdPlaceName.text = DisplayCode(scores[2].personCode);
 
         // ── Fill Player Rank Row (from server-computed rank) ──
         if (response.player != null && !string.IsNullOrEmpty(response.player.personCode))
         {
             if (playerRankName != null)
-                playerRankName.text = BuildDisplayName(response.player.nickName, response.player.fnameE, response.player.lnameE, response.player.personCode);
+                playerRankName.text = response.player.personCode;
             if (playerRankScore != null)
                 playerRankScore.text = response.player.totalScore.ToString();
         }
@@ -90,7 +90,7 @@ public class LeaderBoardManager : MonoBehaviour
         {
             // Player not in DB yet — show current session data
             if (playerRankName != null)
-                playerRankName.text = StateManager.getPlayerName() ?? "---";
+                playerRankName.text = StateManager.getPlayerCode() ?? "---";
             if (playerRankScore != null)
                 playerRankScore.text = StateManager.getTotalScore().ToString();
         }
@@ -99,7 +99,7 @@ public class LeaderBoardManager : MonoBehaviour
         if (response.nextRank != null && !string.IsNullOrEmpty(response.nextRank.personCode))
         {
             if (nextRankName != null)
-                nextRankName.text = BuildDisplayName(response.nextRank.nickName, response.nextRank.fnameE, response.nextRank.lnameE, response.nextRank.personCode);
+                nextRankName.text = response.nextRank.personCode;
             if (nextRankScore != null)
                 nextRankScore.text = response.nextRank.totalScore.ToString();
         }
@@ -113,14 +113,8 @@ public class LeaderBoardManager : MonoBehaviour
         }
     }
 
-    // Same display-name preference used by EnterNameManager: NickName → "FnameE LnameE" → PersonCode.
-    private static string BuildDisplayName(string nickName, string fnameE, string lnameE, string personCode)
-    {
-        if (!string.IsNullOrEmpty(nickName)) return nickName;
-        string combined = ((fnameE ?? "") + " " + (lnameE ?? "")).Trim();
-        if (!string.IsNullOrEmpty(combined)) return combined;
-        return personCode ?? "---";
-    }
+    private static string DisplayCode(string personCode) =>
+        string.IsNullOrEmpty(personCode) ? "---" : personCode;
 
     // ── JSON Data Classes ──────────────────────────────────
     [Serializable]
@@ -138,9 +132,6 @@ public class LeaderBoardManager : MonoBehaviour
         public string personCode;
         public int totalScore;
         public string lastUpdated;
-        public string fnameE;
-        public string lnameE;
-        public string nickName;
     }
 
     [Serializable]
@@ -149,8 +140,5 @@ public class LeaderBoardManager : MonoBehaviour
         public int rank;
         public string personCode;
         public int totalScore;
-        public string fnameE;
-        public string lnameE;
-        public string nickName;
     }
 }

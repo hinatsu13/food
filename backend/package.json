@@ -1,7 +1,7 @@
 {
   "name": "food-score-api",
-  "version": "2.0.0",
-  "description": "Score API for the Patayafood game (SQL Server backend, HRIS roster)",
+  "version": "3.0.0",
+  "description": "Score API for the Patayafood game (MongoDB backend, keyed by employee ID)",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -12,6 +12,6 @@
     "dotenv": "^16.4.5",
     "express": "^4.21.0",
     "jsonwebtoken": "^9.0.3",
-    "mssql": "^11.0.1"
+    "mongodb": "^6.21.0"
   }
 }

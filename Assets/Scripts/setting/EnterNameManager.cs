@@ -2,9 +2,11 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-// Authenticates the player by PersonCode against the HRIS roster. The input
-// field and class name are kept as "name" for scene-reference safety, but
-// the value entered is treated as a PersonID / PersonCode.
+// Logs the player in by Employee ID. There is no roster: any well-formed ID
+// is accepted (the organisation enforces correct IDs), and the ID need not
+// pre-exist — the server creates the player's record on the first score
+// save. The input field and class name are kept as "name" for scene-reference
+// safety, but the value entered is the Employee ID.
 public class EnterNameManager : MonoBehaviour
 {
     [SerializeField] private TMP_InputField nameInput;
@@ -12,30 +14,36 @@ public class EnterNameManager : MonoBehaviour
 
     public void ValidName()
     {
-        string personCode = nameInput != null ? nameInput.text.Trim() : "";
+        string raw = nameInput != null ? nameInput.text : "";
 
-        if (string.IsNullOrEmpty(personCode))
+        if (string.IsNullOrWhiteSpace(raw))
         {
             if (errorText != null) errorText.text = "Please enter your Employee ID";
             return;
         }
 
+        string personCode = MongoDBService.NormalizeEmployeeId(raw);
+        if (personCode == null)
+        {
+            if (errorText != null) errorText.text = "Invalid Employee ID";
+            return;
+        }
+
         Loading.Show();
 
-        MSSqlService.GetPerson(personCode, (response) =>
+        MongoDBService.GetPerson(personCode, (response) =>
         {
             if (response == null)
             {
-                // 404 from server, or a network failure.
+                // Client-side validation already passed, so this is a network
+                // or server failure (or a server-side 400 on a rule mismatch).
                 Loading.Hide();
-                if (errorText != null) errorText.text = "Employee ID not found";
-                Debug.Log("[EnterName] Login rejected for PersonCode: " + personCode);
+                if (errorText != null) errorText.text = "Cannot connect to server. Please try again.";
+                Debug.Log("[EnterName] Login failed for Employee ID: " + personCode);
                 return;
             }
 
-            // Identity: store the canonical PersonCode plus a display name.
             StateManager.setPlayerCode(response.person.personCode);
-            StateManager.setPlayerName(BuildDisplayName(response.person));
 
             // Rehydrate game state from server (zeros for first-time players).
             if (response.gameData != null)
@@ -47,26 +55,10 @@ public class EnterNameManager : MonoBehaviour
                 StateManager.setStageCount(response.gameData.stageCount);
             }
 
-            Debug.Log("[EnterName] Welcome " + StateManager.getPlayerName()
-                + " (PersonCode " + response.person.personCode + ")");
+            Debug.Log("[EnterName] Welcome " + response.person.personCode);
 
             Loading.Hide();
             SceneManager.LoadScene("Scene_Selector");
         });
-    }
-
-    // Display name preference: NickName → "FnameE LnameE" → PersonCode.
-    private static string BuildDisplayName(MSSqlService.PersonInfo person)
-    {
-        if (!string.IsNullOrEmpty(person.nickName))
-            return person.nickName;
-
-        string first = person.fnameE ?? "";
-        string last  = person.lnameE ?? "";
-        string combined = (first + " " + last).Trim();
-        if (!string.IsNullOrEmpty(combined))
-            return combined;
-
-        return person.personCode;
     }
 }

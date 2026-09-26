@@ -4,7 +4,6 @@ using UnityEngine;
 public static class StateManager
 {
     private static string PlayerCode;
-    private static string PlayerName;
     private static int FishSelectionScore = 0;
     private static int FishPrepScore = 0;
     private static int FishCheckTempScore = 0;
@@ -15,11 +14,6 @@ public static class StateManager
     public static void setPlayerCode(string code)
     {
         PlayerCode = code;
-    }
-
-    public static void setPlayerName(string name)
-    {
-        PlayerName = name;
     }
 
     public static void setFishSelection(int score)
@@ -51,7 +45,6 @@ public static class StateManager
 
     // ── Getters ────────────────────────────────────────────
     public static string getPlayerCode() => PlayerCode;
-    public static string getPlayerName() => PlayerName;
     public static int getFishSelection() => FishSelectionScore;
     public static int getFishPrep() => FishPrepScore;
     public static int getFishCheckTemp() => FishCheckTempScore;
@@ -66,14 +59,13 @@ public static class StateManager
         Loading.Show();
         Debug.Log("=== Sending Scores ===");
         Debug.Log("Player Code: " + PlayerCode);
-        Debug.Log("Player Name: " + PlayerName);
         Debug.Log("Fish Selection Score: " + FishSelectionScore);
         Debug.Log("Fish Prep Score: " + FishPrepScore);
         Debug.Log("Fish Check Temp Score: " + FishCheckTempScore);
         Debug.Log("Fish Packaging Score: " + FishPackagingScore);
         Debug.Log("Total Score: " + getTotalScore());
 
-        MSSqlService.SendScore(
+        MongoDBService.SendScore(
             FishSelectionScore,
             FishPrepScore,
             FishCheckTempScore,

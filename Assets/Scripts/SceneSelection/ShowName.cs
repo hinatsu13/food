@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 
+// Shows the logged-in Employee ID (there are no player names).
 public class ShowName : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI text;
@@ -9,7 +10,7 @@ public class ShowName : MonoBehaviour
     {
         if (text == null) return;
 
-        string playerName = StateManager.getPlayerName();
-        text.text = string.IsNullOrEmpty(playerName) ? "---" : playerName;
+        string playerCode = StateManager.getPlayerCode();
+        text.text = string.IsNullOrEmpty(playerCode) ? "---" : playerCode;
     }
 }

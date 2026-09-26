@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const sql = require("mssql");
+const { MongoClient } = require("mongodb");
 const jwt = require("jsonwebtoken");
 
 const app = express();
@@ -14,73 +14,77 @@ if (!process.env.JWT_SECRET) {
 const JWT_SECRET = process.env.JWT_SECRET;
 const JWT_EXPIRY = "12h";
 
-// Legitimate maxima per sub-score. Loose v1 values — tune down after
-// observing real gameplay. The monotonic MERGE below does the heavy
-// lifting; the clamp only exists to block INT_MAX-style garbage.
+// Legitimate maxima per sub-score, set from observed gameplay. The monotonic
+// $max update below does the heavy lifting; the clamp only exists to block
+// INT_MAX-style garbage.
 const MAX_SCORES = {
-  fishSelectionScore: 1000,
-  fishPrepScore:      1000,
-  fishCheckTempScore: 1000,
-  fishPackagingScore: 1000,
+  fishSelectionScore: 500,
+  fishPrepScore:      4,
+  fishCheckTempScore: 400,
+  fishPackagingScore: 3,
   stageCount:         11,
 };
+
+// Employee ID rule — must stay identical to the Unity client's. There is no
+// roster: the organisation enforces correct IDs out-of-band, so any
+// well-formed ID is a player. Uppercasing makes "ab12" and "AB12" one player
+// instead of two leaderboard rows. Returns null when invalid.
+const EMPLOYEE_ID_RE = /^[A-Z0-9-]{1,50}$/;
+function normalizeEmployeeId(raw) {
+  if (typeof raw !== "string") return null;
+  const id = raw.trim().toUpperCase();
+  return EMPLOYEE_ID_RE.test(id) ? id : null;
+}
 
 app.use(cors());
 app.use(express.json());
 
-// ── SQL Server connection pool ─────────────────────────────
-const dbConfig = {
-  user: process.env.MSSQL_USER || "sa",
-  password: process.env.MSSQL_PASSWORD,
-  server: process.env.MSSQL_HOST || "localhost",
-  port: parseInt(process.env.MSSQL_PORT || "1433", 10),
-  database: process.env.MSSQL_DATABASE || "HRIS",
-  options: {
-    encrypt: process.env.MSSQL_ENCRYPT === "true",
-    trustServerCertificate: true,
-  },
-  pool: { max: 10, min: 0, idleTimeoutMillis: 30000 },
-};
+// ── MongoDB connection ─────────────────────────────────────
+// Collection:
+//   gameData — one doc per player, keyed by personCode (the normalized
+//              employee ID). Created by the player's first score save.
+const MONGODB_URI      = process.env.MONGODB_URI || "mongodb://localhost:27017";
+const MONGODB_DATABASE = process.env.MONGODB_DATABASE || "food";
 
-let poolPromise = null;
-function getPool() {
-  if (!poolPromise) {
-    poolPromise = sql.connect(dbConfig)
-      .then((pool) => { console.log("Connected to SQL Server"); return pool; })
-      .catch((err) => { poolPromise = null; throw err; });
+// Leaderboard order: highest total first, older score wins ties, personCode
+// makes it total so ranks are stable. Backed by the compound index below.
+const LB_SORT     = { totalScore: -1, lastUpdated: 1, personCode: 1 };
+const LB_SORT_REV = { totalScore: 1, lastUpdated: -1, personCode: -1 };
+
+// Lazy + cached, like the old SQL pool: connect and ensure indexes once per
+// process. Any failure resets the cache so the next request retries.
+let dbPromise = null;
+function getDb() {
+  if (!dbPromise) {
+    const client = new MongoClient(MONGODB_URI);
+    dbPromise = client.connect()
+      .then(async () => {
+        const db = client.db(MONGODB_DATABASE);
+        await Promise.all([
+          db.collection("gameData").createIndex({ personCode: 1 }, { unique: true }),
+          db.collection("gameData").createIndex(LB_SORT),
+        ]);
+        console.log("Connected to MongoDB");
+        return db;
+      })
+      .catch(async (err) => {
+        dbPromise = null;
+        await client.close().catch(() => {});
+        throw err;
+      });
   }
-  return poolPromise;
+  return dbPromise;
 }
 
-// Trimmed projection of PersonDetail — the full row is heavy (image column,
-// dozens of unused fields). Add columns here when the game needs more of them.
-const PERSON_FIELDS = `
-  pd.PersonID, pd.PersonCode, pd.FnameT, pd.LnameT, pd.FnameE, pd.LnameE,
-  pd.NickName, pd.PositionNameT, pd.Company_NameT
-`;
-
-function mapPerson(row) {
+// Zeros when the player has no gameData doc yet (first login).
+function mapGameData(doc) {
   return {
-    personID:      row.PersonID,
-    personCode:    row.PersonCode,
-    fnameT:        row.FnameT,
-    lnameT:        row.LnameT,
-    fnameE:        row.FnameE,
-    lnameE:        row.LnameE,
-    nickName:      row.NickName,
-    positionNameT: row.PositionNameT,
-    companyNameT:  row.Company_NameT,
-  };
-}
-
-function mapGameData(row) {
-  return {
-    fishSelectionScore: row.FishSelectionScore ?? 0,
-    fishPrepScore:      row.FishPrepScore ?? 0,
-    fishCheckTempScore: row.FishCheckTempScore ?? 0,
-    fishPackagingScore: row.FishPackagingScore ?? 0,
-    stageCount:         row.StageCount ?? 0,
-    totalScore:         row.TotalScore ?? 0,
+    fishSelectionScore: doc?.fishSelectionScore ?? 0,
+    fishPrepScore:      doc?.fishPrepScore ?? 0,
+    fishCheckTempScore: doc?.fishCheckTempScore ?? 0,
+    fishPackagingScore: doc?.fishPackagingScore ?? 0,
+    stageCount:         doc?.stageCount ?? 0,
+    totalScore:         doc?.totalScore ?? 0,
   };
 }
 
@@ -91,6 +95,17 @@ function clamp(value, max) {
   return n;
 }
 
+// gameData docs strictly ahead of `gd` in LB_SORT order.
+function aheadOf(gd) {
+  return {
+    $or: [
+      { totalScore: { $gt: gd.totalScore } },
+      { totalScore: gd.totalScore, lastUpdated: { $lt: gd.lastUpdated } },
+      { totalScore: gd.totalScore, lastUpdated: gd.lastUpdated, personCode: { $lt: gd.personCode } },
+    ],
+  };
+}
+
 // ── Auth middleware ────────────────────────────────────────
 function requireAuth(req, res, next) {
   const header = req.headers.authorization || "";
@@ -98,13 +113,19 @@ function requireAuth(req, res, next) {
   if (!match) {
     return res.status(401).json({ error: "Missing or malformed Authorization header" });
   }
+  let payload;
   try {
-    const payload = jwt.verify(match[1], JWT_SECRET);
-    req.auth = { personID: payload.personID, personCode: payload.personCode };
-    next();
+    payload = jwt.verify(match[1], JWT_SECRET);
   } catch (err) {
     return res.status(401).json({ error: "Invalid or expired token" });
   }
+  // The token's personCode is the upsert key, so it must already be in
+  // normalized form; tokens from older builds without one are rejected.
+  if (typeof payload.personCode !== "string" || !EMPLOYEE_ID_RE.test(payload.personCode)) {
+    return res.status(401).json({ error: "Token has no valid personCode" });
+  }
+  req.auth = { personCode: payload.personCode };
+  next();
 }
 
 // ── Routes ─────────────────────────────────────────────────
@@ -113,44 +134,25 @@ app.get("/", (req, res) => {
   res.json({ status: "ok", message: "Food Score API is running" });
 });
 
-// Login. Lookup by PersonCode against the HRIS roster. Returns 404 if the
-// code is not in the roster so the client can reject the login. Game data
-// joins via PersonID. On success, issues a JWT bound to PersonID — all
-// score writes must present this token.
+// Login. Any well-formed employee ID is accepted (400 otherwise) and gets a
+// JWT bound to its normalized personCode — all score writes must present it.
 app.get("/api/person/:code", async (req, res) => {
+  const personCode = normalizeEmployeeId(req.params.code);
+  if (!personCode) {
+    return res.status(400).json({ success: false, exists: false, error: "Invalid Employee ID" });
+  }
   try {
-    const pool = await getPool();
-    const result = await pool.request()
-      .input("code", sql.VarChar(50), req.params.code)
-      .query(`
-        SELECT ${PERSON_FIELDS},
-               gd.FishSelectionScore, gd.FishPrepScore, gd.FishCheckTempScore,
-               gd.FishPackagingScore, gd.StageCount, gd.TotalScore
-        FROM dbo.PersonDetail pd
-        LEFT JOIN dbo.PersonGameData gd ON gd.PersonID = pd.PersonID
-        WHERE pd.PersonCode = @code
-      `);
-
-    if (result.recordset.length === 0) {
-      return res.status(404).json({
-        success: false,
-        exists: false,
-        error: "PersonCode not found in HRIS roster",
-      });
-    }
-
-    const row = result.recordset[0];
-    const token = jwt.sign(
-      { personID: row.PersonID, personCode: row.PersonCode },
-      JWT_SECRET,
-      { expiresIn: JWT_EXPIRY }
-    );
+    const db = await getDb();
+    // Read-only on purpose: the record is created by the first score save, so
+    // a mistyped ID never leaves a ghost row on the leaderboard.
+    const gd = await db.collection("gameData").findOne({ personCode });
+    const token = jwt.sign({ personCode }, JWT_SECRET, { expiresIn: JWT_EXPIRY });
 
     res.json({
       success: true,
-      exists: true,
-      person:   mapPerson(row),
-      gameData: mapGameData(row),
+      exists: !!gd,
+      person:   { personCode },
+      gameData: mapGameData(gd),
       token,
     });
   } catch (err) {
@@ -159,53 +161,41 @@ app.get("/api/person/:code", async (req, res) => {
   }
 });
 
-// Upsert game data. PersonID comes from the verified JWT, NOT the body —
+// Upsert game data. personCode comes from the verified JWT, NOT the body —
 // any client-supplied personCode is ignored. Sub-scores are clamped to
-// MAX_SCORES, and the MERGE only overwrites a column when the new value
-// is greater than the stored one (monotonic).
+// MAX_SCORES and only ever go up (monotonic).
 app.post("/api/scores", requireAuth, async (req, res) => {
   try {
-    const sel   = clamp(req.body.fishSelectionScore, MAX_SCORES.fishSelectionScore);
-    const prep  = clamp(req.body.fishPrepScore,      MAX_SCORES.fishPrepScore);
-    const temp  = clamp(req.body.fishCheckTempScore, MAX_SCORES.fishCheckTempScore);
-    const pack  = clamp(req.body.fishPackagingScore, MAX_SCORES.fishPackagingScore);
-    const stage = clamp(req.body.stageCount,         MAX_SCORES.stageCount);
+    const clamped = {
+      fishSelectionScore: clamp(req.body.fishSelectionScore, MAX_SCORES.fishSelectionScore),
+      fishPrepScore:      clamp(req.body.fishPrepScore,      MAX_SCORES.fishPrepScore),
+      fishCheckTempScore: clamp(req.body.fishCheckTempScore, MAX_SCORES.fishCheckTempScore),
+      fishPackagingScore: clamp(req.body.fishPackagingScore, MAX_SCORES.fishPackagingScore),
+      stageCount:         clamp(req.body.stageCount,         MAX_SCORES.stageCount),
+    };
 
-    const pool = await getPool();
+    // $max keeps each field monotonic ($ifNull seeds a fresh upsert with 0).
+    // Mongo has no computed columns, so totalScore is stored and recomputed in
+    // the same atomic pipeline update — it can never drift from the sub-scores.
+    const bump = { lastUpdated: "$$NOW" };
+    for (const [field, value] of Object.entries(clamped)) {
+      bump[field] = { $max: [{ $ifNull: ["$" + field, 0] }, value] };
+    }
 
-    await pool.request()
-      .input("pid",   sql.Numeric(18, 0), req.auth.personID)
-      .input("sel",   sql.Int, sel)
-      .input("prep",  sql.Int, prep)
-      .input("temp",  sql.Int, temp)
-      .input("pack",  sql.Int, pack)
-      .input("stage", sql.Int, stage)
-      .query(`
-        MERGE dbo.PersonGameData AS target
-        USING (SELECT @pid AS PersonID) AS source
-          ON target.PersonID = source.PersonID
-        WHEN MATCHED THEN UPDATE SET
-          FishSelectionScore = CASE WHEN @sel   > FishSelectionScore THEN @sel   ELSE FishSelectionScore END,
-          FishPrepScore      = CASE WHEN @prep  > FishPrepScore      THEN @prep  ELSE FishPrepScore      END,
-          FishCheckTempScore = CASE WHEN @temp  > FishCheckTempScore THEN @temp  ELSE FishCheckTempScore END,
-          FishPackagingScore = CASE WHEN @pack  > FishPackagingScore THEN @pack  ELSE FishPackagingScore END,
-          StageCount         = CASE WHEN @stage > StageCount         THEN @stage ELSE StageCount         END,
-          LastUpdated        = GETDATE()
-        WHEN NOT MATCHED THEN
-          INSERT (PersonID, FishSelectionScore, FishPrepScore, FishCheckTempScore, FishPackagingScore, StageCount)
-          VALUES (@pid, @sel, @prep, @temp, @pack, @stage);
-      `);
+    const db = await getDb();
+    // upsert: the player's first save creates their record.
+    const doc = await db.collection("gameData").findOneAndUpdate(
+      { personCode: req.auth.personCode },
+      [
+        { $set: bump },
+        { $set: { totalScore: { $add: [
+          "$fishSelectionScore", "$fishPrepScore", "$fishCheckTempScore", "$fishPackagingScore",
+        ] } } },
+      ],
+      { upsert: true, returnDocument: "after" }
+    );
 
-    const fetched = await pool.request()
-      .input("pid", sql.Numeric(18, 0), req.auth.personID)
-      .query(`
-        SELECT FishSelectionScore, FishPrepScore, FishCheckTempScore,
-               FishPackagingScore, StageCount, TotalScore, LastUpdated
-        FROM dbo.PersonGameData
-        WHERE PersonID = @pid
-      `);
-
-    res.json({ success: true, data: mapGameData(fetched.recordset[0]) });
+    res.json({ success: true, data: mapGameData(doc) });
   } catch (err) {
     console.error("Error saving score:", err);
     res.status(500).json({ error: "Failed to save score", detail: err.message });
@@ -215,46 +205,32 @@ app.post("/api/scores", requireAuth, async (req, res) => {
 // Leaderboard: top 3 + caller's rank + the player one rank above.
 app.get("/api/scores", async (req, res) => {
   try {
-    const personCode = req.query.personCode;
-    const pool = await getPool();
+    // normalizeEmployeeId only accepts a plain string: Express parses
+    // ?personCode[$ne]=x into an object, which would otherwise reach findOne
+    // as a query operator. Invalid IDs are treated as absent.
+    const personCode = normalizeEmployeeId(req.query.personCode);
+    const gameData = (await getDb()).collection("gameData");
 
-    const top3 = await pool.request().query(`
-      SELECT TOP 3
-             pd.PersonCode, gd.TotalScore, gd.LastUpdated,
-             pd.FnameE, pd.LnameE, pd.NickName
-      FROM dbo.PersonGameData gd
-      JOIN dbo.PersonDetail   pd ON pd.PersonID = gd.PersonID
-      ORDER BY gd.TotalScore DESC, gd.LastUpdated ASC
-    `);
+    // Shape matches LeaderBoardManager's ScoreEntry (JsonUtility is case-sensitive).
+    const data = await gameData
+      .find({}, { projection: { _id: 0, personCode: 1, totalScore: 1, lastUpdated: 1 } })
+      .sort(LB_SORT)
+      .limit(3)
+      .toArray();
+    const result = { success: true, data };
 
-    const result = { success: true, data: top3.recordset };
+    const gd = personCode && await gameData.findOne({ personCode });
+    if (gd) {
+      const rank = 1 + await gameData.countDocuments(aheadOf(gd));
+      result.player = { rank, personCode, totalScore: gd.totalScore };
 
-    if (personCode) {
-      const ranks = await pool.request()
-        .input("code", sql.VarChar(50), personCode)
-        .query(`
-          WITH ranked AS (
-            SELECT pd.PersonCode, gd.TotalScore,
-                   ROW_NUMBER() OVER (ORDER BY gd.TotalScore DESC, gd.LastUpdated ASC) AS rnk,
-                   pd.FnameE, pd.LnameE, pd.NickName
-            FROM dbo.PersonGameData gd
-            JOIN dbo.PersonDetail   pd ON pd.PersonID = gd.PersonID
-          )
-          SELECT * FROM ranked
-          WHERE rnk IN (
-            SELECT rnk     FROM ranked WHERE PersonCode = @code
-            UNION
-            SELECT rnk - 1 FROM ranked WHERE PersonCode = @code
-          )
-          ORDER BY rnk;
-        `);
-
-      const rows  = ranks.recordset;
-      const me    = rows.find((r) => r.PersonCode === personCode);
-      const above = me ? rows.find((r) => r.rnk === me.rnk - 1) : null;
-
-      if (me)    result.player   = { rank: me.rnk,    personCode: me.PersonCode,    totalScore: me.TotalScore,    fnameE: me.FnameE,    lnameE: me.LnameE,    nickName: me.NickName };
-      if (above) result.nextRank = { rank: above.rnk, personCode: above.PersonCode, totalScore: above.TotalScore, fnameE: above.FnameE, lnameE: above.LnameE, nickName: above.NickName };
+      if (rank > 1) {
+        // Nearest doc ahead = first of the "ahead" set in reverse order.
+        const above = await gameData.findOne(aheadOf(gd), { sort: LB_SORT_REV });
+        if (above) {
+          result.nextRank = { rank: rank - 1, personCode: above.personCode, totalScore: above.totalScore };
+        }
+      }
     }
 
     res.json(result);

@@ -1,14 +1,14 @@
 {
   "info": {
     "name": "PatayaFood API",
-    "description": "End-to-end tests for the SQL Server + JWT score API. Set `validPersonCode` and `victimPersonCode` in the collection variables to two real HRIS roster entries before running. The `token` and `victimToken` variables populate automatically from the login requests.",
+    "description": "End-to-end tests for the MongoDB + JWT score API. There is no roster: any well-formed employee ID logs in (trimmed, uppercased, must match ^[A-Z0-9-]{1,50}$), and a player's gameData record is created by their first score save. `validPersonCode` and `victimPersonCode` default to two test IDs (`E2E-PLAYER-A` / `E2E-PLAYER-B`); change them to keep test rows apart from real players. The `token` and `victimToken` variables populate automatically from the login requests. Tests 9 (clamp) and 10 (monotonic) are order-dependent, so run the whole collection top-to-bottom.",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [
     { "key": "baseUrl", "value": "http://localhost:3000", "type": "string" },
-    { "key": "validPersonCode", "value": "REPLACE_ME", "type": "string" },
-    { "key": "victimPersonCode", "value": "REPLACE_ME", "type": "string" },
-    { "key": "unknownPersonCode", "value": "DEFINITELY_NOT_IN_HRIS_999", "type": "string" },
+    { "key": "validPersonCode", "value": "E2E-PLAYER-A", "type": "string" },
+    { "key": "victimPersonCode", "value": "E2E-PLAYER-B", "type": "string" },
+    { "key": "invalidPersonCode", "value": "bad id!", "type": "string" },
     { "key": "token", "value": "", "type": "string" },
     { "key": "victimToken", "value": "", "type": "string" },
     { "key": "victimBaseline", "value": "", "type": "string" }
@@ -28,12 +28,13 @@
             "exec": [
               "pm.test('200 OK', () => pm.response.to.have.status(200));",
               "const body = pm.response.json();",
-              "pm.test('exists=true', () => pm.expect(body.exists).to.eql(true));",
+              "pm.test('exists is a boolean (false until the first score save)', () => pm.expect(body.exists).to.be.a('boolean'));",
               "pm.test('returns token', () => pm.expect(body.token).to.be.a('string').and.not.empty);",
               "pm.test('returns person + gameData', () => {",
               "  pm.expect(body.person).to.be.an('object');",
               "  pm.expect(body.gameData).to.be.an('object');",
               "});",
+              "pm.test('person.personCode is the normalized ID', () => pm.expect(body.person.personCode).to.eql(pm.collectionVariables.get('validPersonCode').trim().toUpperCase()));",
               "pm.collectionVariables.set('token', body.token);"
             ],
             "type": "text/javascript"
@@ -42,20 +43,67 @@
       ]
     },
     {
-      "name": "2. Login (unknown PersonCode) — expect 404",
+      "name": "2. Login (brand-new ID) — 200, exists=false, zeros",
       "request": {
         "method": "GET",
         "header": [],
-        "url": { "raw": "{{baseUrl}}/api/person/{{unknownPersonCode}}", "host": ["{{baseUrl}}"], "path": ["api", "person", "{{unknownPersonCode}}"] }
+        "url": { "raw": "{{baseUrl}}/api/person/{{freshPersonCode}}", "host": ["{{baseUrl}}"], "path": ["api", "person", "{{freshPersonCode}}"] }
       },
       "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              "// Lowercase on purpose: the server must uppercase it.",
+              "pm.variables.set('freshPersonCode', 'new-' + Date.now());"
+            ],
+            "type": "text/javascript"
+          }
+        },
         {
           "listen": "test",
           "script": {
             "exec": [
-              "pm.test('404 Not Found', () => pm.response.to.have.status(404));",
+              "pm.test('200 OK', () => pm.response.to.have.status(200));",
               "const body = pm.response.json();",
               "pm.test('exists=false', () => pm.expect(body.exists).to.eql(false));",
+              "pm.test('returns token', () => pm.expect(body.token).to.be.a('string').and.not.empty);",
+              "pm.test('person.personCode is the uppercase ID', () => pm.expect(body.person.personCode).to.eql(pm.variables.get('freshPersonCode').toUpperCase()));",
+              "pm.test('gameData is all zeros', () => pm.expect(body.gameData).to.eql({",
+              "  fishSelectionScore: 0, fishPrepScore: 0, fishCheckTempScore: 0,",
+              "  fishPackagingScore: 0, stageCount: 0, totalScore: 0",
+              "}));"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "3. Login (invalid ID format) — expect 400",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "{{baseUrl}}/api/person/{{invalidPersonCodeEncoded}}", "host": ["{{baseUrl}}"], "path": ["api", "person", "{{invalidPersonCodeEncoded}}"] }
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              "// \"bad id!\" -> \"bad%20id!\" so the space survives as a path segment.",
+              "pm.variables.set('invalidPersonCodeEncoded', encodeURIComponent(pm.collectionVariables.get('invalidPersonCode')));"
+            ],
+            "type": "text/javascript"
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('400 Bad Request', () => pm.response.to.have.status(400));",
+              "const body = pm.response.json();",
+              "pm.test('success=false', () => pm.expect(body.success).to.eql(false));",
               "pm.test('no token leaked', () => pm.expect(body.token).to.be.undefined);"
             ],
             "type": "text/javascript"
@@ -64,7 +112,7 @@
       ]
     },
     {
-      "name": "3. Score POST without token — expect 401",
+      "name": "4. Score POST without token — expect 401",
       "request": {
         "method": "POST",
         "header": [{ "key": "Content-Type", "value": "application/json" }],
@@ -87,7 +135,7 @@
       ]
     },
     {
-      "name": "4. Score POST with bogus token — expect 401",
+      "name": "5. Score POST with bogus token — expect 401",
       "request": {
         "method": "POST",
         "header": [
@@ -113,7 +161,7 @@
       ]
     },
     {
-      "name": "5. Capture victim baseline (login as victim, save scores, capture victim token)",
+      "name": "6. Capture victim baseline (login as victim, capture victim token)",
       "request": {
         "method": "GET",
         "header": [],
@@ -136,7 +184,7 @@
       ]
     },
     {
-      "name": "6. Impersonation attempt — login as A, POST with victim's personCode in body",
+      "name": "7. Impersonation attempt — login as A, POST with victim's personCode in body",
       "request": {
         "method": "POST",
         "header": [
@@ -155,7 +203,7 @@
           "script": {
             "exec": [
               "pm.test('200 OK (write succeeds — but for A, not victim)', () => pm.response.to.have.status(200));",
-              "// The point is in test #7: confirm victim's row is UNCHANGED."
+              "// The point is in test #8: confirm victim's row is UNCHANGED."
             ],
             "type": "text/javascript"
           }
@@ -163,7 +211,7 @@
       ]
     },
     {
-      "name": "7. Verify victim untouched after impersonation attempt",
+      "name": "8. Verify victim untouched after impersonation attempt",
       "request": {
         "method": "GET",
         "header": [],
@@ -190,7 +238,7 @@
       ]
     },
     {
-      "name": "8. Clamp — POST INT_MAX, expect server to cap at MAX_SCORES",
+      "name": "9. Clamp — POST INT_MAX, expect server to cap at MAX_SCORES",
       "request": {
         "method": "POST",
         "header": [
@@ -209,12 +257,12 @@
           "script": {
             "exec": [
               "pm.test('200 OK', () => pm.response.to.have.status(200));",
-              "const data = pm.response.json().data;",
-              "pm.test('fishSelectionScore clamped to <= 1000', () => pm.expect(data.fishSelectionScore).to.be.at.most(1000));",
-              "pm.test('fishPrepScore clamped to <= 1000',      () => pm.expect(data.fishPrepScore).to.be.at.most(1000));",
-              "pm.test('fishCheckTempScore clamped to <= 1000', () => pm.expect(data.fishCheckTempScore).to.be.at.most(1000));",
-              "pm.test('fishPackagingScore clamped to <= 1000', () => pm.expect(data.fishPackagingScore).to.be.at.most(1000));",
-              "pm.test('stageCount clamped to <= 11', () => pm.expect(data.stageCount).to.be.at.most(11));"
+              "const gd = pm.response.json().data;",
+              "pm.test('fishSelectionScore clamped to 500', () => pm.expect(gd.fishSelectionScore).to.eql(500));",
+              "pm.test('fishPrepScore clamped to 4',        () => pm.expect(gd.fishPrepScore).to.eql(4));",
+              "pm.test('fishCheckTempScore clamped to 400', () => pm.expect(gd.fishCheckTempScore).to.eql(400));",
+              "pm.test('fishPackagingScore clamped to 3',   () => pm.expect(gd.fishPackagingScore).to.eql(3));",
+              "pm.test('stageCount clamped to 11',          () => pm.expect(gd.stageCount).to.eql(11));"
             ],
             "type": "text/javascript"
           }
@@ -222,7 +270,7 @@
       ]
     },
     {
-      "name": "9. Monotonic — POST a lower score, expect stored value unchanged",
+      "name": "10. Monotonic — POST a lower score, expect stored value unchanged",
       "request": {
         "method": "POST",
         "header": [
@@ -241,14 +289,14 @@
           "script": {
             "exec": [
               "pm.test('200 OK', () => pm.response.to.have.status(200));",
-              "const data = pm.response.json().data;",
-              "// After test #8 the row should be at the clamped max (1000s, stage 11).",
+              "const gd = pm.response.json().data;",
+              "// After test #9 the row should be at the clamped max (500/4/400/3, stage 11).",
               "// Posting 1s must not deflate it.",
-              "pm.test('fishSelectionScore did NOT decrease', () => pm.expect(data.fishSelectionScore).to.be.above(1));",
-              "pm.test('fishPrepScore did NOT decrease',      () => pm.expect(data.fishPrepScore).to.be.above(1));",
-              "pm.test('fishCheckTempScore did NOT decrease', () => pm.expect(data.fishCheckTempScore).to.be.above(1));",
-              "pm.test('fishPackagingScore did NOT decrease', () => pm.expect(data.fishPackagingScore).to.be.above(1));",
-              "pm.test('stageCount did NOT decrease',         () => pm.expect(data.stageCount).to.be.above(0));"
+              "pm.test('fishSelectionScore did NOT decrease', () => pm.expect(gd.fishSelectionScore).to.eql(500));",
+              "pm.test('fishPrepScore did NOT decrease',      () => pm.expect(gd.fishPrepScore).to.eql(4));",
+              "pm.test('fishCheckTempScore did NOT decrease', () => pm.expect(gd.fishCheckTempScore).to.eql(400));",
+              "pm.test('fishPackagingScore did NOT decrease', () => pm.expect(gd.fishPackagingScore).to.eql(3));",
+              "pm.test('stageCount did NOT decrease',         () => pm.expect(gd.stageCount).to.eql(11));"
             ],
             "type": "text/javascript"
           }
@@ -256,7 +304,7 @@
       ]
     },
     {
-      "name": "10. Leaderboard (no auth required)",
+      "name": "11. Leaderboard (no auth required)",
       "request": {
         "method": "GET",
         "header": [],
@@ -277,6 +325,13 @@
               "pm.test('returns data array (up to top 3)', () => {",
               "  pm.expect(body.data).to.be.an('array');",
               "  pm.expect(body.data.length).to.be.at.most(3);",
+              "});",
+              "pm.test('entries carry personCode + totalScore and no name fields', () => {",
+              "  body.data.forEach((row) => {",
+              "    pm.expect(row).to.have.property('personCode');",
+              "    pm.expect(row).to.have.property('totalScore');",
+              "    pm.expect(row).to.not.have.any.keys('fnameE', 'lnameE', 'nickName');",
+              "  });",
               "});",
               "pm.test('returns caller rank row', () => pm.expect(body.player).to.be.an('object'));"
             ],

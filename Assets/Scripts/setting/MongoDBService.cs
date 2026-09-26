@@ -1,30 +1,31 @@
 using System;
 using System.Collections;
 using System.Text;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.Networking;
 
-// Singleton REST client for the HRIS-backed SQL Server score API.
-public class MSSqlService : MonoBehaviour
+// Singleton REST client (UnityWebRequest) for the Node score API, which is
+// MongoDB-backed. The client never talks to MongoDB directly.
+public class MongoDBService : MonoBehaviour
 {
-    private static MSSqlService _instance;
-    public static MSSqlService Instance
+    private static MongoDBService _instance;
+    public static MongoDBService Instance
     {
         get
         {
             if (_instance == null)
             {
-                GameObject go = new GameObject("MSSqlService");
-                _instance = go.AddComponent<MSSqlService>();
+                GameObject go = new GameObject("MongoDBService");
+                _instance = go.AddComponent<MongoDBService>();
                 DontDestroyOnLoad(go);
             }
             return _instance;
         }
     }
 
-    // Override via the Inspector or MSSqlService.ApiBaseUrl. Local backend
-    // runs on http://localhost:3000; the deployed URL below targets the
-    // legacy Mongo deployment and must be repointed when prod SQL is up.
+    // Override via MongoDBService.ApiBaseUrl at startup — not the Inspector:
+    // Instance always creates its own GameObject, so a scene copy is ignored.
     [SerializeField]
     private string apiBaseUrl = "http://localhost:3000";
 
@@ -68,7 +69,7 @@ public class MSSqlService : MonoBehaviour
     {
         if (string.IsNullOrEmpty(_token))
         {
-            Debug.LogError("[MSSqlService] No auth token — log in first");
+            Debug.LogError("[MongoDBService] No auth token — log in first");
             onComplete?.Invoke(false);
             yield break;
         }
@@ -85,8 +86,8 @@ public class MSSqlService : MonoBehaviour
         string jsonData = JsonUtility.ToJson(payload);
         string url = apiBaseUrl.TrimEnd('/') + "/api/scores";
 
-        Debug.Log($"[MSSqlService] Sending score to: {url}");
-        Debug.Log($"[MSSqlService] Payload: {jsonData}");
+        Debug.Log($"[MongoDBService] Sending score to: {url}");
+        Debug.Log($"[MongoDBService] Payload: {jsonData}");
 
         using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
         {
@@ -100,7 +101,7 @@ public class MSSqlService : MonoBehaviour
 
             if (request.result == UnityWebRequest.Result.Success)
             {
-                Debug.Log($"[MSSqlService] Score saved: {request.downloadHandler.text}");
+                Debug.Log($"[MongoDBService] Score saved: {request.downloadHandler.text}");
                 onComplete?.Invoke(true);
             }
             else
@@ -109,13 +110,13 @@ public class MSSqlService : MonoBehaviour
                 // caller should treat this as "session expired, log in again".
                 if (request.responseCode == 401)
                 {
-                    Debug.LogError("[MSSqlService] Session expired — token rejected");
+                    Debug.LogError("[MongoDBService] Session expired — token rejected");
                     _token = null;
                 }
                 else
                 {
-                    Debug.LogError($"[MSSqlService] Failed to save score: {request.error}");
-                    Debug.LogError($"[MSSqlService] Response: {request.downloadHandler.text}");
+                    Debug.LogError($"[MongoDBService] Failed to save score: {request.error}");
+                    Debug.LogError($"[MongoDBService] Response: {request.downloadHandler.text}");
                 }
                 onComplete?.Invoke(false);
             }
@@ -132,12 +133,27 @@ public class MSSqlService : MonoBehaviour
         public int stageCount;
     }
 
-    // ── Fetch person + game data ───────────────────────────
+    // ── Employee ID rule (must match server.js) ────────────
+    private static readonly Regex EmployeeIdPattern = new Regex("^[A-Z0-9-]{1,50}$");
+
     /// <summary>
-    /// Fetches a person by PersonCode. Returns the response (with exists=true
-    /// and person/gameData) on success, or null if the PersonCode is not in
-    /// the HRIS roster (HTTP 404) or the request failed. As a side effect,
-    /// stores the JWT from the response for use on subsequent score writes.
+    /// Trims and uppercases an Employee ID so "ab12" and "AB12" are the same
+    /// player. Returns null when the result is not ^[A-Z0-9-]{1,50}$.
+    /// </summary>
+    public static string NormalizeEmployeeId(string raw)
+    {
+        if (raw == null) return null;
+        string code = raw.Trim().ToUpperInvariant();
+        return EmployeeIdPattern.IsMatch(code) ? code : null;
+    }
+
+    // ── Log in + fetch game data ───────────────────────────
+    /// <summary>
+    /// Logs in with an Employee ID. There is no roster: any well-formed ID is
+    /// accepted, and a brand-new one comes back with exists=false and zeroed
+    /// gameData. Returns null for an invalid ID (HTTP 400) or a network/server
+    /// failure. As a side effect, stores the JWT from the response for use on
+    /// subsequent score writes.
     /// </summary>
     public static void GetPerson(string personCode, Action<PersonResponse> onComplete)
     {
@@ -147,26 +163,26 @@ public class MSSqlService : MonoBehaviour
     private IEnumerator GetPersonCoroutine(string personCode, Action<PersonResponse> onComplete)
     {
         string url = apiBaseUrl.TrimEnd('/') + "/api/person/" + UnityWebRequest.EscapeURL(personCode);
-        Debug.Log("[MSSqlService] Fetching person: " + url);
+        Debug.Log("[MongoDBService] Fetching person: " + url);
 
         using (UnityWebRequest request = UnityWebRequest.Get(url))
         {
             yield return request.SendWebRequest();
 
             string json = request.downloadHandler != null ? request.downloadHandler.text : "";
-            Debug.Log("[MSSqlService] Person response: " + json);
+            Debug.Log("[MongoDBService] Person response: " + json);
 
             if (request.result != UnityWebRequest.Result.Success)
             {
-                // 404 is the "PersonCode not in roster" rejection path; treated
-                // as a normal failed lookup, not an error to surface to the user.
-                if (request.responseCode == 404)
+                // 400 is the server's "malformed Employee ID" rejection; a
+                // normal outcome of user input, not an error.
+                if (request.responseCode == 400)
                 {
-                    Debug.Log("[MSSqlService] PersonCode not in HRIS roster");
+                    Debug.Log("[MongoDBService] Invalid Employee ID");
                 }
                 else
                 {
-                    Debug.LogError("[MSSqlService] Failed to fetch person: " + request.error);
+                    Debug.LogError("[MongoDBService] Failed to fetch person: " + request.error);
                 }
                 onComplete?.Invoke(null);
                 yield break;
@@ -174,7 +190,8 @@ public class MSSqlService : MonoBehaviour
 
             PersonResponse response = JsonUtility.FromJson<PersonResponse>(json);
 
-            if (response != null && response.exists)
+            // success, not exists: a brand-new ID (exists=false) is a valid login.
+            if (response != null && response.success)
             {
                 _token = response.token;
                 onComplete?.Invoke(response);
@@ -199,15 +216,8 @@ public class MSSqlService : MonoBehaviour
     [Serializable]
     public class PersonInfo
     {
-        public long personID;
+        // The normalized Employee ID — the only identity; there are no names.
         public string personCode;
-        public string fnameT;
-        public string lnameT;
-        public string fnameE;
-        public string lnameE;
-        public string nickName;
-        public string positionNameT;
-        public string companyNameT;
     }
 
     [Serializable]

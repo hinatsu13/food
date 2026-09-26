@@ -1,44 +1,31 @@
-# SQL Server 2019 Express in a Linux container, with the database pinned to
-# compat level 110 (SQL Server 2012) so the engine plans and parses the way
-# prod will. Init scripts in docker/mssql/init/*.sql run once on first boot.
+# MongoDB 7 for local dev. Nothing to seed: there is no roster (any
+# well-formed employee ID logs in) and the server creates its indexes on
+# first request.
+#
+# Upgrading a volume written by the old roster build (gameData keyed by
+# personId)? Run `docker compose down -v` first: its docs and unique
+# personId_1 index make the personCode index build fail, so every request 500s.
 #
 # Usage:
-#   docker compose up -d           # start; init runs once
+#   docker compose up -d           # start
 #   docker compose down            # stop, keep data
-#   docker compose down -v         # stop AND wipe data (re-runs init next time)
+#   docker compose down -v         # stop AND wipe data
 
 services:
-  mssql:
-    image: mcr.microsoft.com/mssql/server:2019-latest
-    container_name: food-mssql
+  mongo:
+    image: mongo:7
+    container_name: food-mongo
     ports:
-      - "1433:1433"
-    environment:
-      ACCEPT_EULA: "Y"
-      MSSQL_SA_PASSWORD: "Local_Dev_2012!"
-      MSSQL_PID: "Express"
+      - "27017:27017"
     volumes:
-      - mssql-data:/var/opt/mssql
+      - mongo-data:/data/db
     restart: unless-stopped
     healthcheck:
-      test: ["CMD-SHELL", "/opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P \"$$MSSQL_SA_PASSWORD\" -C -Q 'SELECT 1' -b || exit 1"]
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping')"]
       interval: 10s
       timeout: 5s
       retries: 10
-      start_period: 30s
-
-  mssql-init:
-    image: mcr.microsoft.com/mssql/server:2019-latest
-    depends_on:
-      mssql:
-        condition: service_healthy
-    volumes:
-      - ./docker/mssql/init:/init:ro
-      - ./docker/mssql/init.sh:/init.sh:ro
-    environment:
-      MSSQL_SA_PASSWORD: "Local_Dev_2012!"
-    entrypoint: ["/bin/bash", "/init.sh"]
-    restart: "no"
+      start_period: 20s
 
 volumes:
-  mssql-data:
+  mongo-data:
