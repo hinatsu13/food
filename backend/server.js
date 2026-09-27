@@ -3,6 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const { MongoClient } = require("mongodb");
 const jwt = require("jsonwebtoken");
+const ExcelJS = require("exceljs");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -237,6 +238,46 @@ app.get("/api/scores", async (req, res) => {
   } catch (err) {
     console.error("Error fetching scores:", err);
     res.status(500).json({ error: "Failed to fetch scores", detail: err.message });
+  }
+});
+
+// Full gameData dump as .xlsx (real xlsx, not CSV: Excel would turn numeric
+// employee IDs into numbers and drop leading zeros), ordered like the
+// leaderboard. It lists every player's ID, so it's gated by EXPORT_KEY and
+// disabled when that env var is unset.
+app.get("/api/export", async (req, res) => {
+  if (!process.env.EXPORT_KEY || req.query.key !== process.env.EXPORT_KEY) {
+    return res.status(401).json({ error: "Invalid or missing export key" });
+  }
+  try {
+    const docs = await (await getDb()).collection("gameData")
+      .find({}, { projection: { _id: 0 } })
+      .sort(LB_SORT)
+      .toArray();
+
+    const wb = new ExcelJS.Workbook();
+    const ws = wb.addWorksheet("gameData");
+    ws.columns = [
+      { header: "Rank",               key: "rank",               width: 6 },
+      { header: "Employee ID",        key: "personCode",         width: 20 },
+      { header: "Fish Selection",     key: "fishSelectionScore", width: 14 },
+      { header: "Fish Prep",          key: "fishPrepScore",      width: 10 },
+      { header: "Fish Check Temp",    key: "fishCheckTempScore", width: 15 },
+      { header: "Fish Packaging",     key: "fishPackagingScore", width: 14 },
+      { header: "Stage Count",        key: "stageCount",         width: 12 },
+      { header: "Total Score",        key: "totalScore",         width: 12 },
+      { header: "Last Updated (UTC)", key: "lastUpdated",        width: 20, style: { numFmt: "yyyy-mm-dd hh:mm:ss" } },
+    ];
+    docs.forEach((d, i) => ws.addRow({ rank: i + 1, ...d }));
+
+    // Buffer first so a write failure can still send a clean 500.
+    const buf = await wb.xlsx.writeBuffer();
+    res.setHeader("Content-Type", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+    res.setHeader("Content-Disposition", `attachment; filename="gameData-${new Date().toISOString().slice(0, 10)}.xlsx"`);
+    res.send(Buffer.from(buf));
+  } catch (err) {
+    console.error("Error exporting data:", err);
+    res.status(500).json({ error: "Failed to export data", detail: err.message });
   }
 });
 

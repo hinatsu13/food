@@ -71,13 +71,14 @@ cd backend
 npm install
 ```
 
-Create a `backend/.env` file:
+Copy `backend/.env.example` to `backend/.env` and fill it in:
 
 ```env
 MONGODB_URI=mongodb://localhost:27017
 MONGODB_DATABASE=food
 JWT_SECRET=<paste long random string here>
 PORT=3000
+EXPORT_KEY=<another random string; leave unset to disable /api/export>
 ```
 
 Generate a `JWT_SECRET` with:
@@ -129,6 +130,7 @@ All routes are prefixed `/api`.
 | `GET` | `/api/person/:code` | none | Login. Normalizes the ID (trim, uppercase, must match `^[A-Z0-9-]{1,50}$`) and returns `{ exists, person: { personCode }, gameData, token }` with a 12h JWT; a new ID gets `exists: false` and zeros. Never writes. 400 means "malformed ID". |
 | `POST` | `/api/scores` | **Bearer JWT** | Upsert game data (the first save creates the player's record). `personCode` is derived from the verified token; any `personCode` in the body is ignored. Each sub-score is clamped to `MAX_SCORES` (constants at top of `server.js`), then a single atomic update keeps the higher of the stored and new value (`$max`, monotonic) and recomputes `totalScore`. |
 | `GET` | `/api/scores?personCode=…` | none | Top-3 leaderboard plus the caller's rank row and the player one rank above. Entries use camelCase keys (`personCode`, `totalScore`, …) — no names. |
+| `GET` | `/api/export?key=…` | `EXPORT_KEY` | Downloads every player's `gameData` as an `.xlsx` file (`gameData-YYYY-MM-DD.xlsx`), in leaderboard order with a Rank column. Employee IDs are text cells, so leading zeros survive. 401 on a wrong key, or always when `EXPORT_KEY` is unset. |
 
 Example login flow:
 
